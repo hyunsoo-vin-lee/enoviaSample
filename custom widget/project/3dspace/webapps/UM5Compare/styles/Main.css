@@ -1,0 +1,73 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+html.uwa-framed {
+    overflow-y: hidden;
+}
+
+#appVue {
+    height: 100%;
+    /*background: #fafafa;*/
+    background: white;
+    position: relative;
+}
+
+div#app {
+    background: white;
+}
+
+div#main {
+    height: calc(100% - 2em);
+    overflow: auto;
+}
+
+.settingsBtn {
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+    cursor: pointer;
+}
+
+div#settingsPanel {
+    position: absolute;
+    z-index: 10;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 0.5em;
+    box-shadow: 0.25em 0.25em 0.5em 0em lightgrey;
+
+    padding: 1em;
+    overflow: auto;
+}
+
+#topBar .v-icon.loading {
+    color: rgb(40, 119, 221);
+    animation: spin 1.0s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,277 @@
+/*
+  Script: core.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+      <div class="[module|module[Platform]]">
+          <div class="moduleFrame [white-module|yellow-module|green-module|red-module|blue-module|orange-module]">
+              <div class="moduleHeaderContainer">
+                  <div class="moduleHeader [white|yellow|green|red|blue|orange]">
+              <div class="contentWrapper">
+                  <div class="moduleEdit">
+                  <div class="moduleContent">
+              <div class="moduleFooterContainer">
+                  <div class="moduleFooter">
+    (end code)
+
+  Target IE Version:
+    - background: #00f; for all browsers
+    - *background: #f00; for IE 7 and below
+    - _background: #f60; for IE 6 and below
+*/
+
+/* Module
+*******************************************************************************/
+
+.module {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-size-adjust:none;
+    -webkit-text-size-adjust:none;
+    touch-callout: none;
+    -webkit-touch-callout: none;
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.module a:link, .module a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+.module a:hover{
+    color: #F60;
+}
+
+
+.rtl .module {
+    text-align: right;
+}
+
+.module code {
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 5px 0;
+}
+
+/* Module header
+*******************************************************************************/
+
+.moduleHeader {
+    margin: 0;
+    padding: 3px 0;
+    overflow: hidden;
+    position: relative;
+    background: #EFF5FF;
+    height: 1.8em;
+}
+
+.moduleHeader .icon {
+    float: left;
+    line-height: 1.8em;
+    padding: 2px 5px 0 3px;
+    border-bottom: none;
+}
+
+.moduleHeader .counter {
+    float: left;
+    padding: 0 5px 0 0;
+    font-size: 1em;
+    line-height: 1.8em;
+    font-weight: bold;
+    color: #900;
+}
+
+.moduleHeader .title {
+    display: block;
+    font-size: 1em;
+    line-height: 1.8em;
+    font-weight: bold;
+    color: #00368F;
+    padding: 0 20px 0 0;
+}
+
+.moduleHeader .title,
+.moduleHeader .title a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.moduleHeader .title a {
+    text-decoration: underline;
+}
+
+.moduleHeader .title a:hover {
+    color: #F60;
+}
+
+.moduleHeader .title em,
+.moduleHeader .title em a {
+    font-style: normal;
+    color: #36C;
+}
+
+/* Module header : links
+*******************************************************************************/
+
+.moduleHeader .share,
+.moduleHeader .edit,
+.moduleHeader .refresh,
+.moduleHeader .close,
+.moduleHeader .maximize,
+.moduleHeader .minimize,
+.moduleHeader .action {
+    cursor: pointer;
+    float: right;
+    padding: 0 1px 0 2px;
+    margin: 0 5px;
+    font-size: 1em;
+    line-height: 1.8em;
+    display: none;
+}
+
+.moduleHeader a {
+    color: #858585;
+    text-decoration: underline;
+}
+
+.moduleHeader a:hover {
+    color: #F60;
+}
+
+/* Edit content
+*******************************************************************************/
+
+.moduleEdit {
+    display: none;
+    padding: 10px;
+    background: #EFF5FF;
+    border-bottom: 1px solid #B9D0ED;
+    border-top: 1px solid #D3E2F4;
+}
+
+.moduleEdit .moduleInfos {
+    padding: 0 10px 10px;
+    text-align: right;
+}
+
+.rtl .moduleEdit .moduleInfos {
+    text-align: left;
+}
+
+.moduleEdit .moduleInfos p {
+    padding: 0;
+    margin: 0;
+}
+
+.onEdit .moduleEdit {
+    display: block;
+}
+
+/* Module content
+*******************************************************************************/
+
+.moduleWrapper {
+    position: relative;
+    clear-after: both;
+    overflow: hidden;
+    z-index:1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.module.fullscreen-view .moduleWrapper {
+    overflow: auto;
+}
+
+/* Clear */
+/* Contain floats: h5bp.com/q */
+.moduleWrapper:before,
+.moduleWrapper:after {
+    content: "";
+    display: table;
+}
+
+.moduleWrapper:after {
+    clear: both;
+}
+
+.moduleWrapper {
+    zoom: 1;
+}
+
+.moduleLoading {
+    text-align: center;
+}
+
+.moduleContent {
+    padding: 7px;
+    background: #FFF;
+    position: relative;
+}
+
+.onEdit .moduleContent {
+    display: none;
+}
+
+/* Module Footer
+*******************************************************************************/
+
+.moduleFooter {
+    background: #FFF;
+    clear: both;
+    position: relative;
+    padding: 5px;
+    border-top: 1px solid #EEE;
+}
+
+.moduleFooter a {
+    text-decoration: none;
+}
+
+.moduleFooter .share {
+    float: right;
+    height: 14px;
+    background: transparent url(img/share.png) no-repeat 2px;
+    padding: 0 0 0 15px;
+}
+
+.moduleFooter .powered {
+    border-bottom: 1px solid #DDD;
+}
+
+
+/* IE Fixes
+*******************************************************************************/
+
+* html .moduleHeader {
+    height: 29px;
+}
+
+* html .moduleHeader .title {
+    position: absolute;
+    width: 70%;
+    top: 3px;
+    left: 25px;
+}
+
+.uwa-font-aa {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.uwa-font-noaa {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}

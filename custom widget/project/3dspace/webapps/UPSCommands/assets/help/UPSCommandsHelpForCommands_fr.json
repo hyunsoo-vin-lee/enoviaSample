@@ -1,0 +1,23 @@
+{
+"UPSAuthInsertExistingProductOrPart.Title":"Insérer un élément existant",
+"UPSAuthInsertExistingProductOrPart.ShortHelp":"Ajoute un produit, une pièce ou une représentation existant(e) à l'intérieur de la structure.",
+"UPSAuthInsertExistingProductOrPart.LongHelp":"Sélectionnez un ou plusieurs produits en tant que parent. Sélectionnez ensuite, par le biais d'une recherche, l'un des éléments suivants <tm tmtype = 'service' tmclass = '3D'>3D</tm>Objets EXPERIENCE à insérer : produit, pièce, forme ou mise en plan. <p>Cette commande est compatible avec l'action de modification (y compris avec la configuration). </p>",
+"UPSAuthReplaceByExisting.Title":"Remplacer par un objet existant",
+"UPSAuthReplaceByExisting.ShortHelp":"Remplace un objet par un objet existant du même type.",
+"UPSAuthReplaceByExisting.LongHelp":"Sélectionnez un objet, puis sélectionnez un objet existant par l'intermédiaire d'une recherche.",
+"UPSReplaceByLatestRevision.Title":"Remplacer par la dernière révision",
+"UPSReplaceByLatestRevision.ShortHelp":"Remplace un produit ou une pièce par sa dernière révision (le cas échéant) pour mettre à jour votre structure avec les dernières modifications (non disponible pour les représentations).",
+"UPSReplaceByLatestRevision.LongHelp":"Sélectionnez un ou plusieurs produits (excepté la racine) ou pièces avant de lancer cette commande.",
+"UPSAuthReplaceByRevision.Title":"Remplacer par une révision",
+"UPSAuthReplaceByRevision.ShortHelp":"Met à jour les pièces ou les produits sélectionnés d'une structure avec une révision existante (non disponible pour les représentations). <p>Le panneau <uicontrol>Remplacer par une révision</uicontrol> affiche la structure du produit dans une vue à plat. </p>",
+"UPSAuthRevisionUpdate.Title":"Mettre à jour les révisions",
+"UPSAuthRevisionUpdate.ShortHelp":"Met à jour une structure avec une révision existante de ses produits et pièces (non disponible pour les représentations). <p>Le panneau <uicontrol>Mettre à jour les révisions</uicontrol> affiche la structure du produit dans une vue hiérarchique. Dans la première colonne, un symbole indique si la révision actuelle peut être remplacée. </p>",
+"UPSAuthUnparent.Title":"Détacher",
+"UPSAuthUnparent.ShortHelp":"Supprime l'instance sélectionnée de la structure.",
+"UPSAuthUnparent.LongHelp":"Cette commande est compatible avec l'action de modification (y compris avec la configuration).",
+"UPSAuthReorderProduct.Title":"Déplacer",
+"UPSAuthReorderProduct.ShortHelp":"Réorganiser les enfants de l'assemblage sélectionné.",
+"UPSAuthReplaceByRevision.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthRevisionUpdate.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthReorderProduct.WebHelp":"PsteUserMap/psd-t-Reorder.htm#psd-t-Reorder"
+}

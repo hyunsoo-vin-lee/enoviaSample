@@ -1,0 +1,31 @@
+/*
+  Script: feedview.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+.uwa-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0);
+    /* RGBa with 0.8 opacity */
+    background: rgba(0, 0, 0, 0.8);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000)";
+}

@@ -1,0 +1,1 @@
+define("UWA/Controls/FeedView/SimpleList",["UWA/Core","UWA/Controls/FeedView"],function(c,b){var a=b.extend({viewName:"simplelist"});return c.namespace("Controls/FeedView_SimpleList",a,c)});

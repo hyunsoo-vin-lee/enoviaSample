@@ -1,0 +1,136 @@
+
+/**
+ * Widget: dropdown menu
+ */
+.uwa-widget-popup-menu {
+    min-width: 160px;
+    padding: 0;
+    margin: 0;
+    background-color: #5F5F5F;
+    border-bottom-left-radius: 4px;
+    z-index: 14;
+    text-align: left;
+}
+
+.uwa-widget-popup-menu > menu {
+    padding: 0;
+    margin: 0;
+}
+
+.uwa-widget-popup-menu-item {
+    display: block;
+    padding: 8px 10px;
+    color: #FFF;
+    border-bottom: 1px dotted #4A4A4A;
+    cursor: pointer;
+}
+
+.uwa-widget-popup-menu-item > .uwa-icon.uwa-icon-only {
+    width: 20px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.uwa-widget-popup-menu-item:hover {
+    background-color: #4A4A4A;
+}
+
+.uwa-widget-popup-menu-item:last-child {
+    border-bottom: none;
+}
+
+
+/**
+ * Widget header: menu button
+ *
+ * Dark icons have color: #AAA;
+ * Light icons have color: #FFF;
+ */
+.uwa-widget-menu-button {
+    -moz-box-sizing: border-box; /* Firefox 1+ */
+         box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+    display: table;
+
+    display: -ms-grid; /* IE 10+ */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+
+    width: 26px;
+    height: 100%;
+    margin: 0;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+    filter:alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.uwa-widget-menu-button:before {
+    display: table-cell;
+
+    /* display: table-cell on generated content not supported by IE 10+ */
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+
+    vertical-align: middle;
+    text-align: center;
+    padding-bottom: 1px;
+}
+
+.uwa-widget-menu-button:hover,
+.uwa-widget-menu-button.active {
+    filter:alpha(opacity=100);
+    opacity: 1;
+}
+
+.uwa-widget-menu-button.active {
+    background-color: #5F5F5F;
+    color: #FFF;
+}
+
+.rtl .uwa-widget-menu-button {
+    float: left;
+}
+
+
+/**
+ * Widget header: menus container
+ */
+.moduleHeader > menu {
+    -moz-box-sizing: border-box; /* Firefox 1+ */
+         box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.moduleHeader .uwa-widget-menu-button {
+    float: right;
+}
+.moduleHeader .uwa-widget-menu-button.active {
+    color: #FFF;
+}
+.moduleHeader[data-menus-items="1"] {
+    padding-right: 40px;
+}
+.moduleHeader[data-menus-items="2"] {
+    padding-right: 80px;
+}
+.moduleHeader[data-menus-items="3"] {
+    padding-right: 100px;
+}
+.moduleHeader[data-menus-items="4"] {
+    padding-right: 120px;
+}
+.moduleHeader[data-menus-items="5"] {
+    padding-right: 140px;
+}
+.moduleHeader[data-menus-items="6"] {
+    padding-right: 160px;
+}

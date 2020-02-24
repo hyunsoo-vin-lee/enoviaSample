@@ -1,0 +1,112 @@
+/*
+  Script: segmented.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+.uwa-segmented {
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+
+.uwa-segmented:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.uwa-segmented-item,
+.uwa-segmented-title {
+    float:left;
+    margin:0;
+    padding:0;
+    background:white;
+}
+
+.uwa-segmented-item-title {
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(220,220,220)),
+        color-stop(1, rgb(255,255,255))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(220,220,220) 0%,
+        rgb(255,255,255) 100%
+    );
+    border: 1px solid #939393;
+    border-left: none;
+
+    background-color:#eee; /* fallback for gradient non compatible browser */
+
+    text-align: center;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.uwa-segmented-item-first:not(.uwa-accordion-item) .uwa-segmented-item-title {
+    border: 1px solid #939393;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.uwa-segmented-item-last:not(.uwa-accordion-item) .uwa-segmented-item-title {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.uwa-segmented-title,
+.uwa-segmented-item-title {
+    display: block;
+    padding: 0 5px 0 5px;
+    line-height: 21px;
+    color:#666;
+}
+.uwa-segmented-title {
+    background:none;
+    font-weight:bold;
+    border:none;
+    text-align:left;
+}
+
+.no-touch .uwa-segmented-item-title:hover {
+    color:#222;
+}
+
+.uwa-segmented-item.selected .uwa-segmented-item-title {
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(200,200,200)),
+        color-stop(1, rgb(120,120,120))
+    );
+
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(200,200,200) 0%,
+        rgb(120,120,120) 100%
+    );
+
+    background-color:#777; /* fallback for gradient non compatible browser */
+}
+
+.uwa-segmented-item.selected .uwa-segmented-item-title {
+    color:white;
+}

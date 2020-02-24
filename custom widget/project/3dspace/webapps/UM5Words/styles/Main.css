@@ -1,0 +1,37 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+@font-face {
+    font-family: "3ds";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../assets/fonts/3dslight.ttf") format("truetype");
+}
+@font-face {
+    font-family: "3ds";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../assets/fonts/3dsbold.ttf") format("truetype");
+}
+
+#content {
+    height: 100%;
+    line-height: 1em;
+    font-family: "3ds";
+    text-align: justify;
+    width: 100%;
+}
+
+.highlight {
+    color: #005685;
+    font-weight: bold;
+}
+.dimmed {
+    color: #ececec;
+}
+
+#content span {
+    margin-right: 0.25em;
+}

@@ -1,0 +1,40 @@
+/*
+  Script: notify.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+.uwa-notify {
+    position: relative;
+    height: 1px;
+}
+
+.uwa-notify-item {
+    position: absolute;
+    width: 100%;
+}
+
+.uwa-notify-msg {
+    position: relative;
+    padding: 5px;
+    margin: 0 0 5px 0;
+
+    background: #ccc;
+    border:1px solid #505050;
+}
+
+.uwa-notify-close {
+    float: right;
+    text-decoration: none;
+}
+

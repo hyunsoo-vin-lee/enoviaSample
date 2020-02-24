@@ -1,0 +1,23 @@
+{
+"UPSAuthInsertExistingProductOrPart.Title":"Insert Existing",
+"UPSAuthInsertExistingProductOrPart.ShortHelp":"Adds an existing product, part or representation inside the structure.",
+"UPSAuthInsertExistingProductOrPart.LongHelp":"Select one or several products as parent and then, through a search, select one of the following <tm tmtype = 'service' tmclass = '3D'>3D</tm>EXPERIENCE objects to be inserted: product, part, shape or drawing. <p>This command is compatible with Change Action (including with configuration). </p>",
+"UPSAuthReplaceByExisting.Title":"Replace by Existing",
+"UPSAuthReplaceByExisting.ShortHelp":"Replaces an object by an existing object of the same type.",
+"UPSAuthReplaceByExisting.LongHelp":"Select an object, and then select an existing object using a search.",
+"UPSReplaceByLatestRevision.Title":"Replace by Latest Revision",
+"UPSReplaceByLatestRevision.ShortHelp":"Replaces a product or part with its latest revision (if any), to update your structure with the latest modification (not available for representations).",
+"UPSReplaceByLatestRevision.LongHelp":"Select one or several products (except the root) or parts before launching this command.",
+"UPSAuthReplaceByRevision.Title":"Replace by Revision",
+"UPSAuthReplaceByRevision.ShortHelp":"Updates the selected products or parts of a structure with an existing revision (not available for representations). <p>The <uicontrol>Replace by Revision</uicontrol> panel displays the product structure in a flat view. </p>",
+"UPSAuthRevisionUpdate.Title":"Update Revisions",
+"UPSAuthRevisionUpdate.ShortHelp":"Updates a structure with an existing revision of its products and parts (not available for representations). <p>The <uicontrol>Update Revision</uicontrol> panel displays the product structure in a hierarchical view. In the first column, a symbol indicates if the current revision can be replaced. </p>",
+"UPSAuthUnparent.Title":"Detach",
+"UPSAuthUnparent.ShortHelp":"Removes the selected instance from the structure.",
+"UPSAuthUnparent.LongHelp":"This command is compatible with Change Action (including with configuration).",
+"UPSAuthReorderProduct.Title":"Reorder",
+"UPSAuthReorderProduct.ShortHelp":"Reorders children of the selected assembly.",
+"UPSAuthReplaceByRevision.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthRevisionUpdate.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthReorderProduct.WebHelp":"PsteUserMap/psd-t-Reorder.htm#psd-t-Reorder"
+}

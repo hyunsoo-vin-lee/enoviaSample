@@ -1,0 +1,171 @@
+
+/*
+    UWA calendar
+*/
+
+.uwa-calendar {
+    text-align: center;
+    background-color: #fff;
+    cursor: default;
+    border-bottom: 1px solid #E6E6E6;
+    min-width: 15em;
+}
+.uwa-calendar td,
+.uwa-calendar th {
+    font-weight: normal;
+}
+.uwa-calendar table {
+    border-spacing: 4px;
+    border-collapse: separate;
+    width: 100%;
+    padding: 20px;
+}
+.uwa-calendar th {
+    text-align: center;
+    height: 20px;
+    vertical-align: top;
+    font-size: 1.2em;
+    color: #999999;
+}
+.uwa-calendar .day {
+    color: #aaa;
+    cursor: pointer;
+    padding: 6px;
+    border: 1px solid #E5E5E5;
+    text-align: right;
+    background-color: #E5E5E5;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 33px;
+    height: 26px;
+    line-height: 24px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 1.1em;
+}
+.uwa-calendar .currentMonth .day {
+    color: #333333;
+    background-color: #fff;
+}
+.uwa-calendar .day:hover {
+    background: rgba(126, 174, 0, 0.15);
+}
+.uwa-calendar .disabled {
+    cursor: default;
+    text-decoration: line-through;
+}
+.uwa-calendar .today .day:hover,
+.uwa-calendar .today .day {
+    font-weight: bold;
+    background: rgba(126, 174, 0, 0.3);
+    color: #7EAE00;
+}
+.uwa-calendar .selectDate .day:hover,
+.uwa-calendar .selectDate .day {
+    border: 1px solid #7EAE00;
+    background-color: #7EAE00;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    cursor: default;
+}
+
+.uwa-calendar .top {
+    position: relative;
+    white-space: nowrap;
+    border-bottom: 1px solid #E6E6E6;
+}
+    .uwa-calendar .next,
+    .uwa-calendar .previous {
+        display: block;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        overflow: hidden;
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        color: #999999;
+    }
+    .uwa-calendar .next:hover,
+    .uwa-calendar .previous:hover {
+        color: #666666;
+    }
+    .uwa-calendar .previous {
+        left: 0;
+        border-right: 1px solid #E6E6E6;
+    }
+    .uwa-calendar .next {
+        right: 0;
+        border-left: 1px solid #E6E6E6;
+    }
+    .uwa-calendar .top > .title {
+        display: block;
+        height: 32px;
+        line-height: 32px;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #8AC500;
+        padding: 0 25px;
+    }
+
+
+/* Black theme for UWA Calendar */
+
+.uwa-calendar.dark {
+    border: none;
+    background: #444444;
+}
+.uwa-calendar.dark th {
+    color: #CACACA;
+}
+    .uwa-calendar.dark .top {
+        background: none;
+        border-bottom: 1px solid #2C2C2C;
+    }
+    .uwa-calendar.dark .previous,
+    .uwa-calendar.dark .next {
+        color: #999999;
+    }
+    .uwa-calendar.dark .previous:hover,
+    .uwa-calendar.dark .next:hover {
+        color: #CACACA;
+    }
+    .uwa-calendar.dark .previous {
+        border-right: 1px solid #2C2C2C;
+    }
+    .uwa-calendar.dark .next {
+        border-left: 1px solid #2C2C2C;
+    }
+
+    .uwa-calendar.dark .currentMonth.disabled .day,
+    .uwa-calendar.dark .day {
+        border: 1px solid #333;
+        background-color: #272727;
+        color: #555;
+    }
+    .uwa-calendar.dark .currentMonth .day {
+        border: 1px solid #333;
+        background-color: #333;
+        color: #FFF;
+    }
+
+    .uwa-calendar.dark .day:hover {
+        background-color: #343b21;
+    }
+    .uwa-calendar.dark .currentMonth .day:hover {
+        background-color: #4a5824;
+    }
+
+    .uwa-calendar.dark .today .day:hover,
+    .uwa-calendar.dark .today .day {
+        background: #556a1c;
+        border: #556a1c;
+    }
+
+    .uwa-calendar.dark .selectDate .day:hover,
+    .uwa-calendar.dark .selectDate .day {
+        border: 1px solid #7EAE00;
+        background-color: #7EAE00;
+    }

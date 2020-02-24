@@ -1,0 +1,9 @@
+UPSCommands.UPSAuthUnparent.Icon.Normal				 = "I_UPSAuthCmdUnparent.png";
+UPSCommands.UPSAuthInsertExistingPart.Icon.Normal    = "I_UPSAuthCmdInsertExistingPart.png";
+UPSCommands.UPSAuthInsertExistingProductOrPart.Icon.Normal    = "I_UPSAuthCmdInsertExistingProduct.png";
+UPSCommands.UPSAuthInsertProductConfiguration.Icon.Normal    = "I_UPSAuthCmdInsertProductConfiguration.png";
+UPSCommands.UPSAuthReplaceByExisting.Icon.Normal       = "I_UPSAuthCmdReplaceByExisting.png";
+UPSCommands.UPSAuthReplaceByRevision.Icon.Normal       = "I_UPSAuthCmdReplaceByRevision2.png";
+UPSCommands.UPSReplaceByLatestRevision.Icon.Normal = "I_UPSAuthCmdReplaceByLatestRevision.png";
+UPSCommands.UPSAuthRevisionUpdate.Icon.Normal = "I_UPSAuthCmdUpdateRevisions.png";
+UPSCommands.UPSAuthReorderProduct.Icon.Normal          = "I_UPSAuthCmdReorder.png";

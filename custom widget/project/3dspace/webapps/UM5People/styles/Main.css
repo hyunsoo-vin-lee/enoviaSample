@@ -1,0 +1,51 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+#contentMain {
+    height: 100%;
+}
+
+#cardsContainer {
+    padding: 0.25em;
+    vertical-align: top;
+    overflow: auto;
+    margin: 0;
+}
+
+#cardsContainer.collapseRight {
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    border-right: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+#cardsContainer.collapseRight.ui.one.cards > .card {
+    width: calc(100% - 1em);
+}
+
+#personDetails {
+    display: none;
+}
+#personDetails.show {
+    display: inline-block;
+    height: 100%;
+    width: 80%;
+    position: relative;
+    overflow: auto;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    cursor: pointer;
+}
+
+#personHeader {
+    min-height: 4em;
+    text-align: center;
+    background-color: rgb(161, 178, 255);
+}

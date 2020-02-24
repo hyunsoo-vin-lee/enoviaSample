@@ -1,0 +1,15 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+.counter {
+    font-stretch: expanded;
+    line-height: 1em;
+    font-size: 5em;
+    font-family: "Consolas";
+    text-align: center;
+}
+div#buttons {
+    text-align: center;
+}

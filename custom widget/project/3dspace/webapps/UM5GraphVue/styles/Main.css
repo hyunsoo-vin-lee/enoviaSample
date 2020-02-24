@@ -1,0 +1,349 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+:root {
+    --arrow-color: #c6c6c6;
+}
+
+html.uwa-framed {
+    overflow-y: hidden;
+}
+
+#appVue {
+    height: 100%;
+    background: #fafafa;
+    position: relative;
+}
+
+#main {
+    position: relative;
+    overflow: none;
+    height: 100%;
+    font-size: 0.9em;
+    padding-left: 0.5em;
+    box-sizing: border-box;
+}
+
+.dropZone {
+    border: 2px solid #6bbcff;
+    background-color: #e0eff5;
+}
+
+/* Messages */
+
+.messageList {
+    position: absolute;
+    top: 2em;
+    right: 0.25em;
+    z-index: 100;
+}
+
+.messageBlock {
+    background-color: #bfe2ff;
+    border: 1px solid #e3e3e3;
+    box-shadow: 1px 1px 5px #e8e8e8;
+    min-width: 12em;
+    max-width: 20em;
+}
+
+.messageBlock>.closeBtn {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    cursor: pointer;
+}
+
+.messageBlock>.messageIcon {
+    position: absolute;
+    top: calc(50% - 0.75em);
+    left: 0.5em;
+}
+
+.messageBlock>.messageContent {
+    padding-left: 2.5em;
+}
+
+.messageBlock>.messageContent>.messageTitle {
+    font-weight: bold;
+    padding-right: 1.5em;
+}
+
+/* No result to display */
+
+#noResult {
+    text-align: center;
+}
+
+/* Graph css */
+
+.graphList {
+    position: relative;
+    height: 100%;
+}
+
+.graphNode {
+    position: relative;
+    display: block;
+    width: 14em;
+    height: 5em;
+    border: 1px solid #e3e3e3;
+    box-shadow: 1px 1px 5px #e8e8e8;
+    background-color: white;
+    margin-top: 0.5em;
+    padding-left: 0.25em;
+}
+
+.graphNode.selected {
+    background-color: #e6faff;
+    border-color: #a9d8ff;
+}
+
+.nodeTop,
+.nodeMiddle,
+.nodeBottom,
+.expandBtn {
+    position: absolute;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.nodeTop,
+.nodeMiddle,
+.nodeBottom {
+    max-width: 12.25em;
+}
+
+.nodeTop {
+    top: 0.1em;
+}
+
+.nodeMiddle {
+    top: calc(50% - 0.8em);
+}
+
+.nodeBottom {
+    bottom: 0.1em;
+}
+
+.iconType {
+    height: 1em;
+    margin-right: 0.2em;
+}
+
+.expandBtn {
+    top: calc(50% - 0.8em);
+    right: 0em;
+    cursor: pointer;
+}
+
+.moreBtn {
+    position: absolute;
+    bottom: 0em;
+    right: 0.1em;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.graphNode>.dropAsChild {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    width: 25%;
+    bottom: 0em;
+    z-index: 1;
+}
+
+.graphNode>.dropAsChild.dropZone {
+    border: 2px solid #6bbcff;
+    background-color: #e0eff588;
+    z-index: 10;
+}
+
+.removeRootBtn {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.connectionType {
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    font-size: 0.65em;
+    /* top and width have to be (5/0.65)em block is 5em height when font-size is 1em */
+    top: 7.4em;
+    line-height: 1em;
+    width: 7.4em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.connectionType~.nodeTop,
+.connectionType~.nodeMiddle,
+.connectionType~.nodeBottom {
+    left: 1.25em;
+    max-width: 11.25em;
+}
+
+.graphNodeBlock {
+    width: 100%;
+    display: block;
+    position: relative;
+    /*nowrap so everything is aligned and expanding to the right*/
+    white-space: nowrap;
+}
+
+.graphNodeBlock .leftBlock {
+    display: inline-block;
+    width: 15em;
+    vertical-align: middle;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: -0.25em;
+    /*To remove space taken by the break line between left and right blocks*/
+}
+
+.graphNodeBlock .rightBlock {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 1em;
+}
+
+.expandArrowDashFrom {
+    position: absolute;
+    border-top: 2px solid var(--arrow-color);
+    top: 3em;
+    left: -1em;
+    width: 1em;
+}
+
+.expandArrowDashTo {
+    position: absolute;
+    border-top: 2px solid var(--arrow-color);
+    top: 3em;
+    right: 0em;
+    width: 1em;
+}
+
+.expandArrowVerticalDown {
+    position: absolute;
+    border-left: 2px solid var(--arrow-color);
+    box-sizing: border-box;
+    top: calc(50% + 0.25em);
+    left: -1em;
+    height: 50%;
+}
+
+.expandArrowVerticalFull {
+    position: absolute;
+    border-left: 2px solid var(--arrow-color);
+    box-sizing: border-box;
+    top: 0em;
+    left: -1em;
+    height: 100%;
+}
+
+.expandArrowVerticalUp {
+    position: absolute;
+    border-left: 2px solid var(--arrow-color);
+    box-sizing: border-box;
+    top: 0em;
+    left: -1em;
+    height: calc(50% + 0.25em);
+}
+
+/* Direction Arrow*/
+
+.arrowDirection {
+    display: block;
+    position: absolute;
+    border-top: 2px solid var(--arrow-color);
+    top: calc(3em - 5px);
+    left: -8px;
+}
+
+.arrowTo {
+    border-right: 8px solid var(--arrow-color);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.arrowFrom {
+    border-left: 8px solid var(--arrow-color);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+/* Toolbar */
+
+.toolbarTop {
+    display: block;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    max-width: 100%;
+    z-index: 10;
+}
+
+.toolbarTop>.toolBtn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Settings */
+
+#settingsPanel {
+    display: block;
+    position: absolute;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+    overflow: auto;
+    border: 1px solid #e3e3e3;
+    box-shadow: 1px 1px 5px #e8e8e8;
+    background-color: white;
+    z-index: 20;
+}
+
+.settingsSubPanel {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.previewCss {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    box-shadow: 1px 1px 5px #e8e8e8;
+    color: black;
+    padding: 0.25em;
+}
+
+/* Connection Panel */
+
+#connectionPanel {
+    position: absolute;
+    top: 0em;
+    left: 0.25em;
+    right: 0.25em;
+    padding: 0.75em;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 4px 5px #e8e8e8;
+    background-color: white;
+    max-height: 100%;
+    overflow: auto;
+    z-index: 10;
+}

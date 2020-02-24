@@ -1,0 +1,23 @@
+{
+"UPSAuthInsertExistingProductOrPart.Title":"插入现有",
+"UPSAuthInsertExistingProductOrPart.ShortHelp":"在结构内 添加现有产品、零件或展示。",
+"UPSAuthInsertExistingProductOrPart.LongHelp":"选择一个或多个产品作为父项， 然后通过搜索选择下列项之一 <tm tmtype = 'service' tmclass = '3D'>3D</tm>EXPERIENCE 对象之一： 产品、零件、形状或工程图。 <p>此命令与更改操作（包括 配置）兼容。 </p>",
+"UPSAuthReplaceByExisting.Title":"替换为现有项",
+"UPSAuthReplaceByExisting.ShortHelp":"将对象替换为 相同类型的现有对象。",
+"UPSAuthReplaceByExisting.LongHelp":"选择一个产品，然后通过搜索选择一个 现有对象。",
+"UPSReplaceByLatestRevision.Title":"替换为最新修订版",
+"UPSReplaceByLatestRevision.ShortHelp":"将产品或零件替换为其最新修订版（如果 有），以将最新修改更新到您的结构中（不适用于 展示）。",
+"UPSReplaceByLatestRevision.LongHelp":"选择一个或多个 产品（根产品除外）和零件，然后再启动此 命令。",
+"UPSAuthReplaceByRevision.Title":"替换为修订版",
+"UPSAuthReplaceByRevision.ShortHelp":"将 结构的选定产品或零件更新为现有版本（不 适用于展示）。 <p><uicontrol>替换为修订版</uicontrol>面板将在 平面视图中显示产品结构。 </p>",
+"UPSAuthRevisionUpdate.Title":"更新修订版",
+"UPSAuthRevisionUpdate.ShortHelp":"将结构 更新为其产品和零件的现有修订版（不适用于 展示）。 <p><uicontrol>更新修订版</uicontrol>面板以层次结构视图 显示产品结构。 在第一个列中，一个符号指明当前 修订版是否可被替换。 </p>",
+"UPSAuthUnparent.Title":"拆离",
+"UPSAuthUnparent.ShortHelp":"从结构中移除 选定的实例。",
+"UPSAuthUnparent.LongHelp":"此 命令与更改操作（包括 配置）兼容。",
+"UPSAuthReorderProduct.Title":"重新排序",
+"UPSAuthReorderProduct.ShortHelp":"重新排序选定装配体 的子项。",
+"UPSAuthReplaceByRevision.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthRevisionUpdate.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthReorderProduct.WebHelp":"PsteUserMap/psd-t-Reorder.htm#psd-t-Reorder"
+}

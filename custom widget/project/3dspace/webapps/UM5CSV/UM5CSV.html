@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>UM5 CSV Table Widget</title>
+
+	<meta name="author" content="UM5" />
+	<meta name="description" content="UM5 CSV Table Widget" />
+	<meta name="apiVersion" content="1.3" />
+	<meta name="debugMode" content="false" />
+	<meta name="strictMode" content="false" />
+
+	<!-- Other Scripts -->
+
+	<script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+
+	<!-- Application Preferences -->
+	<widget:preferences>
+		<widget:preference type="text" name="filePath" label="File Path" defaultValue='' />
+	</widget:preferences>
+
+
+	<!-- Widget files -->
+	<link rel="stylesheet" type="text/css" href="styles/Main.css" />
+	<script type="text/javascript" src="scripts/Main.js"></script>
+
+	<script type="text/javascript">
+		function widgetLoading() {
+			if (widget) {
+				executeWidgetCode();
+			} else {
+				console.warn("Defered widget Loading");
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+		}
+		widgetLoading();
+	</script>
+
+</head>
+
+<body>
+	<p>Widget is Loading...</p>
+</body>
+
+</html>

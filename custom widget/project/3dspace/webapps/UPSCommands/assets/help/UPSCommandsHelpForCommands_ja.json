@@ -1,0 +1,23 @@
+{
+"UPSAuthInsertExistingProductOrPart.Title":"既存を挿入",
+"UPSAuthInsertExistingProductOrPart.ShortHelp":"既存のプロダクト、パーツまたはリプレゼンテーションを構造内に追加します。",
+"UPSAuthInsertExistingProductOrPart.LongHelp":"1 つまたは複数のプロダクトを親として選択し、挿入対象の <tm tmtype = 'service' tmclass = '3D'>3D</tm>EXPERIENCE オブジェクトとして、プロダクト、パーツ、シェイプ、図面のいずれかを選択します。 <p>このコマンドは変更アクション (構成を含む) に適合します。 </p>",
+"UPSAuthReplaceByExisting.Title":"既存で置換",
+"UPSAuthReplaceByExisting.ShortHelp":"オブジェクトを同じタイプの既存のオブジェクトで置換します。",
+"UPSAuthReplaceByExisting.LongHelp":"オブジェクトを選択してから、検索を使用して既存のオブジェクトを選択します。",
+"UPSReplaceByLatestRevision.Title":"最新リビジョンで置換",
+"UPSReplaceByLatestRevision.ShortHelp":"プロダクトまたはパーツを最新のリビジョン (ある場合) で置換して、構造を最新の変更で更新します (リプリゼンテーションに対しては使用不可)。",
+"UPSReplaceByLatestRevision.LongHelp":"このコマンドを起動する前に 1 つまたは複数のプロダクト (ルートを除く) またはパーツを選択します。",
+"UPSAuthReplaceByRevision.Title":"リビジョンで置換",
+"UPSAuthReplaceByRevision.ShortHelp":"構造のうち選択したプロダクトまたはパーツを既存のリビジョンで更新します (リプレゼンテーションに対しては使用不可)。 <p>[<uicontrol>リビジョンで置換</uicontrol>] パネルにプロダクト構成がフラット ビューで表示されます。 </p>",
+"UPSAuthRevisionUpdate.Title":"リビジョンを更新",
+"UPSAuthRevisionUpdate.ShortHelp":"構造を、そのプロダクトおよびパーツの既存のリビジョンで更新します (リプレゼンテーションに対しては使用不可)。 <p>[<uicontrol>リビジョンを更新</uicontrol>] パネルにプロダクト構成が階層ビューで表示されます。 最初の列のシンボルは、現行リビジョンを置換できるかどうかを示します。 </p>",
+"UPSAuthUnparent.Title":"切り離し",
+"UPSAuthUnparent.ShortHelp":"選択したインスタンスを構造から除去します。",
+"UPSAuthUnparent.LongHelp":"このコマンドは変更アクション (構成を含む) に適合します。",
+"UPSAuthReorderProduct.Title":"リオーダ",
+"UPSAuthReorderProduct.ShortHelp":"選択したアセンブリーの子をリオーダします。",
+"UPSAuthReplaceByRevision.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthRevisionUpdate.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthReorderProduct.WebHelp":"PsteUserMap/psd-t-Reorder.htm#psd-t-Reorder"
+}

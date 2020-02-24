@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../BTWWLibrairies/semantic-ui/semantic.min.css" />
+
+    <script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./scripts/dsPlatformAPI.js"></script>
+
+    <script type="text/javascript">
+        //Post message code
+        /*
+        function receivedPostMessage(ev) {
+            console.debug(new Date().toLocaleTimeString() + " - Post Message received : ", ev);
+            var msg = ev.data;
+            console.debug(new Date().toLocaleTimeString() + " - Message received : ", msg);
+        }
+        window.addEventListener("message", receivedPostMessage, false);
+
+        var $btnTest = $("<button>Test postMessage</button>");
+
+        function testPostMessage() {
+            window.parent.postMessage("Test Post Message from iFrame to Widget", "*");
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+        */
+
+        function dispAllOps() {
+            clickStatus();
+
+            $("#allOpsPanel").removeClass("hidden");
+            $("#opPanel").addClass("hidden");
+        }
+
+        let currentOpName = null;
+        let currentOpRev = null;
+
+        function dispOP(opName, opRev, opDisp) {
+            currentOpName = opName;
+            currentOpRev = opRev;
+
+            $("#allOpsPanel").addClass("hidden");
+            $("#opPanel").removeClass("hidden");
+
+            $("span#opDisp").html(opDisp);
+        }
+
+        function loadOP(opName, opRev) {
+            dsPlatformAPI.publish("loadOper", {
+                "name": opName,
+                "revision": opRev
+            });
+        }
+
+        function testPostMessage() {
+            dsPlatformAPI.publish("SmartFrame/Test", {
+                "info": "Message from Frame"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testLoadPID() {
+            dsPlatformAPI.publish("loadOperPID", "75744CB6000037E05AFD45EC00009964");
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testLoadNameRev() {
+            dsPlatformAPI.publish("loadOper", {
+                "name": "gop00000022",
+                "revision": "A"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testSelectByRefName() {
+            dsPlatformAPI.publish("selectInWKIViewer", {
+                "ReferenceName": "prvd00001166"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testSelectByInstName() {
+            dsPlatformAPI.publish("selectInWKIViewer", {
+                "InstanceName": "Solar Panel_Default.141"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testUnselectAll() {
+            dsPlatformAPI.publish("unselectAllInWKIViewer", "");
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function clearLogs() {
+            $("#logDiv").empty();
+        }
+
+        dsPlatformAPI.subscribe("Select_Path_WKI", function (data) {
+            console.debug("Message received due to subcribe - Select_Path_WKI : ", data);
+            $("#logDiv").append(JSON.stringify(data));
+            $("#logDiv").append("<br>");
+
+            for (let i = 0; i < data.selections.length; i++) {
+                const infoSelect = data.selections[i];
+                let selPath = infoSelect.HighlightPath || infoSelect.rawPath || "none";
+                if (infoSelect.isSelected) {
+                    $('i.icon.mouse.pointer[highlightPath="' + selPath + '"]').addClass("selected");
+                } else {
+                    $('i.icon.mouse.pointer[highlightPath="' + selPath + '"]').removeClass("selected");
+                }
+            }
+        });
+
+        let loadedObjects = [];
+        dsPlatformAPI.subscribe("Available_WKI_Objects", function (data) {
+            console.debug("Message received due to subcribe - Available_WKI_Objects : ", data);
+            let $content3D = $("#play3D");
+            loadedObjects = data.objects;
+            for (let i = 0; i < data.objects.length; i++) {
+                const granularObj = data.objects[i];
+                /*
+                DisplayName: "UM5v3-Solar Panel_Default.137 A.1 (Solar Panel_Default.141)"
+                HighlightPath: "1/158"
+                InstanceName: "Solar Panel_Default.141"
+                ReferenceName: "prvd00001166"
+                ReferenceTitle: "UM5v3-Solar Panel_Default.137"
+                Type: "Mfg Item"
+                id: "1"
+                */
+                let $divComponent = $("<div class='componentBlock'></div>");
+
+                let $btnEye = $('<i class="mouse pointer icon"></i>');
+                $btnEye.attr("highlightPath", granularObj["HighlightPath"]);
+                $btnEye.on("click", () => {
+                    dsPlatformAPI.publish("selectInWKIViewer", {
+                        "InstanceName": granularObj["InstanceName"]
+                    });
+                });
+
+                let $btnPaint = $('<i class="paint brush icon"></i>');
+                $btnPaint.attr("highlightPath", granularObj["HighlightPath"]);
+                $btnPaint.on("click", () => {
+                    dsPlatformAPI.publish("colorizeInWKIViewer", {
+                        "InstanceName": granularObj["InstanceName"],
+                        "color": [255, 10, 10]
+                    });
+                });
+
+
+                $divComponent.append($btnEye);
+                $divComponent.append($btnPaint);
+                $divComponent.append("<div class='componentName'>" + granularObj["DisplayName"] + "</div>");
+
+
+                $content3D.append($divComponent);
+            }
+
+            let $divAddSelectCB = $("<div>Add CrossHighlight</div>");
+            $divAddSelectCB.css("font-size", "0.5em");
+            $divAddSelectCB.css("text-align", "right");
+            $divAddSelectCB.css("cursor", "pointer");
+            $divAddSelectCB.on("click", () => {
+                dsPlatformAPI.publish("addCrossHighlight", {
+                    "do": true
+                });
+            });
+            $content3D.append($divAddSelectCB);
+        });
+
+        function clickStatus() {
+            $(".panel").addClass("hidden");
+            $(".tab").removeClass("active");
+
+            $("#status").removeClass("hidden");
+            $("#tabStatus").addClass("active");
+        }
+
+        function click3DTab() {
+            loadOP(currentOpName, currentOpRev);
+
+            $(".panel").addClass("hidden");
+            $(".tab").removeClass("active");
+
+            $("#play3D").empty();
+
+            $("#play3D").removeClass("hidden");
+            $("#tabPlay3D").addClass("active");
+        }
+    </script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .txtCenter {
+            text-align: center;
+        }
+
+        .txtLeft {
+            text-align: left;
+        }
+
+        .head {
+            background-color: rgb(0, 0, 119);
+            color: white;
+            padding: 0.5em;
+            word-spacing: normal;
+        }
+
+        .tabs {
+            background-color: rgb(225, 251, 254);
+            color: rgb(25, 132, 146);
+            border-bottom: 1px solid lightgrey;
+            word-spacing: -1em;
+        }
+
+        .tab {
+            border-right: 1px solid rgb(0, 138, 156);
+            display: inline-block;
+            padding: 0.5em;
+            word-spacing: normal;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background-color: rgb(62, 201, 243);
+            color: white;
+        }
+
+        .progressBar {
+            position: relative;
+            background-color: rgb(206, 206, 206);
+            height: 1em;
+            width: 80%;
+            display: inline-block;
+            top: 2em;
+        }
+
+        .progressIndicator {
+            position: absolute;
+            width: 1.5em;
+            height: 3em;
+            border-radius: 1em;
+            border: 1px solid grey;
+            top: -1em;
+            left: -0.75em;
+        }
+
+        .componentBlock {
+            padding: 0.25em;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .componentName {
+            display: inline-block;
+            margin-left: 0.5em;
+        }
+
+        .icon.mouse.pointer,
+        .icon.paint.brush {
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .icon.mouse.pointer.selected {
+            color: #3ec9f3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="allOpsPanel">
+        <div class='head'>
+            <b>Operations</b>
+            <br> Select an operation
+        </div>
+        <div class='componentBlock' onclick="dispOP('gop00000027','A','0010 - Prise en main du dossier')">0010 - Prise en main du dossier</div>
+        <div class='componentBlock' onclick="dispOP('gop00000029','A','0030 - Montage 924')">0030 - Montage 924</div>
+        <div class='componentBlock' onclick="dispOP('gop00000030','A','0040 - Cheminement Definitif')">0040 - Cheminement Definitif</div>
+        <div class='componentBlock' onclick="dispOP('gop00000031','A','0080 - Controle & Mesure Metallisation')">0080 - Controle & Mesure Metallisation</div>
+        <div class='componentBlock' onclick="dispOP('gop00000028','A','0090 - Protection Metallisation')">0090 - Protection Metallisation</div>
+        <div class='componentBlock' onclick="dispOP('gop00000022','A','Test Oper Satelite')">---</div>
+    </div>
+    <div id="opPanel" class="hidden">
+        <div class='head'>
+            <span onclick="dispAllOps()" style="cursor: pointer;font-size:1.5em;font-weight: bold;">&lt;&nbsp;</span>
+            <b>
+                <span id="opDisp"> 0200 - POSE PCE-RENVOI TROU éclisse C61</span>
+            </b>
+            <br> Ordre de fabrication 1005787475
+        </div>
+        <div class='tabs'>
+            <div class='tab active' id="tabStatus" onclick="clickStatus();">Statut</div>
+            <div class='tab'>Liste à contrôler</div>
+            <!-- <div class='tab'>NC</div>
+        <div class='tab'>Aléas</div>
+        <div class='tab'>Documents</div>
+        <div class='tab'>Replanifier</div>
+        <div class='tab'>TouchNGo</div> -->
+            <div class='tab'>Composants</div>
+            <div class='tab'>Outillages et outils</div>
+            <div class='tab'>Fiche suiveuse</div>
+            <div class='tab' onclick="click3DTab();" id="tabPlay3D">3D Work Instruction</div>
+        </div>
+        <div class='content'>
+
+            <div id="testBtns" class="hidden panel">
+                <button onclick="testPostMessage();">Test Send Post Message</button>
+                <br/>
+                <button onclick="testLoadPID();">Test Load Operation by physicalid</button>
+                <button onclick="testLoadNameRev();">Test Load Operation by Name and Rev</button>
+                <br/>
+                <button onclick="testSelectByRefName();">Test Select by Reference Name</button>
+                <button onclick="testSelectByInstName();">Test Select by Instance Name</button>
+                <br/>
+                <button onclick="testUnselectAll();">Test Unselect All</button>
+                <div>Logs :
+                    <button onclick="clearLogs();">Clear</button>
+                </div>
+                <div id="logDiv"></div>
+            </div>
+            <div id="status" class="panel">
+                <div class="txtCenter" style="margin-top: 2em; margin-bottom: 4em;">
+                    <input type="radio" name="status" id="statusOP" checked="checked" />Afficher statut de l'Operation
+                    <input type="radio" name="status" id="statusOF" />Pour tout l'ordre de fabrication
+                </div>
+                <div class="txtCenter" style="font-size: 1.5em;">
+                    En cours
+                </div>
+                <div class="txtCenter">
+                    <div class="txtLeft" style="margin-left:10%;">Progression 0%</div>
+                    <div class="progressBar">
+                        <div class="progressIndicator"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="play3D" class="hidden panel">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

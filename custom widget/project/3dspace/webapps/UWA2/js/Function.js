@@ -1,0 +1,1 @@
+define("UWA/Function",["UWA/Core"],function(b){var a={};a.always=function(c){return function(){return c}};return b.namespace("Function",a,b)});

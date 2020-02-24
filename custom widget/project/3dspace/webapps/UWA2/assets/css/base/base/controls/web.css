@@ -1,0 +1,28 @@
+.uwa-web-message {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.uwa-web-message > * {
+    display: inline-block;
+    padding: 14px 18px 17px;
+
+    font-size: 2.1em;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+
+    background-color: #aaaaaa;
+}
+.uwa-web-message > p:empty {
+    display: none;
+}
+
+.uwa-web-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,58 @@
+{
+    "peoples": [
+        {
+            "id": "0001",
+            "parent": "",
+            "login": "ABC",
+            "firstName": "toto1",
+            "lastName": "Name",
+            "photo": "",
+            "teamName": "Dev Team",
+            "roleName": "Web Dev.",
+            "location": "3DS Paris Campus",
+            "office": "TE-1P-010",
+            "phone": "+33 1 02 03 04 05",
+            "mobile": "+33 6 07 08 09 10",
+            "email": "toto.name@example.com",
+            "certifications": [{ "name": "Dev JS", "date": "2013/09/01" }, { "name": "Santa Clause", "date": "2017/12/25" }],
+            "skills": [{ "name": "JS", "level": 5 }, { "name": "CSS", "level": 4 }],
+            "languages": [{ "name": "FR", "level": 5 }, { "name": "EN", "level": 4 }]
+        },
+        {
+            "id": "0002",
+            "parent": "",
+            "login": "ABC",
+            "firstName": "toto2",
+            "lastName": "Name",
+            "photo": "",
+            "teamName": "Dev Team",
+            "roleName": "Web Dev.",
+            "location": "3DS Paris Campus",
+            "office": "TE-1P-010",
+            "phone": "+33 1 02 03 04 05",
+            "mobile": "+33 6 07 08 09 10",
+            "email": "toto.name@example.com",
+            "certifications": [{ "name": "Dev JS", "date": "2013/09/01" }, { "name": "Santa Clause", "date": "2017/12/25" }],
+            "skills": [{ "name": "JS", "level": 5 }, { "name": "CSS", "level": 4 }],
+            "languages": [{ "name": "FR", "level": 5 }, { "name": "EN", "level": 4 }]
+        },
+        {
+            "id": "0003",
+            "parent": "",
+            "login": "ABC",
+            "firstName": "toto3",
+            "lastName": "Name",
+            "photo": "",
+            "teamName": "Dev Team",
+            "roleName": "Web Dev.",
+            "location": "3DS Paris Campus",
+            "office": "TE-1P-010",
+            "phone": "+33 1 02 03 04 05",
+            "mobile": "+33 6 07 08 09 10",
+            "email": "toto.name@example.com",
+            "certifications": [{ "name": "Dev JS", "date": "2013/09/01" }, { "name": "Santa Clause", "date": "2017/12/25" }],
+            "skills": [{ "name": "JS", "level": 5 }, { "name": "CSS", "level": 4 }],
+            "languages": [{ "name": "FR", "level": 5 }, { "name": "EN", "level": 4 }]
+        }
+    ]
+}

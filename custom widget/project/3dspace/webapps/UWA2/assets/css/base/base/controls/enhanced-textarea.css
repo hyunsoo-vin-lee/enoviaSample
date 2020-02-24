@@ -1,0 +1,76 @@
+/*
+  Script: enhanced-textarea.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+
+.uwa-enhanced-textarea {
+    border-radius: 4px;
+    width: 15em;
+    max-height: 15em;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: normal;
+}
+
+    .uwa-enhanced-textarea-input.hidden-input,
+    .uwa-enhanced-textarea-content {
+        white-space: inherit;
+        word-wrap: inherit;
+        font: inherit;
+        line-height: inherit;
+        max-height: inherit;
+        min-height: inherit;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: inherit;
+        padding-bottom: 0;
+    }
+
+    .uwa-enhanced-textarea-input.hidden-input {
+        display: block;
+
+        margin: 0;
+        min-height: 0;
+
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        opacity: 1;
+        background-color: transparent;
+        resize: none;
+    }
+
+    .uwa-enhanced-textarea-content {
+        position: absolute;
+
+        height: auto;
+        width: auto;
+
+        /* This should be equal to the border width */
+        left: -1px;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+
+        border: solid 1px transparent;
+
+        color: transparent;
+    }
+
+    .uwa-enhanced-textarea.autogrow .uwa-enhanced-textarea-content {
+        bottom: auto;
+    }

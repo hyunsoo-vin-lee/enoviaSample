@@ -1,0 +1,71 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+html.uwa-framed {
+    overflow-y: hidden;
+}
+
+#appVue {
+    height: 100%;
+    background: #fafafa;
+    position: relative;
+}
+
+#left {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 20%;
+    background-color: white;
+}
+
+#main {
+    position: absolute;
+    overflow: none;
+    height: 100%;
+    font-size: 0.9em;
+    margin-left: 2em;
+    margin-right: 2em;
+    box-sizing: border-box;
+    left: 0%;
+    right: 0%;
+    background-color: white;
+}
+
+#right {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 20%;
+    background-color: white;
+}
+
+#toggleLeftPanel {
+    position: absolute;
+    top: 0%;
+    right: -1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    background-color: white;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+#toggleRightPanel {
+    position: absolute;
+    top: 0%;
+    left: -1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    background-color: white;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+/* Other */

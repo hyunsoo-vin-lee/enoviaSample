@@ -1,0 +1,65 @@
+/*
+    UWA.Controls.Picker
+*/
+
+/* Input Picker */
+.uwa-picker {
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    width: 15em;
+}
+
+.uwa-picker.button-only {
+    width: auto;
+}
+
+.uwa-picker.value-only .uwa-picker-content {
+    display: table;
+}
+
+    .uwa-picker.value-only .uwa-picker-value,
+    .uwa-picker.button-only .uwa-picker-button {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .uwa-picker-text {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+.uwa-picker-navigationlink {
+    display: block;
+    cursor: pointer;
+    padding: 6px;
+    margin: 2px 0;
+    -webkit-border-radius: 6px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+            border-radius: 6px; /* Opera 10.5, IE9, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+}
+
+.no-touch .uwa-picker-navigationlink:hover {
+    background-color: #565656;
+    color: #FFF;
+}
+
+
+/* Date Picker specific style */
+
+.uwa-datepicker .uwa-calendar {
+    display: inline-block;
+}
+.uwa-datepicker-time {
+    text-align: center;
+    width: 10em;
+}
+.uwa-datepicker-time .value {
+    margin-bottom: 6px;
+}
+.uwa-datepicker-time .uwa-input-text {
+    width: 3em;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 0 3px;
+}

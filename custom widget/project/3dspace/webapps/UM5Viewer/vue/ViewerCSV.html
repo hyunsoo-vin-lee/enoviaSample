@@ -1,0 +1,9 @@
+<div style='height:100%;overflow: auto;padding: 0.5em;border-top: 1px solid #c8c8c8;'>
+    <table style='border-collapse: collapse; min-width: 80%; margin: auto;'>
+        <tbody>
+            <tr v-for='row in tableData()'>
+                <td v-for='cell in row' style='border: 1px solid lightgrey;'>{{cell}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,150 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+div#container {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative; /*reference point*/
+    padding-top: 1.25em;
+}
+.expandableBlock {
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+.expandIcon {
+    cursor: pointer;
+    color: grey;
+}
+.expandIcon:hover {
+    color: green;
+}
+
+.title {
+    white-space: nowrap;
+    background-color: #d2e4ff;
+}
+
+.title .name {
+    display: inline-block;
+    padding-left: 4px;
+}
+
+.selected > .title {
+    border: 1px solid green;
+}
+
+.contentChilds,
+.lineContent {
+    position: relative;
+}
+.completion {
+    display: block;
+    background-color: lightgrey;
+    font-size: 0.5em;
+    color: white;
+}
+
+.completion div {
+    position: relative;
+    color: white;
+    background-color: green;
+    box-sizing: border-box;
+    height: 1.5em;
+    font-size: 1.5em;
+}
+
+.gate {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-color: #d2e4ff;
+    transform: rotate(45deg);
+    position: relative;
+    left: -0.5em;
+}
+
+.expandableBlock div.milestone {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    background: none;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 1em solid grey;
+    position: relative;
+    left: -0.5em;
+}
+
+.complete {
+    background-color: #a1f3a3;
+}
+
+.late {
+    background-color: #fceba4;
+}
+
+.lateForStart {
+    background-color: #faadad;
+}
+
+.actualTime {
+    background-color: indigo;
+    /* background-color: firebrick; */
+    position: relative;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 1px;
+}
+
+.dashedLine {
+    box-sizing: border-box;
+    height: 1px;
+    border-top: 1px dashed silver;
+    position: relative;
+}
+
+.dayLine {
+    box-sizing: border-box;
+    border-left: 1px solid lightgrey;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+}
+.dayLine.today {
+    border-left: 1px dashed #ff2e2e;
+}
+
+div#lineMarker.dayLine {
+    border-left: 1px dotted #2226ff;
+}
+
+.dayTxt {
+    position: absolute;
+    top: 0px;
+    color: lightgrey;
+    text-align: center;
+    font-size: 0.8em;
+}
+.dayOffWork {
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: absolute;
+    height: calc(100% - 1.25em);
+    top: 1.25em;
+}
+
+.filtered > .title,
+.filtered > .completion,
+.filtered > .actualTime,
+.filtered > .dashedLine {
+    opacity: 0.2;
+}
+
+.filtered.leafType {
+    display: none;
+}

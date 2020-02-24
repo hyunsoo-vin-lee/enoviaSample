@@ -1,0 +1,109 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+.hidden {
+    display: none !important;
+}
+
+#myRequests {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#overlayPanel {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    bottom: 0.5em;
+    right: 0.5em;
+
+    padding: 0.5em;
+
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid lightgrey;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px 6px 0px grey;
+
+    overflow: auto;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    cursor: pointer;
+}
+
+button#btnCreate {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+button#btnCreate.show {
+    display: block;
+    background-color: white !important;
+}
+
+#deleteBtn {
+    display: inline-block;
+    cursor: pointer;
+    color: lightgrey;
+}
+#deleteBtn:hover {
+    color: red;
+}
+
+#overlayPanel div.ui.input,
+#overlayPanel textarea.ui {
+    width: 100%;
+}
+
+#detailsPanel {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-left: 1px solid lightgrey;
+    width: 75%;
+
+    z-index: 5;
+
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: -2px 0px 4px 0px grey;
+    padding: 0.5em;
+}
+
+#detailsPanel .ui.header {
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+    color: #0b599c;
+}
+
+#myRequests > .request {
+    padding: 0.5em;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 0.5em;
+    margin-bottom: 0.2em;
+
+    background-color: rgb(250, 250, 250);
+}
+#myRequests > .request:hover {
+    border: 1px solid rgb(220, 220, 220);
+    background-color: rgb(240, 240, 240);
+}
+#myRequests > .request > .name {
+    font-weight: bold;
+}
+#myRequests > .request > .ui.mini.steps > .step,
+#detailsPanel > .ui.mini.steps > .step {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}

@@ -1,0 +1,23 @@
+{
+"UPSAuthInsertExistingProductOrPart.Title":"Вставить существующие",
+"UPSAuthInsertExistingProductOrPart.ShortHelp":"Добавляет существующий продукт, деталь или представление в структуру.",
+"UPSAuthInsertExistingProductOrPart.LongHelp":"Выберите один или несколько продуктов в качестве родительских, а затем выполните поиск, чтобы найти один из следующих объектов <tm tmtype = 'service' tmclass = '3D'>3D</tm>EXPERIENCE для вставки: продукт, деталь, форму или чертеж. <p>Эта команда совместима с заданием на изменение (включая конфигурацию). </p>",
+"UPSAuthReplaceByExisting.Title":"Заменить существующим",
+"UPSAuthReplaceByExisting.ShortHelp":"Заменяет объект существующим объектом того же типа.",
+"UPSAuthReplaceByExisting.LongHelp":"Выберите объект, затем выберите существующий объект в результатах поиска.",
+"UPSReplaceByLatestRevision.Title":"Заменить последней редакцией",
+"UPSReplaceByLatestRevision.ShortHelp":"Заменяет продукт или деталь последней редакцией (если имеется) для обновления структуры до последней версии (недоступно для представлений).",
+"UPSReplaceByLatestRevision.LongHelp":"Выберите один или несколько продуктов (кроме корневых) или деталей перед запуском команды.",
+"UPSAuthReplaceByRevision.Title":"Заменить редакцией",
+"UPSAuthReplaceByRevision.ShortHelp":"Обновляет выбранные продукты или детали структуры с существующей редакцией (недоступно для представлений). <p>Панель <uicontrol>Заменить редакцией</uicontrol> отображает структуру продукта в плоском виде. </p>",
+"UPSAuthRevisionUpdate.Title":"Обновить редакции",
+"UPSAuthRevisionUpdate.ShortHelp":"Обновляет структуру с существующей редакцией продуктов и деталей (недоступно для представлений). <p>Панель <uicontrol>Обновить редакцию</uicontrol> отображает структуру продуктов в иерархическом виде. Обозначение в первом столбце показывает, можно ли заменить текущую редакцию. </p>",
+"UPSAuthUnparent.Title":"Открепить",
+"UPSAuthUnparent.ShortHelp":"Удаляет выбранный экземпляр из структуры.",
+"UPSAuthUnparent.LongHelp":"Эта команда совместима с заданием на изменение (включая конфигурацию).",
+"UPSAuthReorderProduct.Title":"Переупорядочить",
+"UPSAuthReorderProduct.ShortHelp":"Переупорядочивает дочерние элементы выбранной сборки.",
+"UPSAuthReplaceByRevision.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthRevisionUpdate.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthReorderProduct.WebHelp":"PsteUserMap/psd-t-Reorder.htm#psd-t-Reorder"
+}

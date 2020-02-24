@@ -1,0 +1,1 @@
+define("UWA/Internal/StringMap",["UWA/Class"],function(a){function b(c){return"_x_"+c}return a.extend({init:function(){this._data={}},get:function(c){return this._data[b(c)]},set:function(c,d){this._data[b(c)]=d;return this},getAll:function(){var c={};for(var d in this._data){c[d.slice(3)]=this._data[d]}return c},remove:function(c){delete this._data[b(c)];return this}})});

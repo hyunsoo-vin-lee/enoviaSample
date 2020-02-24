@@ -1,0 +1,1 @@
+define("DS/UWPClientCode/UWPClientCode_zh",{});define("DS/UWPClientCode/assets/nls/Undo/undo",{deletionMessage:"已删除",elementMessage:"元素",ClickToUndoMessage:"单击以撤消。"});

@@ -1,0 +1,1 @@
+define("DS/UWPClientCode/UWPClientCode_it",{});define("DS/UWPClientCode/assets/nls/Undo/undo",{deletionMessage:"è stato eliminato",elementMessage:"Elemento",ClickToUndoMessage:"Fare clic per annullare."});

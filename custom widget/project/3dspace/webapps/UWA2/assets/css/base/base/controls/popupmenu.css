@@ -1,0 +1,45 @@
+
+/*------------------------------------------------------*/
+/* Tab popup menu
+/*------------------------------------------------------*/
+
+.uwa-popup-menu {
+    position: absolute;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border-bottom: 1px solid #EEE;
+    background: #FFF;
+    border: 1px solid #CCC;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.uwa-popup-menu-item {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    white-space: nowrap;
+    border-bottom: 1px solid #EEE;
+}
+
+.uwa-popup-menu-item > a {
+    text-align: left;
+    display: block;
+    white-space: nowrap;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.uwa-popup-menu-item.action {
+    border: 0;
+    border-top: 1px solid #EEE;
+}
+
+.uwa-popup-menu-item.last {
+    border: 0;
+}

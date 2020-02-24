@@ -1,0 +1,1 @@
+define("UWA/Controls/FeedView/Scoop",["UWA/Core","UWA/Controls/FeedView"],function(c,b){var a=b.Presentable.extend({viewName:"scoop normal"});return c.namespace("Controls/FeedView_Scoop",a,c)});

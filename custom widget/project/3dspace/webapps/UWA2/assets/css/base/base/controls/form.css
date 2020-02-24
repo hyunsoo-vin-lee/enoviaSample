@@ -1,0 +1,244 @@
+/*
+  Script: form.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    <form xmlns="http://www.w3.org/1999/xhtml" class="uwa-form" id="9">
+        <fieldset>
+            <div class="field fieldText">
+                <label for="m_undefined_my_text">My text pref:</label>
+                <span>
+                    <input id="m_undefined_my_text" type="text" class="text" name="my_text" value="" />
+                </span>
+            </div>
+            <div class="field fieldPassword">
+                <label for="m_undefined_my_password">My password pref:</label>
+                <span>
+                    <input id="m_undefined_my_password" type="password" class="password" name="my_password" value="" />
+                </span>
+            </div>
+            <div class="field fieldBoolean">
+                <label for="m_undefined_my_checkbox">My checkbox pref</label>
+                <span>
+                    <input id="m_undefined_my_checkbox" type="checkbox" class="boolean unchecked" name="my_checkbox" />
+                </span>
+            </div>
+            <div class="field fieldRange">
+                <label for="m_undefined_my_range">My range pref:</label>
+                <span>
+                    <select id="m_undefined_my_range" class="range" name="my_range">
+                        <option value="5">5</option>
+                        <option value="10" selected="selected">10</option>
+                        <option value="15">15</option>
+                    </select>
+                </span>
+            </div>
+            <div class="field fieldList">
+                <label for="m_undefined_my_list">My list:</label>
+                <span>
+                    <select id="m_undefined_my_list" class="list" name="my_list">
+                        <option value="Value1" selected="selected">Label1</option>
+                        <option value="Value2">Label2</option>
+                        <option value="Value3">Label3</option>
+                    </select>
+                </span>
+            </div>
+            <div class="field fieldSubmit">
+                <span>
+                    <input id="m_undefined_done" type="submit" class="submit" name="done" value="Done" />
+                </span>
+            </div>
+        </fieldset>
+    </form>
+    (end code)
+*/
+.uwa-form {
+    margin: 0 auto;
+    width: 99%;
+}
+
+    .uwa-form fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .uwa-form .field {
+        position: relative;
+        clear: both;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .uwa-form .field:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Clear */
+    /* Contain floats: h5bp.com/q */
+    .uwa-form .field:before,
+    .uwa-form .field:after {
+        content: "";
+        display: table;
+    }
+    .uwa-form .field:after {
+        clear: both;
+    }
+    .uwa-form .field {
+        zoom: 1;
+    }
+
+        .uwa-form label {
+            float:left;
+            display:block;
+            font-weight:bold;
+            text-align: right;
+            width: 30%;
+            padding: 5px 5px 0 0;
+        }
+
+        .rtl .uwa-form label {
+            float: right;
+            text-align: left;
+        }
+
+        .uwa-form input,
+        .uwa-form select {
+            float:left;
+            padding: 2px;
+            width: 58%;
+        }
+
+        .rtl .uwa-form input,
+        .rtl .uwa-form select {
+            float: right;
+        }
+
+        .uwa-form select {
+            width: 60%;
+            min-width: 155px;
+        }
+
+        .uwa-form .submit,
+        .uwa-form .button,
+        .uwa-form .reset {
+            float: none;
+            width: auto;
+            min-width: 0;
+            text-align: center;
+        }
+
+    .uwa-form .fieldBoolean label {
+        text-align: left;
+        width: auto;
+        margin: 2px 0 0 25px;
+        padding: 0 0 0 30%;
+    }
+
+    .rtl .uwa-form .fieldBoolean label {
+        padding: 0 30% 0 0;
+        margin: 2px 25px 0 0;
+    }
+
+    .uwa-form .fieldBoolean span {
+        position: absolute;
+        vertical-align: middle;
+        left: 30%;
+    }
+
+    .rtl .uwa-form .fieldBoolean span {
+        left: 0;
+        right: 30%;
+    }
+
+    .uwa-form .fieldBoolean span input {
+        margin: 3px 5px 0 7px;
+        width: auto;
+        min-width: 0;
+    }
+
+    /* UIKit only */
+    .uwa-form-uikit .fieldBoolean label {
+        margin-left: 45px;
+    }
+
+    .rtl .uwa-form-uikit .fieldBoolean label {
+        margin-right: 45px;
+    }
+
+    .uwa-form-uikit .fieldBoolean .uwa-toggle {
+        margin: -1px 0 0 18px;
+    }
+
+    .rtl .uwa-form-uikit .fieldBoolean .uwa-toggle {
+        margin: -1px 18px 0 0;
+    }
+
+    .rtl .uwa-form .fieldBoolean span input {
+        margin: 3px 7px 0 5px;
+    }
+
+    .uwa-form .fieldSubmit span,
+    .uwa-form .fieldButton span,
+    .uwa-form .fieldReset span {
+        padding: 0 0 5px 7px;
+        margin-left: 30%;
+    }
+
+    .rtl .uwa-form .fieldSubmit span,
+    .rtl .uwa-form .fieldButton span,
+    .rtl .uwa-form .fieldReset span {
+        padding: 0 7px 5px 0;
+        margin-right: 30%;
+    }
+
+    .uwa-form .fieldHtml div {
+        padding: 5px;
+    }
+
+    .uwa-form .fieldTextarea textarea {
+        margin: 0 0 10px 10px;
+        width: 58%;
+    }
+
+    .uwa-form .fieldChecklist {
+        display: flex;
+    }
+
+    .uwa-form .fieldChecklist .checklist {
+        width: 70%;
+    }
+
+    .uwa-form .fieldChecklist .checklist label {
+        text-align: left;
+    }
+
+    .uwa-form .fieldChecklist .checklist p {
+        display: flex;
+    }
+
+    .uwa-form .fieldImg {
+        line-height: 0px;
+    }
+
+/* IE : fixe */
+.uwa-form .fieldBoolean label {
+    *margin: 5px 0 0 40px;
+    _margin: 5px 0 0 25px;
+    *text-align: right;
+}
+
+.uwa-form .fieldBoolean {
+    *padding: 5px 0 0 0;
+}
+
+.uwa-form select {
+   *width: 59%;
+}

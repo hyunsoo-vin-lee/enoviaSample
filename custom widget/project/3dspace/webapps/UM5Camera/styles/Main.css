@@ -1,0 +1,32 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+video {
+    width: 100%;
+}
+#canvas4Picture {
+    display: none;
+}
+
+#btnPicture {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 1.5em;
+    color: #1a8ad1;
+    cursor: pointer;
+}
+
+#btnNextCamera {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 1.5em;
+    color: #1a8ad1;
+    cursor: pointer;
+}
+#btnNextCamera.show {
+    display: block;
+}

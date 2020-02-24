@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>UM5 Widget</title>
+
+	<meta name="author" content="UM5" />
+	<meta name="description" content="UM5 Widget" />
+	<meta name="apiVersion" content="1.3" />
+	<meta name="debugMode" content="false" />
+	<meta name="strictMode" content="false" />
+
+	<!-- Other Scripts -->
+
+	<script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+
+	<!-- Application Preferences -->
+
+	<widget:preferences>
+		<widget:preference name="wdgTitle" type="text" label="Widget Title" defaultValue='' />
+
+		<widget:preference name="baseURL" type="text" label="Base URL for the Server managing the Quizzs" defaultValue='https://3dexp.18xfd01.ds/3DSpace'
+		/>
+		<widget:preference name="confName" type="text" label="Quizz Name" defaultValue='' />
+
+		<widget:preference type="boolean" name="checkDispOneByOne" label="Display questions results one by one" defaultValue='false'
+		/>
+	</widget:preferences>
+
+
+	<!-- Widget files -->
+
+	<link rel="stylesheet" type="text/css" href="styles/Main.css" />
+	<script type="text/javascript" src="scripts/Main.js"></script>
+
+	<!-- Wait for widget global object to be added to the page by 3DDashboard frame -->
+
+	<script type="text/javascript">
+		function widgetLoading() {
+			if (widget) {
+				executeWidgetCode();
+			} else {
+				console.warn("Defered widget Loading");
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+		}
+		widgetLoading();
+	</script>
+
+</head>
+
+<body>
+	<p>Widget is Loading...</p>
+</body>
+
+</html>

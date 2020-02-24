@@ -1,0 +1,1 @@
+define("UWA/Controls/FeedView/Normal",["UWA/Core","UWA/Controls/FeedView"],function(c,b){var a=b.Full.extend({viewName:"normal"});return c.namespace("Controls/FeedView_Normal",a,c)});

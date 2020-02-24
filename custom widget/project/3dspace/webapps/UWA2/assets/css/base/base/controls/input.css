@@ -1,0 +1,654 @@
+
+/* Common styles */
+.uwa-input {
+    position: relative;
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+    margin: 0 1em;
+}
+
+.uwa-input,
+.uwa-select-dropdown {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    color: #666666;
+    line-height: 1;
+    font-size: 14px;
+
+    outline: none;
+    cursor: pointer;
+
+    text-align: left;
+}
+
+/* generic focus shadow */
+.uwa-input {
+    transition: box-shadow 0.3s;
+    box-shadow: 0 0 0 4px transparent;
+}
+
+.uwa-input.focus,
+.uwa-select-dropdown {
+    box-shadow: 0 0 0 4px rgba(119, 119, 119, .18);
+}
+
+.uwa-input.disabled {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    cursor: default;
+}
+
+    .uwa-input.small {
+        height: 24px;
+    }
+
+    .uwa-input.small,
+    .uwa-select-dropdown.small {
+        font-size: 12px;
+    }
+
+    .uwa-input.large {
+        height: 54px;
+        font-size: 20px;
+    }
+
+    .uwa-input * {
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+    }
+
+    .uwa-input-input {
+        line-height: 100%;
+        color: inherit;
+        font: inherit;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0;
+        outline: none;
+    }
+
+        .uwa-input-input.hidden-input {
+            position: absolute;
+            left: -10000px;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+    .uwa-input-split {
+        display: table;
+        border-collapse: separate;
+        width: 100%;
+        height: 32px;
+        border-spacing: 0;
+    }
+        .uwa-input-split.small {
+            height: 24px;
+        }
+        .uwa-input-split.large {
+            height: 54px;
+        }
+
+        .uwa-input-split > * {
+            display: table-cell;
+            vertical-align: middle;
+            height: auto;
+        }
+
+        .uwa-input-split > :first-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            -webkit-background-clip: padding-box;
+                    background-clip: padding-box;
+            border-right: none;
+        }
+
+        .uwa-input-split > :last-child {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            -webkit-background-clip: padding-box;
+                    background-clip: padding-box;
+        }
+
+    .uwa-input-text {
+        padding: 4px .8em;
+        border: 1px solid #dadada;
+        background-color: #fff;
+    }
+
+    .uwa-input-text.small {
+        padding: 0 .4em;
+    }
+
+    .uwa-input.disabled.uwa-input-text,
+    .uwa-input.disabled .uwa-input-text {
+        background-color: transparent;
+    }
+
+    .uwa-input-button {
+        height: 100%;
+        background-color: #DADADA;
+        color: #444444;
+        border: 1px solid #dadada;
+    }
+    .uwa-input-split .uwa-input-button {
+        width: 1%;
+    }
+    .uwa-input-button .uwa-icon {
+        height: 100%;
+    }
+    .uwa-input-button.small .uwa-icon {
+        width: 24px;
+    }
+
+        .uwa-input.hover .uwa-input-button {
+            background-color: #e3e3e3;
+        }
+        .uwa-input.active .uwa-input-button {
+            background-color: #cacaca;
+        }
+
+    .uwa-input-content {
+        height: 100%;
+        width: 100%;
+    }
+
+.uwa-text,
+.uwa-file,
+.uwa-select {
+    width: 15em;
+}
+.uwa-file.hover,
+.uwa-select.hover,
+.uwa-select-dropdown:hover {
+    box-shadow: 0 0 0 4px rgba(196, 196, 196, .4);
+}
+
+.uwa-select.dropdown-visible {
+    transition: none;
+    box-shadow: 0 0 0 4px transparent;
+}
+
+/* Input text */
+.uwa-text {
+    border-radius: 4px;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    cursor: text;
+    font-family: inherit;
+}
+
+    .uwa-text {
+        box-shadow: 0 0 0 4px transparent, inset 0 0 0 1000px white;
+    }
+
+    .uwa-text.hover {
+        box-shadow: 0 0 0 4px rgba(196, 196, 196, .4), inset 0 0 0 1000px white;
+    }
+
+    .uwa-text.focus {
+        box-shadow: 0 0 0 4px rgba(124, 175, 32, .6), inset 0 0 0 1000px white;
+    }
+
+    .uwa-text.disabled {
+        box-shadow: 0 0 0 4px transparent;
+    }
+
+    .uwa-text.multiline {
+        height: 5em;
+    }
+
+    .uwa-text-placeholder {
+        position: absolute;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #666666;
+    }
+
+    .uwa-text::-moz-placeholder,
+    .uwa-text::-webkit-input-placeholder {
+        color: #666666;
+        opacity: 1;
+    }
+
+    input.uwa-text::-webkit-input-placeholder {
+        line-height: 1.33em;
+    }
+
+
+/* Input select */
+
+.uwa-select,
+.uwa-select.small{
+    border-radius: 4px;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    background-color: #fff;
+    cursor: pointer;
+    height: auto;
+}
+    .uwa-select.disabled {
+        background-color: transparent;
+    }
+    .uwa-select-dropdown {
+        border-radius: 4px 4px;
+        z-index: 1000000; /* ONE MILLION!!!!! */
+    }
+    .uwa-select-dropdown .uwa-select-options {
+        max-height: 250px;
+    }
+    .uwa-select-dropdown .uwa-themed-scroller {
+        background-color: #f0f0f0;
+    }
+    .uwa-select-dropdown .uwa-input-text {
+        border-radius: 4px 0 0 0;
+    }
+    .uwa-select-dropdown .uwa-input-button {
+        border-radius: 0 4px 0 0;
+    }
+    .uwa-select-dropdown-top .uwa-input-text {
+        border-radius: 0 0 0 4px;
+    }
+    .uwa-select-dropdown-top .uwa-input-button {
+        border-radius: 0 0 4px 0;
+    }
+    .uwa-select-dropdown .selected {
+        background-color: #CACACA;
+        color: #333333;
+    }
+    .uwa-select-dropdown .selected:after {
+        content: 'r';
+        position: absolute;
+        right: 15px;
+        font-family: uwa-icons;
+        font-size: 20px;
+        line-height: 10px;
+    }
+
+    .uwa-select-dropdown .option {
+        border-top: 1px solid #dadada;
+    }
+
+    .uwa-select-dropdown .optgroup {
+        background-color: #E3ECE1;
+        border-bottom: 1px solid #dadada;
+        font-weight: bold;
+    }
+
+        .uwa-select-dropdown .optgroup.selected {
+            background-color: #569941;
+        }
+        .uwa-select-dropdown .optgroup.selected:after {
+            font-weight: normal;
+            color: #fff;
+        }
+    .uwa-select-dropdown .option,
+    .uwa-select-dropdown .optgroup {
+        line-height: 16px;
+        cursor: pointer;
+    }
+    .uwa-select-button .uwa-icon:before {
+        content: 'j';
+    }
+    .uwa-select-button.small .uwa-icon:before {
+        content: 'D';
+    }
+
+    .uwa-select-options > * {
+        padding: 5px 18px;
+        border-top: 1px solid #dadada;
+    }
+    .uwa-select-options > :first-child {
+        border-top: 0;
+    }
+    .uwa-select-options .option:hover {
+        background-color: #ffffff;
+    }
+    .uwa-select-options .optgroup ~ .option {
+        border-top: 0;
+    }
+    .uwa-select-options .optgroup ~ .option:before {
+        content: '•';
+        color: #CACACA;
+        margin-right: 10px;
+    }
+    .uwa-select-options .optgroup ~ .option.selected:before {
+        color: #FFF;
+    }
+
+
+/* Input radio / checkbox */
+.uwa-toggle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999999;
+}
+
+    .uwa-radio .uwa-radio-content:before               { background-color: transparent; }
+    .uwa-checkbox                                      { color: transparent;            }
+
+    .uwa-radio.hover .uwa-radio-content:before         { background-color: #cacaca;     }
+    .uwa-checkbox.hover                                { color: #cacaca;                }
+
+    .uwa-radio.checked .uwa-radio-content:before,
+    .uwa-radio.hover.light .uwa-radio-content:before   { background-color: #666666;     }
+
+    .uwa-checkbox.checked,
+    .uwa-checkbox.hover.light                          { color: #666666;                }
+
+    .uwa-radio.checked.light .uwa-radio-content:before { background-color: #ffffff;     }
+    .uwa-checkbox.checked.light                        { color: #ffffff;                }
+
+    .uwa-radio.checked.disabled .uwa-radio-content:before { background-color: #999999; }
+    .uwa-checkbox.checked.disabled                     { color: #999999; }
+
+.uwa-radio {
+    border-radius: 1000px;
+}
+
+.uwa-checkbox {
+    border-radius: 2px;
+}
+
+    .uwa-radio.hover {
+        cursor: pointer;
+    }
+
+    .uwa-toggle-content:before {
+        position: absolute;
+
+        transition: color .3s, background-color .3s;
+    }
+
+    .uwa-radio .uwa-radio-content:before {
+        content: ' ';
+        border-radius: 1000px;
+
+        height: 8px;
+        width: 8px;
+        top: 4px;
+        left: 4px;
+    }
+
+    .uwa-checkbox .uwa-checkbox-content:before {
+        content: 'r';
+
+        font-size: 31px;
+
+        height: 0;
+        width: 0;
+        left: -1px;
+        top: -14px;
+    }
+
+    /* Switch */
+    .uwa-checkbox.switch {
+        border: none;
+        background-color: #666666;
+        border-radius: 1000px;
+        height: 28px;
+        width: 62px;
+    }
+        .uwa-checkbox-content.switch {
+            position: relative;
+            top: 4px;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 1000px;
+            transition: left .3s;
+        }
+        .uwa-checkbox.switch.checked .uwa-checkbox-content {
+            left: 38px;
+        }
+        .uwa-checkbox-content.switch:before {
+            content: '';
+        }
+
+        /* Small switch */
+        .uwa-checkbox.switch.small {
+            width: 32px;
+            height: 14px;
+        }
+        .uwa-checkbox-content.switch.small {
+            width: 10px;
+            height: 10px;
+            top: 2px;
+            left: 2px;
+        }
+        .uwa-checkbox.switch.small.checked .uwa-checkbox-content {
+            left: 20px;
+        }
+
+/* Input File */
+.uwa-file {
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    white-space: nowrap;
+}
+    .uwa-file-input.hidden-input {
+        left: 0;
+        /* On Firefox, the width of an input file can't be set through CSS.
+         * Thus, a simple solution is to set the text-align to right in order
+         * to align the input where the button is. */
+        text-align: right;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .uwa-file.disabled .uwa-file-input.hidden-input {
+        cursor: default;
+    }
+
+    .uwa-file-text {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .uwa-file-split .uwa-file-button {
+        padding: 0;
+        width: 6em;
+        text-align: center;
+    }
+
+    .uwa-file-split {
+        table-layout: fixed;
+    }
+
+
+/* Input button */
+.uwa-button {
+    /* Override default user agent style: -webkit-small-control */
+    font-family: inherit;
+    border-radius: 4px;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    line-height: 28px;
+    padding: 0 14px;
+    text-align: center;
+    border: 0;
+    text-decoration: none;
+}
+    .uwa-button::-moz-focus-inner {
+        border: 0;
+    }
+
+    .uwa-button.small {
+        line-height: 20px;
+        padding: 0 12px;
+        border-radius: 3px;
+    }
+
+    .uwa-button.large {
+        line-height: 50px;
+        padding: 0 21px 4px;
+        border-radius: 5px;
+    }
+
+    /* Icons */
+    .uwa-button:before {
+        line-height: 28px;
+        width: 28px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: inherit;
+        -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+        text-align: center;
+    }
+
+    .uwa-button.small:before {
+        width: 24px;
+        line-height: 20px;
+    }
+
+    .uwa-button.large:before {
+        width: 42px;
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .uwa-button.iconr:before {
+        right: 0;
+        left: auto;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .uwa-button.iconl:before {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .uwa-button.icon-only {
+        padding: 0;
+    }
+
+    /* default icon sizes, button padding + width */
+    .uwa-button.iconr.icon-separated       { padding-right: 46px; /* 32 + 14 */ }
+    .uwa-button.iconr                      { padding-right: 28px; /* 2 * 14 */  }
+    .uwa-button.iconl.icon-separated       { padding-left: 46px;  /* 32 + 14 */ }
+    .uwa-button.iconl                      { padding-left: 28px;  /* 2 * 14 */  }
+
+    .uwa-button.icon-separated:before,
+    .uwa-button.icon-separated:before,
+    .uwa-button.icon-only,
+    .uwa-button.icon-only:before           { width: 32px;                       }
+
+    .uwa-button.small.iconr.icon-separated { padding-right: 36px; /* 24 + 12 */ }
+    .uwa-button.small.iconr                { padding-right: 24px; /* 2 * 12 */  }
+    .uwa-button.small.iconl.icon-separated { padding-left: 36px;  /* 24 + 12 */ }
+    .uwa-button.small.iconl                { padding-left: 24px;  /* 2 * 12 */  }
+
+    .uwa-button.small.icon-separated:before,
+    .uwa-button.small.icon-separated:before,
+    .uwa-button.small.icon-only,
+    .uwa-button.small.icon-only:before     { width: 24px;                       }
+
+    .uwa-button.large.iconr.icon-separated { padding-right: 75px; /* 54 + 21 */ }
+    .uwa-button.large.iconr                { padding-right: 42px; /* 2 * 21 */  }
+    .uwa-button.large.iconl.icon-separated { padding-left: 75px;  /* 54 + 21 */ }
+    .uwa-button.large.iconl                { padding-left: 42px;  /* 2 * 21 */  }
+
+    .uwa-button.large.icon-separated:before,
+    .uwa-button.large.icon-only,
+    .uwa-button.large.icon-only:before     { width: 54px;                       }
+
+
+    /* Common themes styles */
+    .uwa-button {
+        color: white;
+        -webkit-font-smoothing: antialiased;
+                font-smoothing: antialiased;
+    }
+
+    .uwa-button.icon-separated:before   { background-color: rgba(0, 0, 0, 0.25); }
+
+    /* Green theme */
+    .uwa-button.green                   { background-color: #7caf20; }
+    .uwa-button.green.hover             { background-color: #8fc232; }
+    .uwa-button.green.active            { background-color: #72a515; }
+
+    /* Light grey theme */
+    .uwa-button.light-grey              { background-color: #dadada; color: #444444; }
+    .uwa-button.light-grey.hover        { background-color: #e3e3e3; }
+    .uwa-button.light-grey.active       { background-color: #cacaca; }
+
+    /* Medium grey theme */
+    .uwa-button.medium-grey             { background-color: #666666; }
+    .uwa-button.medium-grey.hover       { background-color: #7c7c7c; }
+    .uwa-button.medium-grey.active      { background-color: #444444; }
+
+    /* Dark grey theme */
+    .uwa-button.dark-grey               { background-color: #444444; }
+    .uwa-button.dark-grey.hover         { background-color: #4c4c4c; }
+    .uwa-button.dark-grey.active        { background-color: #333333; }
+
+    .uwa-button.dark-grey:before        { background-color: #333333; }
+    .uwa-button.dark-grey.hover:before  { background-color: #3b3b3b; }
+    .uwa-button.dark-grey.active:before { background-color: #272727; }
+
+    /* Extra dark grey theme */
+    .uwa-button.extra-dark-grey               { background-color: #262626; }
+    .uwa-button.extra-dark-grey.hover         { background-color: #323232; }
+    .uwa-button.extra-dark-grey.active        { background-color: #1e1e1e; }
+
+    .uwa-button.extra-dark-grey:before        { background-color: #1d1d1d; }
+    .uwa-button.extra-dark-grey.hover:before  { background-color: #232323; }
+    .uwa-button.extra-dark-grey.active:before { background-color: #121212; }
+
+    .uwa-button.delete.icon-separated:before           { background-color: #883431; }
+    .uwa-button.delete.icon-separated.hover:before     { background-color: #893936; }
+    .uwa-button.delete.icon-separated.active:before    { background-color: #B50F0D; }
+
+    .uwa-button.border-only {
+        border: #aaa 2px solid;
+        color: #666;
+        background-color: transparent;
+    }
+    .uwa-button.border-only.hover:not(.active) {
+        border-color: #cacaca;
+        color: #999;
+    }
+    .uwa-button.light-border-only {
+        border: #666 2px solid;
+        color: #aaa;
+        background-color: transparent;
+    }
+    .uwa-button.light-border-only.hover,
+    .uwa-button.light-border-only.click {
+        border-color: #999;
+        color: #fff;
+    }
+
+/* Input Tag */
+
+    .uwa-tag {
+        white-space: nowrap;
+    }
+    .uwa-tag .uwa-tag-title {
+        display:inline-block;
+        vertical-align: top;
+    }
+
+    .uwa-tag .uwa-tag-close {
+        display:none;
+        margin:-1px -8px 0 7px;
+        font-size: 18px;
+        opacity:0.5;
+    }
+
+    .uwa-tag.closable .uwa-tag-close{
+        display:inline-block;
+    }

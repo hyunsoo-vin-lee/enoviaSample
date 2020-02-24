@@ -1,0 +1,1 @@
+define("UWA/Class/Debug",["UWA/Core","UWA/Class"],function(c,a){var b=a.extend({debugMode:false,setDebugMode:function(d){this.debugMode=(d===true||d==="true");return this},log:function(d){if(this.debugMode===true){c.log(d)}return this}});return c.namespace("Debug",b,a)});

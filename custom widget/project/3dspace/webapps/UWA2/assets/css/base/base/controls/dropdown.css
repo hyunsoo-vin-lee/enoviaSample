@@ -1,0 +1,75 @@
+.uwa-dropdown {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1001;
+    text-align: left; /* reset the text align in case it is injected in something with a different text-align */
+}
+
+.uwa-dropdown.global {
+    z-index: 1000000;
+}
+
+.uwa-dropdown.uwa-pointydropdown {
+    overflow: visible;
+}
+
+.uwa-pointydropdown-point {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+
+    font-family: 'uwa-icons';
+    line-height: 0;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+
+    margin: -11px -20px;
+    padding: 6px 0 0 0;
+
+    /* We have to set a box here, so the character won't overflow the container
+     * and leak on the targeted element */
+    width: 40px;
+    height: 14px;
+
+    cursor: default;
+
+    /* Fix box-sizing to content-box, in the case we have a box-sizing:
+     * border-box everywhere */
+    box-sizing: content-box;
+}
+
+.uwa-pointydropdown-point.side {
+    overflow: visible;
+
+    margin: -4px 17px 0 -15px;
+    padding: 0;
+    width: 0;
+    height: 0;
+}
+
+.uwa-pointydropdown-inner {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.uwa-pointydropdown .uwa-pointydropdown-point {
+    color: #CACACA;
+}
+
+.uwa-pointydropdown > .uwa-pointydropdown-inner {
+    padding: 6px;
+    background-color: #CACACA;
+}
+
+.uwa-pointydropdown-point.dark {
+    color: #444;
+}
+
+.uwa-pointydropdown-inner.dark {
+    color: #FFF;
+    background-color: #444;
+}

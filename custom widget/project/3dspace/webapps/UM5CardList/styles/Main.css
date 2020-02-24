@@ -1,0 +1,189 @@
+p {
+    border-bottom: 1px solid grey;
+}
+
+table {
+    /*border: 1px solid grey;*/
+    min-width: 100%;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+    background-color: #005686;
+    color: white;
+    border: none;
+}
+
+td {
+    /*border: 1px solid #DEDEDE;*/
+    padding: 5px;
+    /*white-space: nowrap;*/
+    vertical-align: top;
+    font-size: 1.05em;
+}
+
+tr.rowodd {
+    background-color: #f6f6f6;
+}
+
+tr.selected {
+    background-color: #e4eef8;
+}
+tr.rowodd.selected {
+    background-color: #d3e3f3;
+}
+
+td.highlighted {
+    background-color: yellow;
+}
+
+div.inCellValue {
+    display: inline-block;
+    margin-right: 4px;
+    border-right: 1px solid lightgrey;
+    padding-right: 4px;
+}
+
+div.inCellValue.highlighted {
+    background-color: yellow;
+}
+
+div.selectedFilter {
+    background-color: navy;
+    color: white;
+}
+
+a:link,
+a:visited {
+    text-decoration: underline !important;
+    color: #062775 !important;
+}
+img.typeIcon {
+    height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+div.DnD {
+    display: inline-block;
+    cursor: move;
+    padding-right: 16px;
+}
+
+.divImageBlock {
+    width: 32px;
+    height: 32px;
+    padding: 8px 7px 8px 7px;
+    text-align: center;
+    border: solid 1px #7a7a7a;
+    background: linear-gradient(135deg, #ffffff 10%, #b9e8f9 100%);
+    box-sizing: content-box;
+}
+.divImageBlock::before {
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.inlineInfo {
+    display: inline-block;
+    margin-right: 1.25em;
+    line-height: 1.45em;
+}
+.inlineLabel {
+    display: inline-block;
+    /*font-weight: bold;*/
+    color: #9e9e9e;
+}
+.inlineValue {
+    display: inline-block;
+    margin-left: 0.5em;
+}
+.blockInfo {
+    display: block;
+}
+
+.separator {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#divFilter {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    border: 1px solid #c8c8c8;
+    box-shadow: 1px 1px 3px #bfbfbf;
+}
+#divFilter div.imgFilter {
+    background-image: url("../assets/icons/Filter.png");
+    height: 20px;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    margin: 2px;
+}
+
+.toolbar {
+    background-color: #ececec;
+    border-bottom: 1px solid grey;
+}
+.toolbarButton {
+    display: inline-block;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 0.15em;
+    cursor: pointer;
+    height: 1.4em;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    color: grey;
+    margin-right: 4px;
+    box-shadow: 1px 1px 2px 0px lightgrey;
+}
+.toolbarButton:hover {
+    background-color: #c6deec;
+}
+
+/* Create Issue Panel */
+#divCreateIssue {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 0px lightgrey;
+    overflow: auto;
+}
+td.issueLabel {
+    background-color: #e7e7e7;
+}
+
+div#dropRepAgainst {
+    border: 1px dashed #8bb0ed;
+    border-radius: 5px;
+    padding: 4px;
+}
+.removeRepAgainst {
+    background-image: url("../assets/icons/iconActionListRemove.gif");
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+}
+.botBar {
+    text-align: right;
+}

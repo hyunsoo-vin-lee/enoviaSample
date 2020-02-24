@@ -1,0 +1,50 @@
+
+p{
+	border-bottom: 1px solid grey;
+}
+
+div.DnD{
+	display: inline-block;
+}
+
+.toolbar{
+	background-color: #ececec;
+	border-bottom: 1px solid grey;
+}
+.toolbarButton{
+	display: inline-block;
+	cursor: pointer;
+	border: 1px solid grey;
+	margin: 1px;
+	border-radius: 4px;
+	background-color: #ececec;
+	height: 16px;
+	padding: 2px;
+	padding-left:4px;
+	padding-right:4px;
+}
+.toolbarButton:hover{
+	background-color: #c6deec;
+}
+
+table{
+	border: 1px solid grey;
+	min-width: 100%;
+}
+
+th{
+	padding : 0px;
+}
+
+td{
+	border: 1px solid #DEDEDE;
+	padding: 5px;
+}
+
+td.formHeader{
+	padding-right: 10px;
+	background-color: #005686;
+	color: white;
+	font-weight: bold;
+}
+

@@ -1,0 +1,183 @@
+{
+    "urlSendResult": "https://3dexp.18xfd01.ds/3DSpace/UM5QuizzModeler/UM5QuizzWS/quizzSLC/addResults",
+    "urlGetResult": "https://3dexp.18xfd01.ds/3DSpace/UM5QuizzModeler/UM5QuizzWS/quizzSLC/getResults",
+    "urlWebSocket": "wss://3dexp.18xfd01.ds/UM5QuizzWebSocket",
+    "head": "Demo Quizz <b>3D</b>EXPERIENCE",
+    "startPage": {
+        "img": "https://3dexp.18xfd01.ds/Widgets/UM5Quizz/assets/compass.png",
+        "imgCss": "max-height:4em;",
+        "text": "Please could you spend 1 minute to give your vision about <a href='https://3ds.com/'><b>3D</b>EXPERIENCE Platform</a> usages"
+    },
+    "endPage": {
+        "img": "https://3dexp.18xfd01.ds/Widgets/UM5Quizz/assets/compassEnd.png",
+        "imgCss": "max-height:8em;",
+        "text": "Thanks for taking this Quizz !<br/><br/>You are now ready to discover few usages of the <a href='https://3ds.com/'><b>3D</b>EXPERIENCE Platform</a> you may not think about!"
+    },
+    "questions": [{
+            "type": "MultiChoice",
+            "min": 1,
+            "question": "1 - How would you perceive <b>3D</b>EXPERIENCE Platform?",
+            "choices": [
+                "Digital Platform",
+                "CLOUD",
+                "Business intelligence Services",
+                "PLM Services",
+                "Automation Services (Cobots, Machine learning...)",
+                "Marketplace for 3D",
+                "Social Services",
+                "Mobile User Experience"
+            ]
+        },
+        {
+            "type": "YesNo",
+            "question": "2 - Can <b>3D</b>EXPERIENCE Platform display, connect & analyse data from my customer legacy systems ?",
+            "correct": ["yes"]
+        },
+        {
+            "type": "MultiChoice",
+            "min": 1,
+            "question": "3 - What usage(s) of <b>3D</b>EXPERIENCE Platform do you plan to explore with your customers ?",
+            "choices": [
+                "Digital Platform",
+                "CLOUD",
+                "Business intelligence Services",
+                "PLM Services",
+                "Automation Services (Cobots, Machine learning...)",
+                "Marketplace for 3D",
+                "Social Services",
+                "Mobile User Experience"
+            ]
+        },
+        {
+            "type": "OneChoice",
+            "min": 1,
+            "question": "4 - What is the valid sequence of actions to create and share a new dashboard ?",
+            "choices": [
+                "1- Drag & drop widgets from compass<br/><br/>2- Share dashboard",
+                "1- Add dashboard <br/><br/>2- Drag & drop widgets from compass<br/><br/>3- Share dashboard",
+                "1- Call a friend",
+                "1- Add new tab<br/><br/>2- Drag & drop widgets from compass<br/><br/>3- Share tab"
+            ],
+            "correct": ["1- Add dashboard <br/><br/>2- Drag & drop widgets from compass<br/><br/>3- Share dashboard"]
+        },
+        {
+            "type": "MultiLevelChoice",
+            "question": "5 - Choose your organization :",
+            "choices": [{
+                    "value": "XCOM"
+                },
+                {
+                    "value": "BT",
+                    "childs": [{
+                        "value": "BT WW"
+                    }, {
+                        "value": "BT Geo",
+                        "childs": [{
+                            "value": "AMERICAS"
+                        }, {
+                            "value": "EMEAR"
+                        }, {
+                            "value": "ASIA"
+                        }]
+                    }]
+                },
+                {
+                    "value": "R&D"
+                },
+                {
+                    "value": "Industry",
+                    "childs": [{
+                            "value": "T&M"
+                        },
+                        {
+                            "value": "A&D"
+                        },
+                        {
+                            "value": "M&O"
+                        },
+                        {
+                            "value": "IE"
+                        },
+                        {
+                            "value": "HT"
+                        },
+                        {
+                            "value": "CG"
+                        },
+                        {
+                            "value": "CPG"
+                        },
+                        {
+                            "value": "LS"
+                        },
+                        {
+                            "value": "EPU"
+                        },
+                        {
+                            "value": "CGR"
+                        },
+                        {
+                            "value": "AEC"
+                        },
+                        {
+                            "value": "FaBS"
+                        },
+                        {
+                            "value": "NR"
+                        },
+                        {
+                            "value": "Other"
+                        }
+                    ]
+                },
+                {
+                    "value": "DSIS"
+                },
+                {
+                    "value": "Other"
+                }
+            ]
+        },
+        {
+            "type": "FreeText",
+            "question": "6 - Give Some Feedback :"
+        },
+        {
+            "type": "Evaluate",
+            "min": 1,
+            "max": 7,
+            "step": 2,
+            "question": "7 - From 1 to 6 Evaluate the thing :",
+            "labelMin": "Worst",
+            "labelMax": "Best",
+            "dispN/A": true
+        },
+        {
+            "type": "YesNo",
+            "question": "8 - Yes show Question 9, No show question 10",
+            "correct": ["yes"]
+        },
+        {
+            "type": "FreeText",
+            "question": "9 - You clicked on yes, why ?",
+            "showIf": {
+                "questionIndex": 7,
+                "condition": "equals",
+                "value": "yes"
+            }
+        },
+        {
+            "type": "FreeText",
+            "question": "10 - You clicked on no, why ?",
+            "showIf": {
+                "questionIndex": 7,
+                "condition": "equals",
+                "value": "no"
+            }
+        },
+        {
+            "type": "FreeText",
+            "question": "11 - Some feedback on this quizz ?"
+        }
+    ]
+}

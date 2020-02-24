@@ -1,0 +1,135 @@
+.uwa-colorpicker-well {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+.uwa-colorpicker-value + .uwa-colorpicker-button .uwa-colorpicker-well {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Saturation+lightness picker */
+.uwa-colorpicker-dropdown > .uwa-dropdown-inner {
+    padding: 15px;
+}
+
+.uwa-colorpicker-selector {
+    width: 261px;
+}
+
+
+.uwa-colorpicker-sl-picker {
+    display: inline-block;
+    
+    position: relative;
+    
+    width: 220px;
+    height: 220px;
+}
+
+.uwa-colorpicker-sl-picker-canvas {
+    border-radius: 3px;
+}
+
+.uwa-colorpicker-sl-picker-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -8px;
+    margin-top: -8px;
+    
+    width: 16px;
+    height: 16px;
+    
+    background: red;
+    border: 3px solid rgb(242, 242, 242);
+    border-radius: 30px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .6), 0px 0px 1px rgba(0, 0, 0, .45) inset;
+}
+
+/* Hue picker */
+.uwa-colorpicker-hue-picker {
+    display: inline-block;
+    
+    position: relative;
+    
+    margin-left: 15px;
+}
+
+.uwa-colorpicker-hue-picker-arrows {
+    position: absolute;
+    top: 0;
+    left: -7px;
+    right: -7px;
+    margin-top: -7px
+}
+
+.uwa-colorpicker-hue-picker-arrows:before {
+    content: "";
+    display: inline-block;
+    
+    border: solid 7px transparent;
+    border-left-color: rgba(255, 255, 255, 0.39);
+}
+
+.uwa-colorpicker-hue-picker-arrows:after {
+    content: "";
+    display: inline-block;
+    
+    position: absolute;
+    right: 0;
+    
+    border: solid 7px transparent;
+    border-right-color: rgba(255, 255, 255, 0.39);
+}
+
+/* Hex field */
+.uwa-colorpicker-hex-field {
+    display: inline-block;
+    
+    position: relative;
+    margin-top: 8px;
+}
+
+.uwa-colorpicker-hex-field-input {
+    margin: 0;
+    
+    width: 166px; /* 166 - 21 */
+    padding-left: 21px;
+    
+    text-transform: lowercase;
+    font-family: monospace;
+}
+
+.uwa-colorpicker-clear-button {
+    display: inline-block;
+    
+    position: relative;
+    vertical-align: top;
+    right: 24px;
+    top: 12px;
+    
+    width: 16px;
+    height: 16px;
+    
+    color: #cbcbcb;
+}
+
+.uwa-colorpicker-hex-field-icon {
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    
+    font-size: 1.1em;
+    color: rgb(140, 140, 140);
+}
+
+/* Button */
+.uwa-colorpicker-done-button {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    
+    width: 80px;
+}

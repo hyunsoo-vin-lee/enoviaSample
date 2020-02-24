@@ -1,0 +1,1 @@
+define("DS/UWPClientControls/UWPClientControls_ru",{});define("DS/UWPClientControls/assets/nls/tooltips",{menu:"Меню"});

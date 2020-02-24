@@ -1,0 +1,13 @@
+<meta charset="UTF-8"/>
+UPSCommands.UPSAuthUnparent.Title="切り離し";
+UPSCommands.UPSAuthInsertExistingProductOrPart.Title="既存を挿入";
+UPSCommands.UPSAuthInsertProductConfiguration.Title="プロダクト コンフィグレーションを挿入";
+UPSCommands.UPSAuthReplaceByExisting.Title="既存で置換";
+UPSCommands.UPSAuthReplaceByRevision.Title="リビジョンで置換";
+UPSCommands.UPSReplaceByLatestRevision.Title="最新リビジョンで置換";
+UPSCommands.UPSAuthReplaceByLatestRevision.Title="最新リビジョンで置換";
+UPSCommands.UPSAuthRevisionUpdate.Title="リビジョンを更新";
+UPSCommands.UPSAuthReplaceByRevision.Title="リビジョンで置換";
+UPSCommands.UPSAuthReorderProduct.Title="リオーダ";
+
+AuthCommands.PADTools.Title="ツール";

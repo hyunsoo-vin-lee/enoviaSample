@@ -1,0 +1,101 @@
+
+.um5-body-graph{
+	min-width : 320px;
+	min-height : 240px;
+	height : 100%;
+	overflow : auto;
+	position: relative;
+}
+
+.um5-node-view {
+	/* Mandatory properties for Node View */
+    display:         inline-block;
+    position:        absolute;
+    -moz-box-sizing: border-box;
+    box-sizing:      border-box;
+}
+
+.um5-node-view {
+	border-radius: 8px;
+	background: RGBA(230, 243, 252, 0.8);
+    color: #19400F;
+    text-align: left;
+    padding: 4px;
+    cursor: move;
+	border : 2px solid grey;
+}
+
+.um5-node-view.selected{
+	border-color: #476ecb;
+	background-color: RGBA(186, 245, 255, 0.8);
+}
+
+.um5-node-filtered{
+	opacity: 0.3;
+}
+
+.um5-node-top{
+	height: 32%;
+}
+.um5-node-middle{
+	height: 33%;
+	margin-left: 22px;
+	text-align: left;
+}
+.um5-node-bottom{
+	height: 33%;
+}
+.um5-node-inline{
+	display: inline-block;
+}
+
+.um5-node-typeIcon{
+	position: absolute;
+	top: 20px;
+}
+
+.um5-node-ctx-menu{
+	position: absolute;
+	background-color: rgb(248, 248, 248);
+	top: 45px;
+	left: 110px;
+	z-index: 30;
+	border-collapse: collapse;
+	width: 100px;
+	text-align: left;
+}
+.um5-node-ctx-command{
+	border: 1px solid grey;
+	padding-left: 4px;
+	padding-right: 4px;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+.um5-node-ctx-command:hover{
+	background-color: #e4e4e4;
+	color: #3094dd;
+}
+
+.um5-connector-generic{
+	fill: lightgrey;
+	stroke: grey;
+}
+
+.um5-connector-expand{
+	fill: lightgrey;
+	stroke: grey;
+	stroke-width: 2;
+}
+
+.um5-edge-view{
+	/* Mandatory properties for Edge View */
+    fill: none;
+    stroke: grey;
+    stroke-width: 2;
+}
+
+.um5-edge-view.selected{
+    stroke: #0ad4ff;/* cyan */
+    stroke-width: 3;
+}

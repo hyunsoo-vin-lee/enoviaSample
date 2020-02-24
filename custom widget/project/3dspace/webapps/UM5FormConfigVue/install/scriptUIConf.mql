@@ -1,0 +1,73 @@
+
+# Add attribute UIConfType.
+#
+
+add attribute UIConfType
+	type string
+	range = form
+	range = table
+	default form;
+
+# Add attribute UIConfJSON.
+#
+
+add attribute UIConfJSON
+	type string
+	description "JSON Content";
+
+# Add type UIConf.
+#
+
+add type UIConf
+	description "Object to manage UI Customization of Widget"
+	abstract false
+	attribute UIConfJSON
+	attribute UIConfType;
+
+# Add attribute UIConfRights.
+#
+
+add attribute UIConfRights
+	type integer
+	description "Int from Binary access vector"
+	default 0;
+
+# Add relation UIConfToUser.
+#
+
+add relation UIConfToUser
+	Attribute UIConfRights
+	from
+		type UIConf
+		cardinality n
+		revision none
+		clone none
+		notpropagatemodify
+		propagateconnection
+	to
+		type Person
+		cardinality n
+		revision none
+		clone none
+		notpropagatemodify
+		propagateconnection;
+
+# Add policy UIConf.
+#
+
+add policy UIConf
+	notenforce 
+	description "UI Conf policy"
+	sequence ""
+	store STORE
+	type UIConf
+	state Exist
+		version false
+		revision true
+		promote false
+		checkouthistory false
+		owner all
+		public all;
+modify policy 'UIConf'
+	state 'Exist';
+	

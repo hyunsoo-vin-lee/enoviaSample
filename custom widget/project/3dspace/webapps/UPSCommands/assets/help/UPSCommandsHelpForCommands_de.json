@@ -1,0 +1,23 @@
+{
+"UPSAuthInsertExistingProductOrPart.Title":"Vorhandenes Objekt einfügen",
+"UPSAuthInsertExistingProductOrPart.ShortHelp":"Fügt ein vorhandenes Produkt oder Teil bzw. eine vorhandene Darstellung innerhalb der Struktur hinzu.",
+"UPSAuthInsertExistingProductOrPart.LongHelp":"Wählen Sie ein oder mehrere Produkte als übergeordnet aus und wählen Sie dann mithilfe einer Suche eine der folgenden Optionen aus. <tm tmtype = 'service' tmclass = '3D'>3D</tm>EXPERIENCE Objekte, die einzufügen sind: Produkt, Teil, Form oder Zeichnung. <p>Dieser Befehl ist mit der Änderungsaktion kompatibel (einschließlich der Konfiguration). </p>",
+"UPSAuthReplaceByExisting.Title":"Durch vorhandenes ersetzen",
+"UPSAuthReplaceByExisting.ShortHelp":"Ersetzt ein Objekt durch ein vorhandenes Objekt desselben Typs.",
+"UPSAuthReplaceByExisting.LongHelp":"Wählen Sie ein Objekt und anschließend ein vorhandenes Objekt mithilfe einer Suche aus.",
+"UPSReplaceByLatestRevision.Title":"Durch neueste Revision ersetzen",
+"UPSReplaceByLatestRevision.ShortHelp":"Ersetzt ein Produkt oder Teil durch seine neueste Revision (wenn vorhanden), um Ihre Struktur mit den neuesten Änderungen zu aktualisieren (nicht verfügbar für Darstellungen).",
+"UPSReplaceByLatestRevision.LongHelp":"Wählen Sie mindestens ein Produkt (außer dem Stamm) oder Teil aus, bevor Sie diesen Befehl ausführen.",
+"UPSAuthReplaceByRevision.Title":"Durch Revision ersetzen",
+"UPSAuthReplaceByRevision.ShortHelp":"Aktualisiert die ausgewählten Produkte oder Teile einer Struktur mit einer vorhandenen Revision (nicht verfügbar für Darstellungen). <p>Das Fenster <uicontrol>Durch Revision ersetzen</uicontrol> zeigt die Produktstruktur in einer flachen Ansicht an. </p>",
+"UPSAuthRevisionUpdate.Title":"Revisionen aktualisieren",
+"UPSAuthRevisionUpdate.ShortHelp":"Aktualisiert eine Struktur mit einer vorhandenen Revision ihrer Produkte und Teile (nicht verfügbar für Darstellungen). <p>Das Fenster <uicontrol>Revision aktualisieren</uicontrol> zeigt die Produktstruktur in einer hierarchischen Ansicht. In der ersten Spalte gibt ein Symbol an, ob die aktuelle Revision ersetzt werden kann. </p>",
+"UPSAuthUnparent.Title":"Zuordnung aufheben",
+"UPSAuthUnparent.ShortHelp":"Entfernt die ausgewählte Instanz aus der Struktur.",
+"UPSAuthUnparent.LongHelp":"Dieser Befehl ist mit der Änderungsaktion kompatibel (einschließlich der Konfiguration).",
+"UPSAuthReorderProduct.Title":"Neu anordnen",
+"UPSAuthReorderProduct.ShortHelp":"Ordnet untergeordnete Elemente der ausgewählten Baugruppe neu an.",
+"UPSAuthReplaceByRevision.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthRevisionUpdate.WebHelp":"/pste-r-ui-ActBar-Edit.htm#pste-r-ui-ActBar-Edit/rs-FlyoutforReplacingObject",
+"UPSAuthReorderProduct.WebHelp":"PsteUserMap/psd-t-Reorder.htm#psd-t-Reorder"
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Frame Test Page</title>
+
+    <meta name="author" content="UM5" />
+    <meta name="description" content="UM5 Smart Frame Widget" />
+    <meta name="apiVersion" content="1.3" />
+    <meta name="debugMode" content="false" />
+    <meta name="strictMode" content="false" />
+
+    <!-- Other Scripts -->
+
+    <script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./scripts/dsPlatformAPI.js"></script>
+
+    <script type="text/javascript">
+        //Post message code
+        /*
+        function receivedPostMessage(ev) {
+            console.debug(new Date().toLocaleTimeString() + " - Post Message received : ", ev);
+            var msg = ev.data;
+            console.debug(new Date().toLocaleTimeString() + " - Message received : ", msg);
+        }
+        window.addEventListener("message", receivedPostMessage, false);
+
+        var $btnTest = $("<button>Test postMessage</button>");
+
+        function testPostMessage() {
+            window.parent.postMessage("Test Post Message from iFrame to Widget", "*");
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+        */
+
+        function testPostMessage() {
+            dsPlatformAPI.publish("SmartFrame/Test", {
+                "info": "Message from Frame"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testLoadPID() {
+            dsPlatformAPI.publish("loadOperPID", "75744CB6000037E05AFD45EC00009964");
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testLoadNameRev() {
+            dsPlatformAPI.publish("loadOper", {
+                "name": "gop00000022",
+                "revision": "A"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testSelectByRefName() {
+            dsPlatformAPI.publish("selectInWKIViewer", {
+                "ReferenceName": "prvd00001166"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testSelectByInstName() {
+            dsPlatformAPI.publish("selectInWKIViewer", {
+                "InstanceName": "Solar Panel_Default.141"
+            });
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function testUnselectAll() {
+            dsPlatformAPI.publish("unselectAllInWKIViewer", "");
+            console.debug(new Date().toLocaleTimeString() + " - Post message sent");
+        }
+
+        function clearLogs() {
+            $("#logDiv").empty();
+        }
+
+
+        dsPlatformAPI.subscribe("SmartFrame/Test", function (data) {
+            console.debug("Message received due to subcribe - SmartFrame/Test: ", data);
+            $("#logDiv").append(JSON.stringify(data));
+            $("#logDiv").append("<br>");
+        });
+
+        dsPlatformAPI.subscribe("Select_Path_WKI", function (data) {
+            console.debug("Message received due to subcribe - Select_Path_WKI : ", data);
+            $("#logDiv").append(JSON.stringify(data));
+            $("#logDiv").append("<br>");
+        });
+    </script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            border: 1px dotted black;
+            font-family: Arial;
+        }
+
+        h1 {
+            color: #000;
+            background-color: #59bfff;
+            margin: 0;
+            padding: 0.1em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            background-color: #e0e0e0;
+            margin-top: 0px;
+            padding: 0.05em;
+        }
+
+        div#logDiv {
+            overflow: auto;
+            height: 40%;
+            margin: 0.5em;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ERP Page</h1>
+    <h2>To simulate interaction capabilities with other widgets.</h2>
+    <p>Post Message Test Page</p>
+    <button onclick="testPostMessage();">Test Send Post Message</button>
+    <br/>
+    <button onclick="testLoadPID();">Test Load Operation by physicalid</button>
+    <button onclick="testLoadNameRev();">Test Load Operation by Name and Rev</button>
+    <br/>
+    <button onclick="testSelectByRefName();">Test Select by Reference Name</button>
+    <button onclick="testSelectByInstName();">Test Select by Instance Name</button>
+    <br/>
+    <button onclick="testUnselectAll();">Test Unselect All</button>
+    <div>Logs :
+        <button onclick="clearLogs();">Clear</button>
+    </div>
+    <div id="logDiv"></div>
+</body>
+
+</html>

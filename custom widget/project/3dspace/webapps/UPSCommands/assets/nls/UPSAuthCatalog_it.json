@@ -1,0 +1,36 @@
+{
+  "type_3DShape": "Forma 3D",
+  "type_EC": "Componente CATIA incorporato",
+  "type_Representation":"Rappresentazione",
+  "type_PhysicalProduct": "Prodotto fisico",
+  "operationAborted_Cycle": "Operazione annullata in quanto creerebbe dei cicli.",
+  "request_timedout": "Si è verificato il timeout della richiesta prima del completamento dell'operazione. Aggiornare il widget per ottenere le modifiche.",
+
+  "unparent_error_shape_from_3DPart" : "Non è possibile scollegare una forma 3D sotto una parte 3D.",
+
+  "verb_insert": "inserisci",
+  "insert_existing_failed": "Inserimento esistente non riuscito.",
+  "insert_existing_failed_with_reason": "Inserimento esistente non riuscito: ",
+
+  "verb_reparent": "Associa con un nuovo elemento padre",
+  "reparent_failed": "Associazione con un nuovo elemento padre non riuscita.",
+  "reparent_failed_with_reason": "Associazione con un nuovo elemento padre non riuscita: ",
+  "reparent_failed_target_3DPart": "Non è possibile {verb} sotto un oggetto di tipo Parte 3D.",
+  "reparent_failed_target_invalid": "È possibile {verb} solo sotto oggetti di tipo Prodotto fisico.",
+  "reparent_failed_source_invalid": "Non è possibile {verb} un oggetto di tipo {type}.",
+  "reparent_failed_parent_config":"Le operazioni di associazione con un nuovo elemento padre sono disattivate se l'oggetto padre ha un contesto di configurazione.",
+
+  "authoring_failed_EC":"Non è possibile utilizzare i comandi Inserisci, Aggiorna, Sostituisci con, Copia/Taglia/Incolla con un componente incorporato.",
+  "replace_V6_under_V5": "Non è possibile sostituire un oggetto V5 con un oggetto V6 sotto un oggetto padre V5.",
+
+  "move3D_success": "Spostamento 3D riuscito.",
+
+  "UPSAuthRevisionUpdate": "Aggiorna revisioni",
+  "UPSAuthRevisionUpdate_report": "Aggiorna report revisioni",
+  
+  "UPSAuthReplaceByRevision": "Sostituisci con revisione",
+  "UPSAuthReplaceByRevision_report": "Report Sostituisci con revisione",
+  
+  "UPSAuthReplaceByLatestRevision": "Sostituisci con ultima revisione",
+  "UPSAuthReplaceByLatestRevision_report": "Report Sostituisci con ultima revisione"
+}

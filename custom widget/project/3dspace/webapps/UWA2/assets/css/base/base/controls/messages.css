@@ -1,0 +1,147 @@
+/*
+  Script: messages.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2013 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+*/
+
+/*
+  Base classes to display a message in UWA.
+
+  Use the uwa-message base class for a basic display. You can then style it however you
+  want to. In addition to this class, you can use one of .{alert|simple|notice|error|warning}
+  predefined stylings
+
+  background-image are base64 encoded SVG. To modify one or create a new one, decode the base64 string.
+
+  You can generate this file with the following bash script
+
+svg='
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="s" x1="0" y1="0" x2="0" y2="100%">
+<stop offset="0" style="stop-color:#555;stop-opacity:0.2"/>
+<stop offset="100%" style="stop-color:#555;stop-opacity:0"/>
+</linearGradient>
+</defs>
+<rect x="16" y="0" width="100%" height="100%" style="fill:#{{background}}"/>
+<rect x="0" y="16" width="16" height="100%" style="fill:#{{background}}"/>
+<path d="m 0,16 19,3 -3,-3 z" style="fill:url(#s);"/>
+<path d="m 0,0 -3,3 19,-3 z" style="fill:url(#s);" transform="rotate(-90 16 0)"/>
+<path d="m 0,16 16,0 0,-16 z" style="fill:#{{highlight}};"/>
+</svg>
+'
+
+b64 () {
+    background=$3
+    highlight=$2
+    class=$1
+    color=$4
+
+    echo -n "
+.uwa-message$class {"
+
+    if [ -z "$class" ]; then
+        echo -n "
+    padding: 12px 12px 12px 24px;
+    margin: 4px 0;
+    color: #FFF;"
+    fi
+
+    if [ -n "$color" ]; then
+    echo -n "
+    color: #$color;"
+    fi
+
+    echo -n "
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,"
+    echo "$svg" | tr -d '\n' | sed 's/{{highlight}}/'$highlight'/g' | sed 's/{{background}}/'$background'/g' | base64 -w 0
+    echo -n "');
+}
+
+.ie6 .uwa-message$class,
+.ie7 .uwa-message$class,
+.ie8 .uwa-message$class {
+    background: #$background;
+}"
+}
+
+b64 ''       666    444
+b64 .simple  BCBCBC ECECEC 666
+b64 .notice  96BCDE 2F7BBD
+b64 .error   CB9594 972C2B
+b64 .warning FFCF99 F80
+b64 .success BBD6B3 569941
+*/
+
+
+.uwa-message {
+    padding: 12px 12px 12px 24px;
+    margin: 4px 0;
+    color: #FFF;
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNTU1O3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NTU7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIxNiIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzQ0NCIvPjxyZWN0IHg9IjAiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzQ0NCIvPjxwYXRoIGQ9Im0gMCwxNiAxOSwzIC0zLC0zIHoiIHN0eWxlPSJmaWxsOnVybCgjcyk7Ii8+PHBhdGggZD0ibSAwLDAgLTMsMyAxOSwtMyB6IiBzdHlsZT0iZmlsbDp1cmwoI3MpOyIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDE2IDApIi8+PHBhdGggZD0ibSAwLDE2IDE2LDAgMCwtMTYgeiIgc3R5bGU9ImZpbGw6IzY2NjsiLz48L3N2Zz4=');
+}
+
+/* targetting only IE 8 7 & 6 */
+.ie6 .uwa-message,
+.ie7 .uwa-message,
+.ie8 .uwa-message {
+    background: #444;
+}
+.uwa-message.simple {
+    color: #666;
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNTU1O3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NTU7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIxNiIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I0VDRUNFQyIvPjxyZWN0IHg9IjAiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I0VDRUNFQyIvPjxwYXRoIGQ9Im0gMCwxNiAxOSwzIC0zLC0zIHoiIHN0eWxlPSJmaWxsOnVybCgjcyk7Ii8+PHBhdGggZD0ibSAwLDAgLTMsMyAxOSwtMyB6IiBzdHlsZT0iZmlsbDp1cmwoI3MpOyIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDE2IDApIi8+PHBhdGggZD0ibSAwLDE2IDE2LDAgMCwtMTYgeiIgc3R5bGU9ImZpbGw6I0JDQkNCQzsiLz48L3N2Zz4=');
+}
+
+/* targetting only IE 8 7 & 6 */
+.ie6 .uwa-message.simple,
+.ie7 .uwa-message.simple,
+.ie8 .uwa-message.simple {
+    background: #ECECEC;
+}
+.uwa-message.notice {
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNTU1O3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NTU7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIxNiIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzJGN0JCRCIvPjxyZWN0IHg9IjAiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzJGN0JCRCIvPjxwYXRoIGQ9Im0gMCwxNiAxOSwzIC0zLC0zIHoiIHN0eWxlPSJmaWxsOnVybCgjcyk7Ii8+PHBhdGggZD0ibSAwLDAgLTMsMyAxOSwtMyB6IiBzdHlsZT0iZmlsbDp1cmwoI3MpOyIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDE2IDApIi8+PHBhdGggZD0ibSAwLDE2IDE2LDAgMCwtMTYgeiIgc3R5bGU9ImZpbGw6Izk2QkNERTsiLz48L3N2Zz4=');
+}
+
+/* targetting only IE 8 7 & 6 */
+.ie6 .uwa-message.notice,
+.ie7 .uwa-message.notice,
+.ie8 .uwa-message.notice {
+    background: #2F7BBD;
+}
+.uwa-message.error {
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNTU1O3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NTU7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIxNiIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6Izk3MkMyQiIvPjxyZWN0IHg9IjAiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6Izk3MkMyQiIvPjxwYXRoIGQ9Im0gMCwxNiAxOSwzIC0zLC0zIHoiIHN0eWxlPSJmaWxsOnVybCgjcyk7Ii8+PHBhdGggZD0ibSAwLDAgLTMsMyAxOSwtMyB6IiBzdHlsZT0iZmlsbDp1cmwoI3MpOyIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDE2IDApIi8+PHBhdGggZD0ibSAwLDE2IDE2LDAgMCwtMTYgeiIgc3R5bGU9ImZpbGw6I0NCOTU5NDsiLz48L3N2Zz4=');
+}
+
+/* targetting only IE 8 7 & 6 */
+.ie6 .uwa-message.error,
+.ie7 .uwa-message.error,
+.ie8 .uwa-message.error {
+    background: #972C2B;
+}
+.uwa-message.warning {
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNTU1O3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NTU7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIxNiIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I0Y4MCIvPjxyZWN0IHg9IjAiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I0Y4MCIvPjxwYXRoIGQ9Im0gMCwxNiAxOSwzIC0zLC0zIHoiIHN0eWxlPSJmaWxsOnVybCgjcyk7Ii8+PHBhdGggZD0ibSAwLDAgLTMsMyAxOSwtMyB6IiBzdHlsZT0iZmlsbDp1cmwoI3MpOyIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDE2IDApIi8+PHBhdGggZD0ibSAwLDE2IDE2LDAgMCwtMTYgeiIgc3R5bGU9ImZpbGw6I0ZGQ0Y5OTsiLz48L3N2Zz4=');
+}
+
+/* targetting only IE 8 7 & 6 */
+.ie6 .uwa-message.warning,
+.ie7 .uwa-message.warning,
+.ie8 .uwa-message.warning {
+    background: #F80;
+}
+.uwa-message.success {
+    background-image: url('data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJzIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojNTU1O3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1NTU7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIxNiIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzU2OTk0MSIvPjxyZWN0IHg9IjAiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzU2OTk0MSIvPjxwYXRoIGQ9Im0gMCwxNiAxOSwzIC0zLC0zIHoiIHN0eWxlPSJmaWxsOnVybCgjcyk7Ii8+PHBhdGggZD0ibSAwLDAgLTMsMyAxOSwtMyB6IiBzdHlsZT0iZmlsbDp1cmwoI3MpOyIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDE2IDApIi8+PHBhdGggZD0ibSAwLDE2IDE2LDAgMCwtMTYgeiIgc3R5bGU9ImZpbGw6I0JCRDZCMzsiLz48L3N2Zz4=');
+}
+
+/* targetting only IE 8 7 & 6 */
+.ie6 .uwa-message.success,
+.ie7 .uwa-message.success,
+.ie8 .uwa-message.success {
+    background: #569941;
+}

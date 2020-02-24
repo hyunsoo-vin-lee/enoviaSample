@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>UM5 Charts Widget</title>
+
+	<meta name="author" content="UM5" />
+	<meta name="description" content="UM5 Charts Widget" />
+	<meta name="apiVersion" content="1.3" />
+	<meta name="debugMode" content="false" />
+	<meta name="strictMode" content="false" />
+
+	<!-- Other Scripts -->
+
+	<script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+
+	<!-- Application Preferences -->
+	<widget:preferences>
+		<widget:preference type="hidden" name="ctx" label="3DSpace Context" defaultValue='' />
+		<!-- Preferences Config set -->
+		<widget:preference type="hidden" name="adminMode" label="Admin Mode" defaultValue='true' />
+
+		<!-- Config Find -->
+		<widget:preference type="hidden" name="configFind" label="Table Configuration (Find)" defaultValue='' />
+		<widget:preference type="text" name="configNameFind" label="New Configuration Name (Find)" defaultValue='' />
+
+		<!-- Get Roots -->
+		<widget:preference type="text" name="typeObjRoot" label="Type of Root Objects" defaultValue='Project Space' />
+		<widget:preference type="text" name="whereExpRoot" label="Where expression for Root Objects" defaultValue='' />
+
+		<!-- Advanced Find Roots -->
+		<widget:preference type="text" name="findProgram" label="Find Program" defaultValue='' />
+		<widget:preference type="text" name="findFunction" label="Find Function" defaultValue='' />
+		<widget:preference type="text" name="findParams" label="Additional Find Parameters (url format)" defaultValue='' />
+
+		<widget:preference type="text" name="selects" label="Infos to Select" defaultValue='name,revision,current,type' />
+
+		<widget:preference type="text" name="catKey" label="Key for Categorie" defaultValue='type' />
+		<widget:preference type="boolean" name="showData" label="Show Data" defaultValue='false' />
+
+		<widget:preference type="text" name="chartTitle" label="Chart Title" defaultValue='Type of Objects' />
+		<widget:preference type="boolean" name="dispChartTitle" label="Show Title also in chart" defaultValue='true' />
+		<widget:preference type="text" name="searchKeys" label="Search on keys" defaultValue='name' />
+		<widget:preference type="text" name="catOrder" label="Prefered Order for Categories" defaultValue='Create,Assign,Active,Review,Complete' />
+		<widget:preference type="text" name="catColors" label="Colors for Categories" defaultValue='Create:#f5e25a,Assign:#2a2ac2,Active:#f7a35c,Review:#7cb5ec,Complete:#90ed7d' />
+
+		<widget:preference type="list" name="chartMode" label="Chart Mode" defaultValue='pie'>
+			<widget:option label="Pie" value="pie"></widget:option>
+			<widget:option label="Bar" value="bar"></widget:option>
+			<widget:option label="Column" value="column"></widget:option>
+		</widget:preference>
+
+		<widget:preference type="boolean" name="filterExcludeMode" label="Filter in exclude Mode" defaultValue='false' />
+
+		<widget:preference type="list" name="filterMode" label="Filter Mode" defaultValue='OR'>
+			<widget:option label="Display Item if ONE filter criteria is Ok" value='OR' />
+			<widget:option label="Display Item if ALL filters criterias are Ok" value='AND' />
+		</widget:preference>
+
+		<!-- Cross Filter -->
+		<widget:preference type="text" name="receiveFilterKeys" label="Receive Filter Event (EventName|Key,...)" defaultValue='' />
+
+	</widget:preferences>
+
+
+	<!-- Widget files -->
+	<link rel="stylesheet" type="text/css" href="styles/Main.css" />
+	<script type="text/javascript" src="scripts/Main.js"></script>
+
+	<script type="text/javascript">
+		function widgetLoading() {
+			if (widget) {
+				executeWidgetCode();
+			} else {
+				console.warn("Defered widget Loading");
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+		}
+		widgetLoading();
+	</script>
+
+</head>
+
+<body>
+	<p>Widget is Loading...</p>
+</body>
+
+</html>

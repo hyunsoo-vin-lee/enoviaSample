@@ -1,0 +1,108 @@
+
+.uwa-themed-scroller {
+    position: relative;
+}
+
+.uwa-themed-scroller-content {
+    position: absolute;
+    overflow: auto;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.uwa-themed-scroller-content.no-native-scrollbars {
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+
+.uwa-themed-scroller-content.no-native-scrollbars::-webkit-scrollbar {
+    display: none;
+}
+
+.uwa-themed-scroller-scrollbar {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+    right: 0;
+    bottom: 0;
+}
+
+.uwa-themed-scroller-scrollbar:before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    background-color: #888;
+    transition: opacity 0.2s;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.uwa-themed-scroller-scrollbar.active:before,
+.uwa-themed-scroller-scrollbar.visible:before {
+    opacity: .5;
+    filter: alpha(opacity = 50);
+}
+
+.uwa-themed-scroller-scrollbar.active:before {
+    opacity: .8;
+    filter: alpha(opacity = 80);
+}
+
+.uwa-themed-scroller-scrollbar-y:before {
+    right: 4px;
+}
+
+.uwa-themed-scroller-scrollbar-x:before {
+    bottom: 4px;
+}
+
+.uwa-themed-scroller-shadow {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .15);
+    border: 1px solid rgba(0, 0, 0, .1);
+    z-index: 1;
+}
+
+.uwa-themed-scroller-shadow.dark {
+    box-shadow: 0 0 26px rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+
+.uwa-themed-scroller-shadow.active {
+    display: block;
+}
+
+.uwa-themed-scroller-shadow-x-start {
+    left: -100%;
+    left: calc(-100% + 1px);
+}
+.uwa-themed-scroller-shadow-x-end {
+    left: 100%;
+    left: calc(100% - 1px);
+}
+.uwa-themed-scroller-shadow-y-start {
+    top: -100%;
+    top: calc(-100% + 1px);
+}
+.uwa-themed-scroller-shadow-y-end {
+    top: 100%;
+    top: calc(100% - 1px);
+}

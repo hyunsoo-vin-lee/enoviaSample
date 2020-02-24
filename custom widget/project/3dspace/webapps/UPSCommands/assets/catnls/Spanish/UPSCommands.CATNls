@@ -1,0 +1,13 @@
+<meta charset="UTF-8"/>
+UPSCommands.UPSAuthUnparent.Title="Separar";
+UPSCommands.UPSAuthInsertExistingProductOrPart.Title="Insertar existente";
+UPSCommands.UPSAuthInsertProductConfiguration.Title="Insertar configuración del producto";
+UPSCommands.UPSAuthReplaceByExisting.Title="Sustituir por existente";
+UPSCommands.UPSAuthReplaceByRevision.Title="Sustituir por revisión";
+UPSCommands.UPSReplaceByLatestRevision.Title="Sustituir por la revisión más reciente";
+UPSCommands.UPSAuthReplaceByLatestRevision.Title="Sustituir por la revisión más reciente";
+UPSCommands.UPSAuthRevisionUpdate.Title="Actualizar revisiones";
+UPSCommands.UPSAuthReplaceByRevision.Title="Sustituir por revisión";
+UPSCommands.UPSAuthReorderProduct.Title="Reordenar";
+
+AuthCommands.PADTools.Title="Herramientas";

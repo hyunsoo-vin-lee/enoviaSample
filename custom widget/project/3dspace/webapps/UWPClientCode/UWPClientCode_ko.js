@@ -1,0 +1,1 @@
+define("DS/UWPClientCode/UWPClientCode_ko",{});define("DS/UWPClientCode/assets/nls/Undo/undo",{deletionMessage:"삭제됨",elementMessage:"요소",ClickToUndoMessage:"실행 취소하려면 클릭하십시오."});

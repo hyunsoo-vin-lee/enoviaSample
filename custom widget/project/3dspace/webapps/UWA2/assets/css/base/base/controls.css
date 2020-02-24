@@ -1,0 +1,379 @@
+/*
+  Script: extras.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+/* Import Controls Stylesheet */
+@import "controls/form.css";
+@import "controls/pager.css";
+@import "controls/tabview.css";
+@import "controls/feedview.css";
+@import "controls/segmented.css";
+@import "controls/accordion.css";
+@import "controls/overlay.css";
+@import "controls/audioplayer.css";
+@import "controls/searchform.css";
+@import "controls/calendar.css";
+@import "controls/picker.css";
+@import "controls/notify.css";
+@import "controls/tooltip.css";
+@import "controls/embedtooltip.css";
+@import "controls/popupmenu.css";
+@import "controls/datagrid.css";
+@import "controls/dropdown.css";
+@import "controls/input.css";
+@import "controls/colorpicker.css";
+@import "controls/autocomplete.css";
+@import "controls/enhanced-textarea.css";
+@import "controls/slider.css";
+@import "controls/messages.css";
+@import "controls/widgetmenu.css";
+@import "controls/themed-scroller.css";
+@import "controls/web.css";
+
+@import "icons.css";
+
+/* Following class is for cache manifest only */
+.UWAmanifest {
+   background: url(img/logout.png);
+   background: url(img/download.png);
+   background: url(img/play.png);
+   background: url(img/play_overlay.png);
+   background: url(img/s.gif);
+   background: url(img/loader.gif);
+   background: url(img/article.png);
+   background: url(img/clear.gif);
+   background: url(img/dragandfollow.png);
+   background: url(img/shareicon.png);
+   background: url(cursor/closedhand.cur);
+   background: url(cursor/openhand.cur);
+}
+
+/* External Links
+
+  XHTML skeleton:
+  (start code)
+  TODO
+  (end code)
+*/
+a.external {
+    text-decoration: none;
+}
+
+a.external:hover {
+    text-decoration: underline;
+}
+
+/* Datagrid
+
+  XHTML skeleton:
+  (start code)
+  TODO
+  (end code)
+*/
+.nv-datagrid {
+    width: 99%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+
+/* IE6 : fixe */
+* html .nv-datagrid {
+    width: 93%;
+}
+
+    .nv-datagrid th {
+        font-weight: bold;
+        background: #EFF5FF;
+        border-bottom: 1px solid #C1D8FF;
+        padding: 3px;
+    }
+
+    .nv-datagrid td {
+        border: 1px solid #efefef;
+        padding: 3px;
+        margin: 0;
+    }
+
+    .nv-datagrid tfoot td{
+        border-top: 1px solid #DDD;
+    }
+
+    /* Odd/Even */
+    .nv-datagrid .odd{
+        background: transparent;
+    }
+
+    .nv-datagrid .even{
+        background: #F6F9FF;
+    }
+
+
+/* Richlist , ThumbnailedList , Productlist
+
+  XHTML skeleton:
+  (start code)
+  TODO
+  (end code)
+*/
+.nv-feedList li {
+    background: url(img/bullet.png) no-repeat;
+    background-position: 0 5px;
+    padding: 1px 10px;
+}
+
+.nv-richList,
+.nv-thumbnailedList,
+.nv-productList{
+    margin: 0;
+    padding: 0;
+}
+    .nv-thumbnailedList .item,
+    .nv-richList .item,
+    .nv-productList .item {
+        background-image: none;
+        margin: 0;
+        padding: 5px;
+    }
+
+    /* IE : fixe */
+    * html .nv-thumbnailedList .item,
+    * html .nv-richList .item,
+    * html .nv-productList .item {
+        height: 1%;
+    }
+
+    .nv-feedList a a.link-action,
+    .nv-thumbnailedList a a.link-action,
+    .nv-richList a a.link-action,
+    .nv-productList a a.link-action {
+        float: right;
+        padding: 0 5px 0 0;
+    }
+
+    .nv-productList .item{
+        padding: 0 5px;
+    }
+
+    /* Clear */
+    /* Contain floats: h5bp.com/q */
+    .nv-feedList .item:before, .nv-feedList .item:after,
+    .nv-thumbnailedList .item:before, .nv-thumbnailedList .item:after,
+    .nv-richList .item:before, .nv-richList .item:after,
+    .nv-productList .item:before, .nv-productList .item:after {
+        content: "";
+        display: table;
+    }
+
+    .nv-feedList .item:after,
+    .nv-thumbnailedList .item:after,
+    .nv-richList .item:after,
+    .nv-productList .item:after {
+        clear: both;
+    }
+
+    .nv-feedList .item,
+    .nv-thumbnailedList .item,
+    .nv-richList .item,
+    .nv-productList .item {
+        zoom: 1;
+    }
+
+    .nv-thumbnailedList .item h3,
+    .nv-thumbnailedList .item h3 a,
+    .nv-richList .item h3,
+    .nv-richList .item h3 a,
+    .nv-productList .price {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .nv-feedList .item .age,
+    .nv-thumbnailedList .item .age,
+    .nv-richList .item .age,
+    .nv-productList .age {
+        color: #AAAAAA;
+        white-space: nowrap;
+    }
+
+    .nv-thumbnailedList .even,
+    .nv-richList .even,
+    .nv-productList .even {
+         background-color: #F6F9FF;
+    }
+
+    .nv-thumbnailedList .item h3 a,
+    .nv-richList .item h3 a{
+        cursor: pointer;
+    }
+
+    .nv-thumbnailedList .item .thumbnail,
+    .nv-productList .item img.thumbnail {
+        float: left;
+        margin-right: 5px;
+    }
+
+    .nv-thumbnailedList .item img.thumbnail{
+        width: 92px;
+        height: 52px;
+    }
+
+    .nv-productList .item img.thumbnail{
+        width: 50px;
+        height: 50px;
+    }
+
+    .nv-thumbnailedList .item h3,
+    .nv-thumbnailedList .item .description{
+        text-align: left;
+    }
+
+    .nv-thumbnailedList .has-thumbnail h3,
+    .nv-thumbnailedList .has-thumbnail .description {
+        margin-left: 97px;
+        margin-right: 0;
+    }
+
+    .rtl .nv-thumbnailedList .item h3,
+    .rtl .nv-thumbnailedList .item .description {
+        text-align: right;
+    }
+
+    .rtl .nv-thumbnailedList .has-thumbnail h3,
+    .rtl .nv-thumbnailedList .has-thumbnail .description {
+        margin-left: 0;
+        margin-right: 97px;
+    }
+
+    .nv-productList .item .description{
+        margin: 0 0 0 55px;
+        padding: 5px 0;
+        line-height: 1em;
+    }
+
+    .nv-thumbnailedList .read,
+    .nv-thumbnailedList .read h3,
+    .nv-thumbnailedList .read h3 a {
+        color: #999999;
+    }
+
+    .nv-feedList .time-infos,
+    .nv-thumbnailedList .time-infos {
+        color: #AAA;
+    }
+
+/* EmailList
+
+  XHTML skeleton:
+  (start code)
+  <dl class="nv-emailList">
+    <dt class="read">
+      <a href="#" title="Read e-mail">
+      <span class="sender">Sender</span> - My e-mail subject #1</a>
+    </dt>
+    <dd>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus condimentum.</p>
+    </dd>
+
+    <dt class="read even">
+      <a href="#" title="Read e-mail">
+      <span class="sender">Sender</span> - My e-mail subject #2</a>
+    </dt>
+    <dd>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus condimentum.</p>
+    </dd>
+  </dl>
+  (end code)
+*/
+dl.nv-emailList dt {
+    color: #333;
+    margin: 0;
+}
+
+dl.nv-emailList dt a{
+    display: block;
+    background: transparent;
+    border-bottom: 1px solid #FFF;
+}
+
+dl.nv-emailList dt a:hover{
+    background: #FFFFE0;
+    border-bottom: 1px solid #DCDC87;
+}
+
+dl.nv-emailList .read .sender {
+    font-weight: normal;
+}
+
+dl.nv-emailList .unread .sender{
+    font-weight: bold;
+}
+
+dl.nv-emailList dd {
+    margin: 0;
+    border-bottom: 1px solid #DDE8F5;
+    margin-bottom: 4px;
+}
+
+dl.nv-emailList dd p {
+    color: #549B3F;
+    padding: 2px 2px 0 6px;
+    margin: 5px 5px 5px 8px;
+    border-left: 4px solid #DFEBFF;
+}
+
+/* SearchList
+
+  XHTML skeleton:
+  (start code)
+  TODO
+  (end code)
+*/
+.nv-searchList .item h3,
+.nv-searchList .item h3 a {
+    color: #00C;
+}
+
+.nv-searchList .item h3 a:visited{
+    color: #551A8B;
+}
+.nv-searchList .item p a {
+    color: green;
+}
+
+
+/* ProductList
+
+  XHTML skeleton:
+  (start code)
+  TODO
+  (end code)
+*/
+.nv-productList .offer{
+    float: right;
+    color: #36C;
+}
+.nv-productList .price,
+.nv-productList .product,
+.nv-productList .merchant{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.nv-productList .merchant{
+    color: #36C;
+}
+

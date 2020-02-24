@@ -1,0 +1,136 @@
+/*
+  Script: audioplayer.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+
+/* vanilla theme*/
+
+.uwa-audioplayer {
+    height:28px;
+    background: #dadada;
+    color: #444444;
+    margin: 0 auto;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #dadada;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+}
+
+.uwa-audioplayer .play-pause {
+    cursor: pointer;
+    height: 28px;
+    min-width: 28px;
+    text-align: center;
+    line-height:24px;
+    background: transparent;
+    font-size: 12px;
+}
+.uwa-audioplayer.playing .play-pause {
+    background: transparent;
+}
+
+.uwa-audioplayer .play-pause::before {
+    content:">"
+}
+
+.uwa-audioplayer.playing .play-pause::before {
+    content:"<";
+}
+
+.uwa-audioplayer.waiting .play-pause::before {
+    content:"P";
+}
+
+.uwa-audioplayer .controls-slider {
+    flex: 1 1 auto;
+    width:120px;
+}
+
+.uwa-audioplayer .scrubber-wrapper {
+    height: 28px;
+}
+.uwa-audioplayer .scrubber {
+    background: #CCC;
+    height: 10px;
+    top: 9px;
+    position: relative;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.uwa-audioplayer .controls-right,
+.uwa-audioplayer .controls-times {
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    min-width: 10px
+}
+
+.uwa-audioplayer .controls-times {
+    text-align: left;
+    width : 50px;
+}
+
+.uwa-audioplayer .close {
+    cursor: pointer;
+    line-height: 24px;
+    font-size: 20px;
+    min-width: 28px;
+    text-align:center;
+    background: transparent;
+}
+
+.uwa-audioplayer .close::before {
+    content: ',';
+}
+
+.uwa-audioplayer .close.close-hide {
+    display: none;
+}
+
+.uwa-audioplayer .played {
+    border-left: 1px solid #666;
+    color: #555;
+    padding: 0px 0px 0px 10px;
+}
+
+.uwa-audioplayer .duration {
+    padding: 0px 0px 0px 4px;
+    color: #888;
+}
+.uwa-audioplayer .duration.duration-hide {
+    display:none;
+}
+
+/* audioplayer dark theme */
+
+.uwa-audioplayer.dark,
+.uwa-audioplayer.dark .scrubber-wrapper,
+.uwa-audioplayer.dark .controls-slider {
+    background: transparent;
+    border-color: transparent;
+}
+
+.uwa-audioplayer.dark .play-pause,
+.uwa-audioplayer.dark .close,
+.uwa-audioplayer.dark .played {
+    color:#999999;
+}
+.uwa-audioplayer.dark .scrubber {
+    color:#666666;
+}

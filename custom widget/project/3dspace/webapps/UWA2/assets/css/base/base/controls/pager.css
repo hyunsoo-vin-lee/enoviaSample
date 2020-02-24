@@ -1,0 +1,132 @@
+/*
+  Script: pager.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    <div class="nv-pager">
+        <div class="loading">
+            <a class="prev disabled" href="#prev"><span>prev</span></a>
+            <a class="next" href="#next"><span>next</span></a>
+            <span class="pageLinks">
+                <a class="pageLink selected" href="#page_1">1</a>
+                <a class="pageLink" href="#page_2">2</a>
+                <a class="pageLink" href="#page_5">5</a>
+                <span class="comas"> ... </span>
+                <a class="pageLink" href="#page_17">17</a>
+          </span>
+        </div>
+    </div>
+    (end code)
+*/
+
+/*Pager*/
+.nv-pager {
+    text-align: center;
+    padding: 5px;
+    clear: both;
+}
+
+/* Clear */
+.nv-pager:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.nv-pager a:link,
+.nv-pager a:visited {
+    border: none;
+}
+
+.nv-pager a.disabled {
+    visibility: hidden;
+}
+
+/* Links: Next, Previous, More */
+.nv-pager a.next:hover,
+.nv-pager a.prev:hover {
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.nv-pager a.prev {
+    float: left;
+    padding: 1px 0 0 20px;
+    background: transparent url(../img/previous.gif) no-repeat left center;
+}
+
+.nv-pager a.more,
+.nv-pager a.next {
+    float: right;
+    padding: 1px 20px 0 0;
+    background: transparent url(../img/next.gif) no-repeat right center;
+}
+
+
+/* Links: Rtl */
+.rtl .nv-pager a.more,
+.rtl .nv-pager a.next {
+    float: left;
+    padding: 1px 0 0 20px;
+    background: transparent url(../img/previous.gif) no-repeat left center;
+}
+
+.rtl .nv-pager a.prev {
+    float: right;
+    padding: 1px 20px 0 0;
+    background: transparent url(../img/next.gif) no-repeat right center;
+}
+
+/* Links: Loading */
+.nv-pager .loading a,
+.nv-pager .loading a:hover {
+    color: #CCC;
+}
+
+.nv-pager .loading a.next {
+    background: transparent url(../img/ajax_loader.gif) right no-repeat;
+}
+
+/* Page Links */
+.nv-pager .pageLinks .selected {
+    font-weight:bold;
+    color: #F60;
+}
+
+.nv-pager .pageLinks .pageLink {
+    padding: 2px 5px;
+    margin: 0 3px 0 0;
+    border: 1px solid #EEE;
+    background: #FFF;
+}
+
+.nv-pager .pageLinks .pageLink:hover {
+    background: #EEE;
+}
+
+/* IE7 */
+/* TODO: Check if required */
+/*
+*:first-child+html .nv-pager {
+    display: inline-block;
+}
+
+*:first-child+html .nv-pager {
+    display: block;
+}
+
+* html .nv-pager{
+    height: 1%;
+}
+*/

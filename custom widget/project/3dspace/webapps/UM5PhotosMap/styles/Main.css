@@ -1,0 +1,62 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+html.uwa-framed {
+    overflow-y: hidden;
+}
+
+#appVue {
+    height: 100%;
+    /*background: #fafafa;*/
+    background: white;
+    position: relative;
+}
+
+div#app {
+    background: white;
+}
+
+.imgBlockPosition {
+    position: absolute;
+    box-sizing: border-box;
+
+}
+
+.imgBlockPosition:hover,
+.imgBlockPosition.showImage {
+    /*Have some max position for bottom and right to set a max to width and height*/
+    bottom: 0%;
+    right: 0%;
+}
+
+
+.imgBlockPosition>.imgBullet {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+}
+
+.imgBlockPosition.last>.imgBullet {
+    background-color: red;
+    border: 1px solid darkred;
+}
+
+.imgBlockPosition>.imgDisplay {
+    display: none;
+}
+
+.imgBlockPosition:hover>.imgDisplay,
+.imgBlockPosition.showImage>.imgDisplay {
+    display: block;
+    width: 200px;
+    max-width: 95%;
+    max-height: 95%;
+    position: relative;
+    left: -5px;
+    top: 5px;
+    box-shadow: 0.25em 0.25em 0.75em grey;
+}

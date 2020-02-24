@@ -1,0 +1,13 @@
+<meta charset="UTF-8"/>
+UPSCommands.UPSAuthUnparent.Title="Открепить";
+UPSCommands.UPSAuthInsertExistingProductOrPart.Title="Вставить существующие";
+UPSCommands.UPSAuthInsertProductConfiguration.Title="Вставить конфигурацию продукта";
+UPSCommands.UPSAuthReplaceByExisting.Title="Заменить существующим";
+UPSCommands.UPSAuthReplaceByRevision.Title="Заменить редакцией";
+UPSCommands.UPSReplaceByLatestRevision.Title="Заменить последней редакцией";
+UPSCommands.UPSAuthReplaceByLatestRevision.Title="Заменить последней редакцией";
+UPSCommands.UPSAuthRevisionUpdate.Title="Обновить редакции";
+UPSCommands.UPSAuthReplaceByRevision.Title="Заменить редакцией";
+UPSCommands.UPSAuthReorderProduct.Title="Переупорядочить";
+
+AuthCommands.PADTools.Title="Инструменты";

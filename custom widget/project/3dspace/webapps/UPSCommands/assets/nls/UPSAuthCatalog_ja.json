@@ -1,0 +1,36 @@
+{
+  "type_3DShape": "3D シェイプ",
+  "type_EC": "CATIA 埋め込み構成要素",
+  "type_Representation":"リプレゼンテーション",
+  "type_PhysicalProduct": "物理プロダクト",
+  "operationAborted_Cycle": "循環参照が生じるため、操作は中断されました。",
+  "request_timedout": "操作が完了する前に要求がタイム アウトになりました。変更内容を取得するために、ウィジェットをリフレッシュしてください。",
+
+  "unparent_error_shape_from_3DPart" : "3D シェイプは 3D パーツの下で切り離せません。",
+
+  "verb_insert": "挿入",
+  "insert_existing_failed": "既存を挿入に失敗しました。",
+  "insert_existing_failed_with_reason": "既存を挿入に失敗しました: ",
+
+  "verb_reparent": "再親化",
+  "reparent_failed": "再親化に失敗しました。",
+  "reparent_failed_with_reason": "再親化に失敗しました: ",
+  "reparent_failed_target_3DPart": "タイプ 3D パーツのオブジェクトの下に{verb}できません。",
+  "reparent_failed_target_invalid": "物理プロダクト タイプのオブジェクトの下では{verb}のみ可能です。",
+  "reparent_failed_source_invalid": "タイプ {type} のオブジェクトを{verb}できません。",
+  "reparent_failed_parent_config":"親オブジェクトに構成コンテキストがある場合は、再親化の操作は無効になります。",
+
+  "authoring_failed_EC":"組み込み構成要素の挿入、更新、置換、コピー/切り取り/貼り付けのいずれも実行できません。",
+  "replace_V6_under_V5": "V5 の親の下では、V5 オブジェクトを V6 オブジェクトに置換できません。",
+
+  "move3D_success": "正常に 3D を移動しました。",
+
+  "UPSAuthRevisionUpdate": "リビジョンを更新",
+  "UPSAuthRevisionUpdate_report": "リビジョンを更新レポート",
+  
+  "UPSAuthReplaceByRevision": "リビジョンで置換",
+  "UPSAuthReplaceByRevision_report": "リビジョンで置換レポート",
+  
+  "UPSAuthReplaceByLatestRevision": "最新リビジョンで置換",
+  "UPSAuthReplaceByLatestRevision_report": "最新リビジョンで置換レポート"
+}

@@ -1,0 +1,10 @@
+{
+    "gps": {
+        "top": 43.751909,
+        "bottom": 43.724761,
+        "left": 7.409116,
+        "right": 7.451119
+    },
+    "img": "assets/Monaco.png",
+    "defaultImages": []
+}

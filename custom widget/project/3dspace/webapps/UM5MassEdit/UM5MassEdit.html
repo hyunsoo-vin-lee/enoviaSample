@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>UM5 Indented Table Widget</title>
+
+	<meta name="author" content="UM5" />
+	<meta name="description" content="UM5 Indented Table Widget" />
+	<meta name="apiVersion" content="1.3" />
+	<meta name="debugMode" content="false" />
+	<meta name="strictMode" content="false" />
+
+	<!-- Other Scripts -->
+
+	<script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../BTWWLibrairies/semantic-ui/semantic.min.js"></script>
+
+	<!-- Application Preferences -->
+	<widget:preferences>
+		<widget:preference type="text" name="wdgTitle" label="Widget Title" defaultValue='' />
+
+		<widget:preference type="hidden" name="oidsLoaded" label="Objects Ids Loaded (hidden)" defaultValue='' />
+
+		<widget:preference type="hidden" name="adminMode" label="Admin Mode" defaultValue='true' />
+		<widget:preference type="hidden" name="ctx" label="3DSpace Context" defaultValue='' />
+
+
+		<!-- Config Expand -->
+		<widget:preference type="hidden" name="configExpand" label="Table Configuration (Expand)" defaultValue='' />
+		<widget:preference type="text" name="configNameExpand" label="New Configuration Name (Expand)" defaultValue='' />
+
+		<!-- Expand Infos -->
+		<widget:preference type="text" name="typeObjExp" label="Type of Object for Expand" defaultValue='Task,Phase,Gate' />
+		<widget:preference type="text" name="whereExpObjExp" label="Where expression for Expanded Objects" defaultValue='' />
+		<widget:preference type="text" name="typeRel" label="Type of Relationship for Expand" defaultValue='*' />
+		<widget:preference type="text" name="whereExpRelExp" label="Where expression for Expanded Relationships" defaultValue=''
+		/>
+
+		<!-- Advanced Expand -->
+		<widget:preference type="text" name="expandProg" label="Expand Program" defaultValue='' />
+		<widget:preference type="text" name="expandFunc" label="Expand Function" defaultValue='' />
+		<widget:preference type="text" name="expandParams" label="Additional Expand Parameters (url format)" defaultValue='' />
+
+
+		<!-- Config Display -->
+		<widget:preference type="hidden" name="configDisplay" label="Table Configuration (Display)" defaultValue='' />
+		<widget:preference type="text" name="configNameDisplay" label="New Configuration Name (Display)" defaultValue='' />
+
+		<!-- Selects -->
+		<widget:preference type="text" name="selects" label="Infos to Select on Objects" defaultValue='name,revision,current,type,description'
+		/>
+		<widget:preference type="text" name="selectsRel" label="Infos to Select on Relationships" defaultValue='id[connection],name[connection]'
+		/>
+
+		<!-- Display -->
+		<widget:preference type="text" name="columnKeys" label="Columns Keys" defaultValue='"name","revision","type","current","description"'
+		/>
+		<widget:preference type="text" name="columnDisp" label="Columns Headers" defaultValue='Name,Rev,Type,State,Description' />
+		<widget:preference type="text" name="sortKeys" label="Sort by keys" defaultValue='type,name,current' />
+		<widget:preference type="text" name="searchKeys" label="Search on keys" defaultValue='name,description' />
+
+
+		<!-- Others -->
+		<widget:preference type="boolean" name="dispArrows" label="Display direction arrows" defaultValue='false' />
+
+		<!-- Cross Filter -->
+		<widget:preference type="text" name="sendFilterKeys" label="Send Filter Event (EventName|Key,...)" defaultValue='' />
+		<widget:preference type="text" name="receiveFilterKeys" label="Receive Filter Event (EventName|Key,...)" defaultValue=''
+		/>
+
+		<widget:preference type="boolean" name="doFilterHighlight" label="Do Filter when using column Highlighter" defaultValue='false'
+		/>
+
+		<widget:preference type="list" name="filterMode" label="Filter Mode" defaultValue='OR'>
+			<widget:option label="Display Item if ONE filter criteria is Ok" value='OR' />
+			<widget:option label="Display Item if ALL filters criterias are Ok" value='AND' />
+		</widget:preference>
+
+		<widget:preference type="text" name="editableAttrs" label="Editable Keys Attributes" defaultValue='' />
+
+	</widget:preferences>
+
+
+	<!-- Widget files -->
+	<link rel="stylesheet" type="text/css" href="styles/Main.css" />
+	<script type="text/javascript" src="scripts/Main.js"></script>
+
+	<script type="text/javascript">
+		function widgetLoading() {
+			if (widget) {
+				executeWidgetCode();
+			} else {
+				console.warn("Defered widget Loading");
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+		}
+		widgetLoading();
+	</script>
+
+</head>
+
+<body>
+	<p>Widget is Loading...</p>
+</body>
+
+</html>

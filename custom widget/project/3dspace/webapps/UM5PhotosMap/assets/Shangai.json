@@ -1,0 +1,10 @@
+{
+    "gps": {
+        "top": 31.869692,
+        "bottom": 30.688037,
+        "left": 120.856601,
+        "right": 122.010821
+    },
+    "img": "assets/Shangai.png",
+    "defaultImages": []
+}

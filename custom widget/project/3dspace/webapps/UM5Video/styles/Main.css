@@ -1,0 +1,15 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+html,
+body,
+video {
+    background-color: white;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,10 @@
+{
+    "gps": {
+        "top": 48.798684,
+        "bottom": 48.769426,
+        "left": 2.161899,
+        "right": 2.228951
+    },
+    "img": "assets/Velizy.png",
+    "defaultImages": []
+}

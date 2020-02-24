@@ -1,0 +1,179 @@
+/*
+  Script: icons.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2013 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+*/
+
+/* http://www.paulirish.com/2010/font-face-gotchas/#smiley */
+@font-face {
+    font-family: 'uwa-icons';
+    src: url('font/icons.eot');
+    src: local('uwa-icons-regular'),
+         url('font/icons.woff') format('woff'),
+         url('font/icons.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+  Base classes to display a named icon in UWA.
+
+  Use the class uwa-icon to basic icon display. You can then style it how you
+  want. In addition to the class uwa-icon, use the class uwa-icon-only on an
+  empty element to display an icon like if it was an image.
+
+  See the widget /apps/Samples/Examples/Icons/index.xhtml for examples.
+*/
+
+.uwa-icon:before {
+    content: attr(data-icon);
+    font-family: uwa-icons;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: initial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.uwa-icon-only {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+}
+
+.uwa-icon-only.small {
+    width: 24px;
+    height: 24px;
+}
+
+.uwa-icon-only.large {
+    width: 54px;
+    height: 54px;
+}
+
+.uwa-icon-only:before {
+    position: absolute;
+    top: 44%; /* Magic number, so the icons are vertically aligned independently of their height */
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 0;
+}
+
+.uwa-icon-only.large:before {
+    font-size: 40px;
+}
+
+.uwa-icon-unicode:before {
+    font-family: inherit;
+}
+
+.uwa-icon.previous:before        { content: 'l'; }
+.uwa-icon.previous.small :before { content: 'F'; }
+
+.uwa-icon.next:before            { content: 'm'; }
+.uwa-icon.next.small:before      { content: 'G'; }
+
+.uwa-icon.arrow-down.small:before { content: 'D'; }
+.uwa-icon.arrow-down:before       { content: 'j'; }
+
+.uwa-icon.arrow-up.small:before  { content: 'E'; }
+.uwa-icon.arrow-up:before        { content: 'k'; }
+
+.uwa-icon.delete:before          { content: 'p'; }
+.uwa-icon.delete.small:before    { content: ','; }
+
+.uwa-icon.plus:before            { content: 'A'; }
+.uwa-icon.plus.small:before      { content: 'h'; }
+
+.uwa-icon.refresh:before         { content: 'Q'; }
+
+.uwa-icon.cogwheel:before        { content: 'ç'; }
+
+.uwa-icon.calendar:before        { content: 'u'; -webkit-font-smoothing: none; }
+
+.uwa-icon.double-arrow:before    { content: 'H'; }
+
+.uwa-icon.facet:before           { content: '5'; }
+
+.uwa-icon.tooltip:before         { content: 'T'; }
+
+.uwa-icon.rss:before             { content: '7'; }
+
+.uwa-icon.whirlwind:before       { content: 'è'; }
+
+.uwa-icon.star:before            { content: '8'; }
+
+.uwa-icon.circle-crossed:before  { content: '¼'; }
+
+.uwa-icon.pin-point:before       { content: '~'; }
+
+.uwa-icon.curvy-next:before      { content: 'q'; }
+
+.uwa-icon.play:before            { content: 'M'; }
+
+.uwa-icon.download:before        { content: 'Y'; }
+
+.uwa-icon.lock:before            { content: 'Á'; }
+
+.uwa-icon.book:before            { content: 'À'; }
+
+.uwa-icon.forbidden:before       { content: 'O'; }
+
+.uwa-icon.list:before            { content: 'w'; }
+
+.uwa-icon.expanded-list:before   { content: 'y'; }
+
+.uwa-icon.mosaic:before          { content: 'z'; }
+
+.uwa-icon.bug:before             { content: 'é'; }
+
+.uwa-icon.charts:before          { content: 'B'; }
+
+.uwa-icon.options:before         { content: 'W'; }
+
+.uwa-icon.single-window:before   { content: 'n'; }
+
+.uwa-icon.double-window:before   { content: 'o'; }
+
+.uwa-icon.edit:before            { content: 'X'; }
+
+.uwa-icon.duplicate:before       { content: 'V'; }
+
+.uwa-icon.potion:before          { content: 'ȇ'; }
+
+/* Graph views icons */
+.uwa-icon.lines:before           { content: 'ų'; }
+
+.uwa-icon.stacked-lines:before   { content: 'ŷ'; }
+
+.uwa-icon.vbar:before            { content: 'ŵ'; }
+
+.uwa-icon.stacked-vbar:before    { content: 'ž'; }
+
+.uwa-icon.hbar:before            { content: 'ů'; }
+
+.uwa-icon.stacked-hbar:before    { content: 'ſ'; }
+
+.uwa-icon.pie:before             { content: 'ź'; }
+
+.uwa-icon.table:before           { content: 'ű'; }
+
+.uwa-icon.cloud:before           { content: 'ż'; }
+
+.uwa-icon.menu:before            { content: '$'; }
+
+.uwa-icon.checked:before         { content: 'r'; }
+
+.uwa-icon.funnel:before          { content: '6'; }
+
+.uwa-icon.magnifying-glass:before { content: 'U'; }

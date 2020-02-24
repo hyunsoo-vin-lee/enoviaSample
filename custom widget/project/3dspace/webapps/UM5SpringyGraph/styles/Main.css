@@ -1,0 +1,62 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+div#renderIcon {
+    width: 16px;
+    height: 16px;
+    background-image: url("../assets/icons/Rendering.gif");
+    top: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 100;
+}
+
+div#nodeSelectedInfos {
+    background-color: #ffffe0;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+div#legendColors {
+    background-color: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    height: 90%;
+    font-size: 0.8em;
+    opacity: 0.25;
+    overflow: hidden;
+    border-top: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+div#legendColors:hover {
+    opacity: 0.9;
+}
+
+div#legendColors.hide {
+    max-width: 16px;
+}
+div#btnHideShow {
+    cursor: pointer;
+    font-size: 1.25em;
+}
+div#listLegends {
+    overflow-y: auto;
+    max-height: 100%;
+}
+div#legendColors.hide div#listLegends {
+    overflow: hidden;
+}
+.legendItem {
+    white-space: nowrap;
+    margin-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+}

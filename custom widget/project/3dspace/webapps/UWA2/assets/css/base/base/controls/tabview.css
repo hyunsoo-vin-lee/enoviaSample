@@ -1,0 +1,273 @@
+/*
+  Script: tabview.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  HTML skeleton:
+  (start code)
+    <div class="uwa-tabview">
+      [<div class="uwa-carousel">]
+          <ul class="uwa-tablist">
+              <li class="uwa-tab [uwa-tab-dropdown][selected]"><a href="#tab1"><span class="title">Some text</span></a></li>
+              <li class="uwa-tab [uwa-tab-dropdown]"><a href="#tab2"><span class="title">An image</span></a></li>
+              <li class="uwa-tab [uwa-tab-dropdown]"><a href="#tab3"><span class="title">A feed</span></a></li>
+          </ul>
+          [<a class="uwa-carousel-button-next"><span></span></a>]
+          [<a class="uwa-carousel-button-previous"><span></span></a>]
+      [</div>]
+      <div class="uwa-tabview-panel">
+          <div id="tab1" class="uwa-tab-panel [selected]">Some Content...</div>
+          <div id="tab2" class="uwa-tab-panel [hidden]">Loading...</div>
+          <div id="tab3" class="uwa-tab-panel [hidden]">Loading...</div>
+       </div>
+    </div>
+  (end code)
+*/
+
+.hidden, [hidden] { display: none !important; }
+
+.uwa-tabview {
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.uwa-tabview .disabled {
+    opacity: 0.3;
+    filter: alpha(opacity=30); /* IE7-IE8 */
+    background-color: transparent;
+    cursor: default;
+}
+
+/*------------------------------------------------------*/
+/* Mode singeline
+/*------------------------------------------------------*/
+
+.uwa-tabview[scrollable] > .uwa-carousel {
+    position: relative;
+    padding: 0;
+}
+.uwa-tabview[scrollable] .uwa-tablist {
+    white-space: nowrap;
+}
+.uwa-tabview > .uwa-carousel[overflow="true"] {
+    padding: 0 20px;
+}
+.uwa-tabview > .uwa-carousel[overflow="true"] > .uwa-carousel-button-next,
+.uwa-tabview > .uwa-carousel[overflow="true"] > .uwa-carousel-button-previous {
+    visibility: visible;
+}
+
+/*------------------------------------------------------*/
+/* Tab list
+/*------------------------------------------------------*/
+
+.uwa-tablist {
+    position: relative;
+    zoom: 1;
+    margin: 0;
+    padding: 0 2px;
+}
+
+.uwa-tabview .scrollable-x .uwa-tablist {
+    padding: 0;
+}
+
+.uwa-tab {
+    display: inline-block;
+    *display: inline; /* IE7 */
+    zoom: 1;
+    padding: 0;
+    margin: 0 1px -1px; /* negative margin to hide double border when there is more than one row of tabs */
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.uwa-tab > a,
+.uwa-tab > a:link,
+.uwa-tab > a:visited {
+    display: inline-block;
+    *display: inline; /* IE7 */
+    zoom: 1;
+    white-space: nowrap;
+    padding: 6px 8px;
+    outline: 0;
+    text-decoration: none;
+    border: 1px solid #CACACA;
+    font-weight: bold;
+    background: #FFF;
+    color: #888;
+}
+
+.uwa-tab.open > a,
+.uwa-tab.open > a:hover,
+.uwa-tab.selected > a {
+    background: #ECECEC;
+    color: #333;
+}
+
+.uwa-tab .icon,
+.uwa-tab .unread,
+.uwa-tab .title,
+.uwa-tab .dropdown {
+    display: inline-block;
+    *display: inline; /* IE7 */
+    zoom: 1;
+}
+
+.uwa-tab.plus img {
+    vertical-align: middle;
+}
+
+.uwa-tab .unread {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    margin: 0 3px;
+    font-size: 0.8em;
+    color: #990000;
+}
+
+.uwa-tab .icon {
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.uwa-tab .dropdown {
+    width: 14px;
+    height: 14px;
+    margin: 0 0 0 6px;
+    background: transparent url(../img/menudown.png) no-repeat center left;
+    vertical-align: bottom;
+}
+
+.rtl .uwa-tab .dropdown {
+    background: transparent url(../img/menudown_rtl.png) no-repeat 100% 50%;
+    padding: 0 0 1px 12px;
+    margin: 0 4px 0 0;
+}
+
+/*------------------------------------------------------*/
+/* Tab panel
+/*------------------------------------------------------*/
+
+.uwa-tab-panel {
+    padding: 5px 10px 10px 10px;
+    border: 1px solid #CACACA;
+    background-color: #fff;
+}
+
+/*------------------------------------------------------*/
+/* Tab scroll buttons
+/*------------------------------------------------------*/
+
+.uwa-tabview .uwa-carousel-button {
+    visibility: hidden;
+    -webkit-box-sizing: border-box; /* iOS4, Android 2.3 */
+       -moz-box-sizing: border-box; /* Firefox 1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+    position: absolute;
+    background-color: #FFF;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+         -m-user-select: none;
+            user-select: none;
+
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 20px;
+    z-index: 3;
+}
+.uwa-tabview .uwa-carousel-button:hover {
+    background-color: #F1F1F1;
+}
+
+.uwa-tabview .uwa-carousel-button > span {
+    -webkit-box-sizing: border-box; /* iOS4, Android 2.3 */
+       -moz-box-sizing: border-box; /* Firefox 1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.uwa-tabview .uwa-carousel-button-next {
+    right: 0;
+}
+.uwa-tabview .uwa-carousel-button-next > span {
+    background: transparent url(../img/next.gif) right center no-repeat;
+}
+
+.uwa-tabview .uwa-carousel-button-previous {
+    left: 0;
+}
+.uwa-tabview .uwa-carousel-button-previous > span {
+    background: transparent url(../img/previous.gif) left center no-repeat;
+}
+
+
+/*------------------------------------------------------*/
+/* Tab scroll buttons shadows
+/*------------------------------------------------------*/
+
+.uwa-tabview .uwa-carousel-button-previous:after,
+.uwa-tabview .uwa-carousel-button-next:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 14px;
+    height: 100%;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    opacity: 1;
+    pointer-events: none;
+    -webkit-transition: opacity 0.6s ease-out;
+       -moz-transition: opacity 0.6s ease-out; /* Firefox 4-15 */
+         -o-transition: opacity 0.6s ease-out; /* Opera 10.5–12.00 */
+            transition: opacity 0.6s ease-out; /* Firefox 16+, Opera 12.50+ */
+}
+.uwa-tabview .uwa-carousel-button-previous:after {
+    left: 19px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAjCAYAAACkejs5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA90lEQVQ4y5VU0Q4CMQgrBU38/w+eL3cGG9g4k8VEV2hLBwF8ALwBOADD8MPrjAEZGBfQnnb06/BpxwzktEC+uNLvR9pM3Vy0rhPwlQwaO5zHoaAtXW4OdnSzq5Y6YWqOJbqY6GTR1USjncZB6czdWFh0PRqjQGvo2SSrWR93OjPQi/fZdr4veVOAO6psLttEo2ZV6XpFFY3GY8hdKIe4bEUk/56UBsCKAqt7VpG+s66l+WUxy5DAe7FCjRJq3UFe6DRdHV0IvApCB/JmM5gC1dlo1iY7czjILXWO9xii0KaUSbHdpUBXaLGIVDR7NofBugXVrZLff19wBQuHPK6xtQAAAABJRU5ErkJggg==);
+}
+.uwa-tabview .uwa-carousel-button-next:before {
+    right: 19px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAjCAYAAACkejs5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA80lEQVQ4y5VUAQrEMAhb0h73/xfv6DHBuehsQdZBY6KmxdFbuGJc8eWxtxZ4YSY3Qcb62QHSSW0BTR48mA2QYm7V6NnajBG8QPONEQVzyXg6eTFGhxHCOex2NYJTIMTXOso3RorhsytVslXNgTC3ZwWLW2AHI6uUCrFnkFrW+Bi4mdvY2agvJliBmYwA4X/Lq/I6WWIWA/ednCEBsq7aAdVVWI0oZjldN71zbsB4GAE0PCuFW27XR/j00RwIQw/Bxgx4JKCHVCSPrtU34ww9Iwt7qVrBYCu4zCMYwM/xvzkLiXIUvsYzuU5U9Sl/HskDFT2MHzgHBZ8JToh3AAAAAElFTkSuQmCC);
+}
+.uwa-tabview .uwa-carousel-button-next.disabled:before,
+.uwa-tabview .uwa-carousel-button-previous.disabled:after {
+    opacity: 0;
+    filter: alpha(opacity=0); /* IE7-IE8 */
+    -webkit-transition: opacity 0.6s ease-out;
+       -moz-transition: opacity 0.6s ease-out; /* Firefox 4-15 */
+         -o-transition: opacity 0.6s ease-out; /* Opera 10.5–12.00 */
+            transition: opacity 0.6s ease-out; /* Firefox 16+, Opera 12.50+ */
+
+    /* IE7-9 hack: no support for opacity on pseudo-element */
+    visibility: hidden\9;
+}
+
+
+/*------------------------------------------------------*/
+/* Tab dropdown
+/*------------------------------------------------------*/
+
+.uwa-tab-dropdown {
+    position: relative;
+}
+.uwa-tab-dropdown ul {
+    position: absolute;
+    z-index: 2001;
+    display: none;
+}
+.uwa-tab-dropdown.open ul {
+    display: block;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>UM5 Widget</title>
+
+	<meta name="author" content="UM5" />
+	<meta name="description" content="UM5 Widget" />
+	<meta name="apiVersion" content="1.3" />
+	<meta name="debugMode" content="false" />
+	<meta name="strictMode" content="false" />
+
+	<!-- Other Scripts -->
+
+	<script type="text/javascript" src="../BTWWLibrairies/jquery/jquery-3.2.1.min.js"></script>
+
+	<!-- Application Preferences -->
+
+	<widget:preferences>
+		<widget:preference type="text" name="wdgTitle" label="Widget Title" defaultValue='' />
+
+		<widget:preference type="hidden" name="adminMode" label="Admin Mode" defaultValue='true' />
+		<widget:preference type="hidden" name="ctx" label="3DSpace Context" defaultValue='' />
+
+		<widget:preference type="text" name="projectName" label="Project Name" defaultValue='**' />
+
+		<widget:preference type="text" name="leafTypes" label="Leaf Types (hidden when filtered)" defaultValue='Task,Gate,Milestone'
+		/>
+
+		<widget:preference type="text" name="dispStart" label="Display Start Date (YYYY/MM/DD) or empty" defaultValue='' />
+		<widget:preference type="text" name="dispEnd" label="Display End Date (YYYY/MM/DD) or empty" defaultValue='' />
+
+		<widget:preference type="boolean" name="dispCompletion" label="Display Completion percentage" defaultValue='true' />
+		<widget:preference type="boolean" name="dispActual" label="Display Actual Dates" defaultValue='true' />
+
+		<widget:preference type="text" name="typeToColor" label="Type to Color Mapping (type1=color1,type2=color2)" defaultValue=''
+		/>
+		<widget:preference type="boolean" name="sortByStartDate" label="Sort by Estimated Start Date (or by Sequence Order if unchecked)"
+		    defaultValue='false' />
+
+
+	</widget:preferences>
+
+
+	<!-- Widget files -->
+
+	<link rel="stylesheet" type="text/css" href="styles/Main.css" />
+	<script type="text/javascript" src="scripts/Main.js"></script>
+
+	<!-- Wait for widget global object to be added to the page by 3DDashboard frame -->
+
+	<script type="text/javascript">
+		function widgetLoading() {
+			if (widget) {
+				executeWidgetCode();
+			} else {
+				console.warn("Defered widget Loading");
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+		}
+		widgetLoading();
+	</script>
+
+</head>
+
+<body>
+	<p>Widget is Loading...</p>
+</body>
+
+</html>

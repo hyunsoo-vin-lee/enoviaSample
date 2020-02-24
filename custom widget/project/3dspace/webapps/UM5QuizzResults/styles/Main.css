@@ -1,0 +1,87 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+/*rgb(0, 86, 133) ds blue*/
+
+#content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.result {
+    overflow: auto;
+}
+
+.result>div {
+    white-space: nowrap;
+    /* border-radius: 0.5em; */
+    box-sizing: border-box;
+    /* border: 1px solid lightgrey; */
+    padding: 0.75em;
+    padding-left: 0.5em;
+    margin-bottom: 0.25em;
+    position: relative;
+    color: grey;
+}
+
+.result>div.correct {
+    background-color: rgb(208, 238, 254);
+    font-weight: bold;
+}
+
+.result>div.incorrect {
+    background-color: rgb(255, 198, 224);
+}
+
+.result>div>div.percentage {
+    position: absolute;
+    right: 0.25em;
+    top: 0.75em;
+}
+
+div.inline {
+    display: inline-block;
+}
+
+div.questionResult {
+    margin-bottom: 1em;
+    padding-bottom: 0.25em;
+    /* border-bottom: 1px solid lightgrey; */
+}
+
+div.question {
+    color: #005685;
+    font-size: 1.2em;
+    line-height: 1em;
+    margin-bottom: 0.5em;
+}
+
+div#saveBtn {
+    position: absolute;
+    top: 2px;
+    right: 40px;
+    font-size: 1.5em;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#clearBtn {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 1em;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: lightgrey;
+}
+
+#clearBtn:hover {
+    color: red;
+}
+
+.buttonsPrevNext {
+    text-align: center;
+}

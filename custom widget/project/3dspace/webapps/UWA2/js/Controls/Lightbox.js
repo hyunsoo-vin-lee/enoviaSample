@@ -1,0 +1,1 @@
+define("UWA/Controls/Lightbox",["UWA/Core","UWA/Controls/Overlay"],function(c,a){var b=a.extend({getInnerElement:function(){return this.elements.container},setContent:function(d){this.getInnerElement().setContent(d);return this},addContent:function(d){this.getInnerElement().addContent(d);return this}});return c.namespace("Controls/Lightbox",b,c)});

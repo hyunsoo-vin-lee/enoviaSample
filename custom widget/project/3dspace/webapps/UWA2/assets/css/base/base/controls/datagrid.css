@@ -1,0 +1,87 @@
+/*
+  Script: datagrid.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  HTML skeleton:
+  (start code)
+    <div class="uwa-datagrid table">
+        <table class="uwa-datagrid-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Users</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2012 07 06</td>
+                    <td>user1</td>
+                </tr>
+                <tr>
+                    <td>2012 07 09</td>
+                    <td>user2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  (end code)
+*/
+
+.uwa-datagrid .uwa-datagrid-table {
+    width: 100%;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.uwa-datagrid .fixed-column {
+    position: absolute;
+    table-layout: fixed;
+}
+
+.uwa-datagrid .uwa-datagrid-table td {
+    padding: 8px 5px;
+    background-color: #ECECEC;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.uwa-datagrid .uwa-datagrid-table th {
+    text-align: left;
+    padding: 8px 5px;
+    height: 15px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.uwa-datagrid .uwa-datagrid-table td.first,
+.uwa-datagrid .uwa-datagrid-table th {
+    background-color: #D8D8D8;
+    font-weight: bold;
+}
+
+.uwa-datagrid .uwa-datagrid-table th.first.empty {
+    visibility: hidden;
+}
+
+.uwa-datagrid th.sortable:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.uwa-datagrid th.sortable .sort {
+    display: inline-block;
+    width: 8px;
+    margin-left: 5px;
+    font-family: uwa-icons;
+    line-height: 10px;
+}
+
+.uwa-datagrid th.no-sortable .sort {
+    display: none;
+}

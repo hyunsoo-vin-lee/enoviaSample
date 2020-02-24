@@ -1,0 +1,76 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+div#content {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.policyName {
+    position: relative;
+    text-align: center;
+    background-color: #eaeaea;
+    border-radius: 0.25em;
+}
+
+#previousDisplay {
+    position: absolute;
+    left: 0px;
+    top: 0.25em;
+    cursor: pointer;
+}
+
+.category {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 0.25em;
+    margin-bottom: 0.15em;
+    display: inline-block;
+}
+
+.policyTypes {
+    max-height: 2.5em;
+    overflow-y: auto;
+    width: 100%;
+    border: 1px solid lightgrey;
+    margin-top: 0.5em;
+}
+
+.type {
+    display: inline-block;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    border-right: 1px solid lightgrey;
+}
+.type:hover {
+    background-color: rgb(190, 218, 255);
+}
+
+#policyStates {
+    margin-top: 0.25em;
+}
+
+.state {
+    display: inline-block;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    border: 1px solid lightgrey;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    margin-right: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.selected {
+    background-color: rgb(11, 64, 134);
+    color: white;
+}
+
+#policyTable {
+    height: calc(100% - 11em);
+    overflow: auto;
+}

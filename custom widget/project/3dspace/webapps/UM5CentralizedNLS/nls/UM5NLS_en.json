@@ -1,0 +1,19 @@
+{
+	"attribute" : {
+		"PLMEntity.V_discipline" : {
+			"Provide" : "Provided Part",
+			"CreateAssembly" : "Manufacturing Assembly"
+		},
+		"BMW_Assembly_and_Provide.BMW_LocalContent" : {
+			"TRUE" : "Yes",
+			"FALSE" : "No",
+			"null" : "Not Defined"
+		}
+	},
+	"interface" : {
+		"DELAsmUnitRefRequired" : "Assembly Unit",
+		"DELAsmLotRefRequired" : "Assembly Lot",
+		"BMW_Assembly_and_Provide" : "Interface Custom"
+	}
+	
+}

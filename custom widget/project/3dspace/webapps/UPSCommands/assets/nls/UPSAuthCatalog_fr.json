@@ -1,0 +1,36 @@
+{
+  "type_3DShape": "Forme 3D",
+  "type_EC": "Composant CATIA incorporé",
+  "type_Representation":"Représentation",
+  "type_PhysicalProduct": "Produit physique",
+  "operationAborted_Cycle": "Opération abandonnée, car elle pourrait créer des cycles.",
+  "request_timedout": "Dépassement de délai de la demande avant la fin de l'opération. Actualisez le widget pour obtenir les modifications.",
+
+  "unparent_error_shape_from_3DPart" : "Vous ne pouvez pas détacher la forme 3D sous une pièce 3D.",
+
+  "verb_insert": "insérer",
+  "insert_existing_failed": "Echec de l'insertion de l'existant.",
+  "insert_existing_failed_with_reason": "Echec de l'insertion de l'existant : ",
+
+  "verb_reparent": "changer le parent",
+  "reparent_failed": "Echec du changement de parent.",
+  "reparent_failed_with_reason": "Echec du changement de parent : ",
+  "reparent_failed_target_3DPart": "Vous ne pouvez pas {verb} sous un objet de type Pièce 3D.",
+  "reparent_failed_target_invalid": "Vous ne pouvez {verb} que sous des objets de type Produit physique.",
+  "reparent_failed_source_invalid": "Vous ne pouvez pas {verb} les objets de type {type}.",
+  "reparent_failed_parent_config":"Les opérations de changement de parent sont désactivées si l'objet parent possède un contexte de configuration.",
+
+  "authoring_failed_EC":"Vous ne pouvez pas insérer, mettre à jour, remplacer par ou copier/couper/coller un composant intégré.",
+  "replace_V6_under_V5": "Vous ne pouvez pas remplacer un objet V5 par un objet V6 sous un parent V5.",
+
+  "move3D_success": "Déplacement 3D réussi.",
+
+  "UPSAuthRevisionUpdate": "Mettre à jour les révisions",
+  "UPSAuthRevisionUpdate_report": "Mettre à jour le rapport de révisions",
+  
+  "UPSAuthReplaceByRevision": "Remplacer par une révision",
+  "UPSAuthReplaceByRevision_report": "Remplacer par un rapport de révisions",
+  
+  "UPSAuthReplaceByLatestRevision": "Remplacer par la révision la plus récente",
+  "UPSAuthReplaceByLatestRevision_report": "Remplacer par le rapport de révisions le plus récent"
+}

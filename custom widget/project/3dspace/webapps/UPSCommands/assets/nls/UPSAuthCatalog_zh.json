@@ -1,0 +1,36 @@
+{
+  "type_3DShape": "3D 形状",
+  "type_EC": "CATIA 嵌入式部件",
+  "type_Representation":"展示",
+  "type_PhysicalProduct": "物理产品",
+  "operationAborted_Cycle": "操作已中止，因为它会导致循环。",
+  "request_timedout": "操作完成前请求已过期。请刷新 Widget 以获取修改。",
+
+  "unparent_error_shape_from_3DPart" : "您无法在 3DPart 下拆离 3DShape。",
+
+  "verb_insert": "插入",
+  "insert_existing_failed": "插入现有项失败。",
+  "insert_existing_failed_with_reason": "插入现有项失败： ",
+
+  "verb_reparent": "重新设置父级",
+  "reparent_failed": "重新设置父级失败。",
+  "reparent_failed_with_reason": "重新设置父级失败： ",
+  "reparent_failed_target_3DPart": "您不能在 3DPart 类型的对象下 {verb}。",
+  "reparent_failed_target_invalid": "您只能在物理产品类型的对象下 {verb}。",
+  "reparent_failed_source_invalid": "您不能 {verb} {type} 类型的对象。",
+  "reparent_failed_parent_config":"如果父级对象有配置上下文，则重新设置父级操作被禁用。",
+
+  "authoring_failed_EC":"您无法插入、更新或替换，也不能复制/剪切/粘贴嵌入式部件。",
+  "replace_V6_under_V5": "您不能在 V5 父级下将 V5 对象替换为 V6 对象。",
+
+  "move3D_success": "移动 3D 成功。",
+
+  "UPSAuthRevisionUpdate": "更新修订版",
+  "UPSAuthRevisionUpdate_report": "更新修订版报告",
+  
+  "UPSAuthReplaceByRevision": "用修订版替换",
+  "UPSAuthReplaceByRevision_report": "替换为修订版报告",
+  
+  "UPSAuthReplaceByLatestRevision": "替换为最新修订版",
+  "UPSAuthReplaceByLatestRevision_report": "替换为最新修订版报告"
+}

@@ -1,0 +1,11 @@
+<div id='appVue'>
+    <v-app style='height: 100%;'>
+        <div style='height:2em;'>
+            <span v-if='object'>Loaded Document: {{object.name}} - {{object.title}} - {{object.fileName}}</span>
+            <span v-else>No Document Loaded</span>
+        </div>
+        <div style='height:calc(100% - 2em);'>
+            <div v-if='object' :is='viewerComponent' :object='object'></div>
+        </div>
+    </v-app>
+</div>

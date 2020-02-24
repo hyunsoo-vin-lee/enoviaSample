@@ -1,0 +1,24 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+html.uwa-framed {
+    overflow-y: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#appVue {
+    height: 100%;
+    /*background: #fafafa;*/
+    background: white;
+    position: relative;
+}
+
+div#app {
+    background: white;
+}

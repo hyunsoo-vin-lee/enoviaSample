@@ -1,0 +1,110 @@
+/*
+  Script: searchform.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    <div class="search uwa-searchform">
+        <form>
+            <img class="favicon" src="/lib/c/UWA/assets/css/base/img/s.gif" width="16" height="16" style="display: none;" />
+            <input class="search" type="text" value="" />
+            <img class="clear" alt="Clear" title="Clear" src="/lib/c/UWA/assets/css/base/img/clear.gif" style="display: none;" />
+            <input class="submit" type="submit" value="Search" />
+            <input class="check" type="checkbox" title="" value="" />
+            [<ul class="uwa-popup-menu">]
+                <li class="uwa-popup-menu-item"><a href="#history:France"><span>France</span></a></li>
+                <li class="uwa-popup-menu-item"><a href="#history:Usa"><span>Usa</span></a></li>
+                <li class="uwa-popup-menu-item action"><a>Clear recent searches</a></li>
+            [</ul>]
+        </form>
+    </div>
+    (end code)
+*/
+
+.uwa-searchform {
+    text-align: center;
+    margin-bottom: 5px;
+}
+    .uwa-searchform form {
+        padding: 0 16px;
+        display: block;
+        position: relative;
+    }
+
+    .uwa-searchform img.favicon {
+        vertical-align: bottom;
+        margin: 0 3px 3px 3px;
+        height: 16px;
+    }
+
+    .uwa-searchform img.clear {
+        vertical-align: middle;
+        margin: 0 0 0 -21px;
+        cursor: pointer;
+    }
+
+    * html .uwa-searchform img.clear {
+        margin: -5px 0 0 -20px;
+    }
+
+    .uwa-searchform input.search {
+        background: url('../img/search.png') no-repeat scroll top left transparent;
+        margin: 0 3px;
+        padding: 3px 3px 3px 18px;
+        border: 1px solid #CCC;
+        text-align: left;
+        display: inline;
+        width: 155px;
+    }
+
+    .uwa-searchform input.check {
+        margin: -1px 0 0 0;
+        border: 0;
+        position: absolute;
+        top: 5px;
+    }
+
+    * html .uwa-searchform input.check {
+        margin: -2px 0 0 0;
+    }
+
+    * html .uwa-searchform input.search {
+        padding: 3px 0 0 18px;
+        height: 21px;
+    }
+
+    .uwa-searchform .submit {
+        margin-left: 2px;
+    }
+
+    .uwa-searchform input.submit {
+        margin-left: 5px;
+    }
+
+    .uwa-searchform .submit.uwa-icon {
+        height: 15px;
+
+        color: #8c8c8c;
+
+        cursor: pointer;
+    }
+
+    .uwa-searchform .submit.uwa-icon:before {
+        top: 26%;
+    }
+
+    .uwa-searchform .submit.uwa-icon:hover {
+        color: #656565;
+    }
+
+    .uwa-searchform .submit.uwa-icon:active {
+        color: #333;
+    }
+
+

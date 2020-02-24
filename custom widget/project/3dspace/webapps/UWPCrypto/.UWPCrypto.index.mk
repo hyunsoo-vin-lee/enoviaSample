@@ -1,0 +1,9 @@
+m|UWPClient\UWPCrypto.mweb
+b|j|c,m
+b|c|c,m
+v|6.422.0.19243|3.1
+r|G:\R422\BSF\.
+t|win_b64\webapps\UWPCrypto\UWPCrypto.js|1567236869|5113
+s|UWPClient\UWPCrypto.mweb\src\UWPCrypto.js|1513779638|15922
+u|win_b64\code\toolcmds\mkwebconcat.bat|1567204153|287
+u|win_b64\code\toolcmds\jscompressor.bat|1567204153|41

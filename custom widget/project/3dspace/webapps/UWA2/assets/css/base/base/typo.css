@@ -1,0 +1,92 @@
+/*
+  Script: typo.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+*/
+
+/* Addresses default font-size */
+html {
+    font-size: 62.5%;
+    text-rendering: optimizeSpeed;
+}
+
+/* Addresses font-family inconsistency between 'textarea' and other form elements. */
+body,
+button,
+input,
+select,
+textarea{
+    font: 1.1em/1.3em Tahoma, Verdana, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+}
+
+/* Addresses font sizes and margins set differently in IE6/7
+   Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+*/
+h1 {
+    font-size: 2em;
+    margin: 0 0 0.67em 0;
+    line-height: 1.5em;
+    font-weight: normal;
+}
+
+h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+ol,
+menu,
+dir {
+    list-style-type: disc;
+}
+ol ol {
+    list-style-type: circle;
+}
+ul,
+ul ul {
+    list-style-type: none;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+::-moz-selection { text-shadow: none; }
+::selection { text-shadow: none; }
+ */
+

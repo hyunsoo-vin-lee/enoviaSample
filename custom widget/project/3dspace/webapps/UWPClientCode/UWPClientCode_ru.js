@@ -1,0 +1,1 @@
+define("DS/UWPClientCode/UWPClientCode_ru",{});define("DS/UWPClientCode/assets/nls/Undo/undo",{deletionMessage:"не удален",elementMessage:"Элемент",ClickToUndoMessage:"Нажмите, чтобы отменить"});

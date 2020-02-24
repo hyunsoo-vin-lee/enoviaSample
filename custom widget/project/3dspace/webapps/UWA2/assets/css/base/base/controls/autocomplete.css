@@ -1,0 +1,132 @@
+/*
+  Script: autocomplete.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+/* Autocomplete */
+.uwa-autocomplete {
+    display: inline-block;
+    position: relative;
+    width: 15em;
+    font-size: 14px; /* same as .uwa-input */
+}
+
+    .uwa-autocomplete.singleline {
+        height: 32px;
+    }
+
+    .uwa-autocomplete .uwa-input {
+        min-height: inherit;
+        max-height: inherit;
+        height: inherit;
+        width: inherit;
+    }
+        .uwa-autocomplete .uwa-input-text {
+            width: 100%;
+            margin: 0;
+        }
+
+    .uwa-autocomplete.not-floating .uwa-dropdown {
+        width: 100%;
+        overflow: visible;
+    }
+
+        .uwa-autocomplete.not-floating .uwa-dropdown:before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 0 4px rgba(124, 175, 32, .6);
+        }
+
+        .uwa-autocomplete-floating-dropdown {
+            width: 200px;
+        }
+
+        .uwa-autocomplete.floating .uwa-dropdown-inner {
+            background-color: #F0F0F0;
+            padding: 0;
+        }
+
+        .uwa-autocomplete.floating .uwa-dropdown-point {
+            color: #F0F0F0;
+        }
+
+    .uwa-autocomplete-suggestions {
+        position: relative;
+        background-color: #fff;
+    }
+
+    .uwa-autocomplete-suggestions.not-floating {
+        border-radius: 0 0 4px 4px;
+        transition: height 0.4s;
+    }
+
+        .uwa-autocomplete-suggestions .suggestion {
+            color: #666;
+            padding: 8px 15px;
+            word-wrap:break-word;
+            cursor: pointer;
+        }
+
+        .uwa-autocomplete-suggestions .suggestion.current {
+            background-color: #DBDBDB;
+        }
+
+        .uwa-autocomplete-suggestions .category {
+            position: relative;
+            padding-left: 28px;
+            border-bottom: 1px solid #DBDBDB;
+        }
+
+        .uwa-autocomplete-suggestions .category:before {
+            position: absolute;
+            color: #fff;
+            left: 0;
+            top: 0;
+            bottom: -1px;
+            width: 28px;
+            padding-top: 7px;
+            text-align: center;
+            background-color: #8BC636;
+            border: 1px solid #fff;
+            border-width: 0 1px 1px 0;
+        }
+
+        .uwa-autocomplete-suggestions .category:last-child {
+            border-bottom: none;
+        }
+
+        .uwa-autocomplete-suggestions .category:last-child:before {
+            border-bottom: none;
+            bottom: 0;
+        }
+
+        .uwa-autocomplete-suggestions .category.current {
+            background-color: #E8E8E8;
+        }
+
+    .uwa-autocomplete.suggestions-displayed.not-floating .uwa-input {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: 0 0 0 4px rgba(124, 175, 32, .6);
+    }
+
+
+    .uwa-enhanced-textarea-inline-text {
+        color: #aaa;
+    }
+

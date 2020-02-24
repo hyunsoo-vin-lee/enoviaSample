@@ -1,0 +1,256 @@
+/*
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+
+a:link,
+a:visited {
+    /* text-decoration: underline !important; */
+    color: #062775 !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+img.typeIcon {
+    height: 1em;
+}
+
+div#container {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+div#projNames {
+    display: block;
+    width: 10%;
+    position: absolute;
+    padding-top: 1.25em;
+}
+
+div#calendars {
+    display: inline-block;
+    width: 90%;
+    min-height: 100%;
+    position: absolute;
+    left: 10%;
+    padding-top: 1.25em;
+    overflow-x: auto;
+}
+
+div.projName {
+    border-top: 1px dashed lightgrey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.projCalendar {
+    position: relative;
+    border-top: 1px dashed lightgrey;
+}
+
+.task {
+    position: absolute;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: #d2e4ff;
+    z-index: 2;
+}
+
+.task.showOverflow {
+    overflow: unset;
+}
+
+.gate {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-color: #d2e4ff;
+    border: 1px solid grey;
+    transform: rotate(45deg);
+    position: relative;
+    left: -0.5em;
+}
+
+.task div.milestone {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    background: none;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 1em solid grey;
+    position: relative;
+    left: -0.5em;
+}
+
+.tasksBefore,
+.tasksAfter {
+    position: absolute;
+    height: 100%;
+    vertical-align: middle;
+    z-index: 10;
+    background-color: rgba(242, 254, 255, 0.5);
+    color: grey;
+}
+
+.tasksBefore {
+    left: 0px;
+}
+
+.tasksAfter {
+    right: 0px;
+}
+
+div#selectBlockInCalendar {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    background-color: rgba(129, 188, 243, 0.6);
+    border-left: 1px dashed rgb(69, 82, 255);
+    border-right: 1px dashed rgb(69, 82, 255);
+    box-sizing: border-box;
+    z-index: 15;
+}
+
+div#btnZoomOut {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* TODO Old style to be Updated */
+
+.expandableBlock {
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+
+.expandIcon {
+    cursor: pointer;
+    color: grey;
+}
+
+.expandIcon:hover {
+    color: green;
+}
+
+.title {
+    white-space: nowrap;
+    background-color: #d2e4ff;
+}
+
+.title .name {
+    display: inline-block;
+    padding-left: 4px;
+}
+
+.selected > .title {
+    border: 1px solid green;
+}
+
+.contentChilds,
+.lineContent {
+    position: relative;
+}
+
+.completion {
+    display: block;
+    background-color: lightgrey;
+    font-size: 0.5em;
+    color: white;
+}
+
+.completion div {
+    position: relative;
+    color: white;
+    background-color: green;
+    box-sizing: border-box;
+    height: 1.5em;
+    font-size: 1.5em;
+}
+
+.gate {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background-color: #d2e4ff;
+    transform: rotate(45deg);
+    position: relative;
+    left: -0.5em;
+}
+
+.complete {
+    background-color: #a1f3a3;
+}
+
+.late {
+    background-color: #fceba4;
+}
+
+.lateForStart {
+    background-color: #faadad;
+}
+
+.actualTime {
+    background-color: indigo;
+    position: relative;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 1px;
+}
+
+.dashedLine {
+    box-sizing: border-box;
+    height: 1px;
+    border-top: 1px dashed silver;
+    position: relative;
+}
+
+.dayLine {
+    box-sizing: border-box;
+    border-left: 1px solid lightgrey;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+}
+
+.dayLine.today {
+    border-left: 1px dashed #ff2e2e;
+}
+
+div#lineMarker.dayLine {
+    border-left: 1px dotted #2226ff;
+}
+
+.dayTxt {
+    position: absolute;
+    top: 0px;
+    color: lightgrey;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.dayOffWork {
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: absolute;
+    height: calc(100% - 1.25em);
+    top: 1.25em;
+}
+
+.filtered > .title,
+.filtered > .completion,
+.filtered > .actualTime,
+.filtered > .dashedLine {
+    opacity: 0.2;
+}

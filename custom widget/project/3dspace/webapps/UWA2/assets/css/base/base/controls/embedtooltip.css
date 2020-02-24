@@ -1,0 +1,11 @@
+.uwa-embedToolTip {
+    color: #333333;
+    border: 1px solid #BBBBBB;
+    background: none repeat scroll 0 0 white;
+    padding: 5px;
+    margin-top: 0;
+    transition: opacity .3s ease;
+}
+.uwa-embedToolTip .uwa-dropdown-point {
+    display: none;
+}

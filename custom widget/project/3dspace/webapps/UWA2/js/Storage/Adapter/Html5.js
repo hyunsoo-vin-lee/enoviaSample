@@ -1,0 +1,1 @@
+define("UWA/Storage/Adapter/Html5",["UWA/Core","UWA/Storage/Adapter/Object","UWA/Internal/Deprecate"],function(d,a,b){var c=a.extend({type:"Html5",connect:function(e){b.warn("UWA/Storage/Adapter/Html5","Use WebSQL directly if you really need to.");this._parent(e)}});return d.namespace("Storage/Adapter/Html5",c,d)});

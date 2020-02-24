@@ -1,0 +1,83 @@
+/*
+  Script: slider.css
+
+    This file is part of UWA JS Runtime.
+
+  About: License
+
+    Copyright 2006-2012 Netvibes, a Dassault Systèmes company.
+    All rights reserved.
+
+  XHTML skeleton:
+    (start code)
+    TODO
+    (end code)
+*/
+
+.uwa-slider {
+    background: #D8D9D6;
+    color: #444444;
+    height: 28px;
+
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #D5D4D4;
+}
+
+.uwa-slider .scrubber-wrapper {
+    height: 28px;
+}
+.uwa-slider .scrubber {
+    background: #CCC;
+    height: 16px;
+    top: 5px;
+    position: relative;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.uwa-slider .handle {
+    position: absolute;
+    z-index:3;
+    width:14px;
+    height: 100%;
+    border-radius:8px;
+    border : 2px solid #ccc;
+    background-color: #b8fb09;
+    top: -2px;
+}
+.uwa-slider .handle,
+.uwa-slider .loaded,
+.uwa-slider .progress {
+    background: #7eae00;
+}
+.uwa-slider .handle.handle-hide{
+    display:none;
+}
+
+.uwa-slider .progress,
+.uwa-slider .loaded {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.uwa-slider .progress {
+    z-index: 2;
+}
+
+.uwa-slider .loaded,
+.uwa-slider .progress {
+    height: 100%;
+}
+
+.uwa-slider .loaded {
+    opacity: 0.2;
+}
+
+#playermp3Container .uwa-slider .scrubber {
+    top : 4px;
+}

@@ -1,0 +1,305 @@
+/**
+ * BT WW Competencies Center - Fast Prototypes Team
+ * @author UM5
+ */
+@font-face {
+    font-family: "3ds";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../assets/fonts/3dslight.ttf") format("truetype");
+}
+@font-face {
+    font-family: "3ds";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../assets/fonts/3dsbold.ttf") format("truetype");
+}
+
+html,
+body {
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    html,
+    body {
+        font-size: 0.75rem !important;
+    }
+}
+
+div#main {
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.dsFont,
+.ui.button.dsFont,
+button.dsFont {
+    font-family: "3ds";
+}
+.dsBlue {
+    color: #005685;
+}
+
+div#top {
+    height: 1.25em;
+    width: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 5px #e0e0e0;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    line-height: 1em;
+    font-size: 2.5em;
+    vertical-align: middle;
+    font-family: "3ds";
+}
+div#top img {
+    height: 1em;
+    position: relative;
+    top: 0.1em;
+}
+div#top img.left {
+    position: absolute;
+    left: 0px;
+}
+
+div#top img.right {
+    position: absolute;
+    right: 0px;
+}
+
+div#middle {
+    height: calc(98% - 6.6125em);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: calc(3.125em + 1%); /* 2.5em font-size * 1.25em height */
+}
+div#bottom {
+    height: 3.5em;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+button#backBtn {
+    width: 8%;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow: hidden;
+}
+.backBtn {
+    position: absolute;
+    top: 0px;
+    bottom: 10px;
+    left: 2px;
+}
+
+div#botCentering {
+    display: inline-block;
+    width: 80%;
+    vertical-align: bottom;
+}
+
+div#start {
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.alignRight {
+    text-align: right;
+}
+div#progressBar div.bar img {
+    height: 2em;
+    position: relative;
+    top: -1.5em;
+    left: 0em;
+    transition: all 2s ease-in;
+    -webkit-transition: all 2s ease-in;
+    -moz-transition: all 2s ease-in;
+    -o-transition: all 2s ease-in;
+    -ms-transition: all 2s ease-in;
+}
+
+div#progressBar div.bar img.flyAway {
+    top: -9em;
+    left: 30em;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+div.panel.question {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: "3ds";
+}
+
+.line.question {
+    font-size: 3em;
+    font-size: 2em;
+    line-height: 1.2em;
+    margin-top: 2em;
+}
+
+.panel.question.hasImage .line.question {
+    margin-top: unset;
+}
+
+.question.imageHolder {
+    height: 45%;
+    margin-bottom: 1em;
+}
+.imageHolder img {
+    max-height: 100%;
+}
+
+button.ui.button.choice {
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 0.5em;
+}
+
+.panel.question.hasImage button.ui.button.choice {
+    width: 30%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+.panel.question.longList button.ui.button.choice {
+    width: 31%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 5em;
+    line-height: 1em;
+    vertical-align: middle;
+}
+
+div.field textarea {
+    max-width: 80%;
+}
+
+.vertical.spacer.one {
+    display: block;
+    height: 1em;
+}
+
+button.ui.toggle i.icon {
+    display: none;
+}
+button.ui.toggle.active i.icon {
+    display: inline;
+}
+
+button.ui.toggle div {
+    display: none;
+}
+button.ui.toggle.active div {
+    display: unset;
+}
+
+div.panel.question div.vertical.spacer.percent30 {
+    height: 30%;
+}
+div.panel.question.hasImage div.vertical.spacer.percent30 {
+    height: unset;
+}
+
+div.big.text {
+    font-size: 3em;
+    line-height: 2em;
+}
+div#loaderResults {
+    width: auto;
+    vertical-align: bottom;
+    line-height: 6em;
+    font-size: 1em;
+}
+
+div.horizontal.spacer {
+    width: 20%;
+}
+
+.ui.buttons:not(.basic):not(.inverted) > .button,
+.ui.buttons:not(.basic):not(.inverted) > button.ui.button.clickable,
+button.ui.button.clickable {
+    box-shadow: 2px 2px 3px 1px #aaa;
+}
+
+div#loaderResults {
+    top: 70%;
+}
+
+.answer.right {
+    color: green;
+}
+.answer.wrong {
+    color: red;
+}
+
+.ui.button.toggle.choice.active {
+    background-color: #2185d0 !important;
+}
+.ui.button.toggle.choice.active:hover {
+    background-color: #1f79be !important;
+}
+
+div.answer {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 0.2em;
+    color: grey;
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+    display: inline-block;
+}
+
+div.answer.selected {
+    background-color: #2185d0;
+    color: white;
+}
+
+div.correct.answer {
+    text-decoration-line: underline;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+div.uncorrect.answer {
+    text-decoration-line: line-through;
+    text-decoration-style: double;
+}
+
+div.answer.correct.selected::before {
+    text-decoration: none;
+    content: "\f00c  "; /*checkmark ok*/
+    color: lime;
+    font-family: Icons;
+}
+div.answer.correct.notselected::before {
+    text-decoration: none;
+    content: "\f00c  "; /*checkmark icon ok*/
+    color: red;
+    font-family: Icons;
+}
+div.answer.uncorrect.selected::before {
+    text-decoration: none;
+    content: "\f00d  "; /*X icon*/
+    color: red;
+    font-family: Icons;
+}
+
+div.result {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+div.result.correct {
+    color: green;
+}
+div.result.wrong {
+    color: red;
+}
