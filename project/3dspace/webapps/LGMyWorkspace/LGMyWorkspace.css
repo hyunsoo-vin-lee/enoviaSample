@@ -1,0 +1,216 @@
+.searchFilterContainer {
+	line-height:30px;
+	margin:0 10px;
+	display:table-row;
+	font-size:15px;
+	vertical-align:middle;
+	font-weight:bold;
+	color:#5b5d5e;
+	font-family:Arial, Helvettica, sans-serif;
+}
+.filterHeader {
+	font-size:15px;
+	width:100%;
+	display:table;
+	line-height:30px;
+	border-radius:7x;
+	color:#5b5d5e;
+	height:100%;
+}
+.selectContainer{
+	display:inline-flex;
+	vertical-align:middle;
+	margin-left:8px;
+	font-weight:normal;
+	min-width:250px;
+}
+.bodyContainer{
+	height:99%;
+	display:table-row;
+	width:auto;
+	overflow:auto;
+	box-sizing:border-box;
+	position:releative;
+}
+.contentBody{
+	width:980px;
+	height:99%;
+	position:relative;
+	display:flex;
+}
+.mContainer{
+	width:99%;
+	height:99%;
+	position:relative;
+	justify-content:space-between;
+	flex-wrap:nowrap;
+	padding:4px;
+	min-width:auto;
+	min-height:auto;
+	overflow:auto;
+}
+.cardTtitle{
+	display:inline-block;
+	box-sizing:border-box;
+	flex-shrink:0;
+	text-align:center;
+	color:#005686;
+	margin-top:3px;
+	font-size:x-large;
+	height:2.5em;
+	padding-top:5px;
+}
+.cardDesc{ 
+	display:inline-block;
+	box-sizing:border-box;
+	flex-shrink:0;
+	text-align:center;
+	margin-top:1px;
+	font-size:14px;
+	vertical-align:bottom;
+	bottom:auto;
+	height:1.5em;
+	Word-break:break-word;
+	font-weight:normal;
+	color:#5b5d5e;
+}
+.cardRole{
+	display:inline-block;
+	box-sizing:border-box;
+	flex-shrink:0;
+	text-align:center;
+	font-size:12px;
+	color:#684040;
+	height:auto;
+	margin-top:3px;
+	font-weight:normal;
+}
+.cardIcon{ 
+	text-align:center;
+}
+.cardIconImg{ 
+	width:50px;
+	height:50px;
+}
+.cardItemCount{ 
+	display:inline-block;
+	box-sizing:border-box;
+	flex-shrink:0;
+	text-align:center;
+	color:#005386;
+	margin-top:5px;
+	font-size:x-large;
+	font-weight:bold;
+}
+.cardItem{
+	display:inline-block;
+	box-sizing:border-box;
+	flex-shrink:0;
+	font-size:14px;
+	color:#0d5c95;
+	margin-top:5px;
+	font-style:italic;
+	flex:1;
+	padding-right:5px;
+}
+.cardItemUL{ 
+	vertical-align:middle;
+	text-align:left;
+	padding-left:5px;
+	margin:0;
+	List-style-position:inside;
+	line-height:20px;
+	color:#368ec4;
+	font-weight:normal;
+}
+.cardLi{
+	cursor:pointer;
+	vertical-align:middle;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.cardItemMore {
+	vertical-align:middle;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	list-style-image:none;
+}
+.cardHow{
+	display:inline-block;
+	box-sizing:border-box;
+	flex-shrink:0;
+	text-align:center;
+	color:#5b5d5e;
+	margin-top:5px;
+	font-size:16px;
+	font-weight:bold;
+	cursor:pointer;
+	align-self:flex-end;
+	width:100%;
+	padding-bottom:5px;
+}
+.cardSpan{
+	vertical-align:middel;
+	margin:3px;
+}
+.cardHowImg{
+	display:inline-block;
+	vertical-align:middle;
+	width:1em;
+	height:1em;
+}
+.cardSection{
+	box-sizing:border-box;
+	display:block;
+	float:left;
+	width:auto;
+	height:100%;
+	text-align:center;
+	padding-left:4px;
+	padding-right:4px;
+	flex-glow:1;
+}
+.cardTop{
+	box-sizing:border-box;
+	position:relative;
+	display:inline-flex;
+	flex-direction:column;
+	flex-wrap:nowrap;
+	width:140px;
+	margin-top:3px;
+	height:99%;
+	min-height:auto;
+	border-radius:.5rem;
+	box-shadow:2px 2px 2px 0px #d4d4d5, 0px 0px 0px 1px #d4d4d5;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-self;
+	/* 
+	background:linear-gradient(to bottom, #f5f6f7 0%,#e2e4e3 100%); 
+	*/
+	background:linear-gradient(150deg, #fff 40%,#e2e4e3 100%);
+}
+.cardDetailSection{
+	box-sizing:border-box;
+	display:block;
+	float:left;
+	height:100%;
+	text-align:center;
+	padding-left:4px;
+	padding-right:4px;
+	flex-glow:1;
+}
+.cardDetailTop{
+	box-sizing:border-box;
+	position:relative;
+	display:inline-flex;
+	flex-direction:column;
+	flex-wrap:nowrap;
+	width:100%;
+	margin-top:3px;
+	min-height:auto;
+	border-radius:.5rem;
+	box-shadow:2px 2px 2px 0px #d4d4d5, 0px 0px 0px 1px #d4d4d5;
+	text-align:center;
+}

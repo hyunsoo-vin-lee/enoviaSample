@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+  <head>
+    <!-- Application Metas -->
+    <title>Project Widget</title>
+
+    <meta name="author" content="yslim" />
+    <meta name="description" content="Project Widget" />
+    <meta name="apiVersion" content="1.3" />
+    <meta name="debugMode" content="true" />
+    <meta name="strictMode" content="false" />
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!-- Load UWA environment --> 
+	<link rel="stylesheet" type="text/css" href="../c/UWA/assets/css/standalone.css" />
+	<script type="text/javascript" src="../c/UWA/js/UWA_Standalone_Alone.js"></script>
+	
+	<!---->
+    <script type="text/javascript" src="../UWA2/js/Drivers/jQuery.js"></script>
+    <script type="text/javascript" src="../PlatformAPI/PlatformAPI.js"></script>
+
+	<!-- Custom javascripts -->
+	<script type="text/javascript" src="../sampleCard/scripts/jquery-3.2.1.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../UIKIT/UIKIT.css" /> 
+	<script type="text/javascript" src="../UIKIT/UIKIT.js"></script> 
+	
+	<!-- Application JavaScript Source -->
+    <script type="text/javascript">
+    //<![CDATA[
+    "use strict";
+    var dependencies = dependencies || [];
+    require(['DS/sampleCard/tableList'].concat(dependencies),
+		
+		function(tableList){ 
+			var myWidget = { 
+				onLoad: function() { 
+					var options = {
+						content : { 
+							header : ["Project","Current Phase","계획 기간 (Estimated Duration)/실행 기간 (Actual Duration)","완료율","완료 예정일","PM","status" ]
+						}
+					};
+					myWidget.sample = new DSK.tableList(); 
+					myWidget.sample.init(widget,options);
+				} 
+			};
+			widget.addEvent("onLoad",myWidget.onLoad);
+		});
+     //]]>
+    </script>
+</head>
+<body>widget Loading...</body>
+</html>
