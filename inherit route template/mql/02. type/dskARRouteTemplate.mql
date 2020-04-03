@@ -1,0 +1,5 @@
+add type 'dskARRouteTemplate'
+	derived 'Route Template'
+;
+
+add property type_dskARRouteTemplate on program 'eServiceSchemaVariableMapping.tcl' to type 'dskARRouteTemplate';

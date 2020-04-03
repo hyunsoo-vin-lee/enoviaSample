@@ -1,0 +1,17 @@
+#del bus 'eService Object Generator' 'type_dskARRouteTemplate' '';
+add bus 'eService Object Generator' 'type_dskARRouteTemplate' '1' vault 'eService Administration' policy 'eService Object Generator'
+  'eService Name Prefix' 'AR-RT-'
+  'eService Name Suffix' ''
+  'eService Processing Time Limit' '60'
+  'eService Retry Count' '5'
+  'eService Retry Delay' '1000'
+  'eService Safety Policy' 'policy_RouteTemplate'
+  'eService Safety Vault' 'vault_eServiceAdministration'
+;
+
+#del bus 'eService Number Generator' 'type_dskARRouteTemplate' '1';
+add bus 'eService Number Generator' 'type_dskARRouteTemplate' '1' vault 'eService Administration' policy 'eService Object Generator'
+  'eService Next Number' '000001'
+;
+
+add connection 'eService Number Generator' from 'eService Object Generator' 'type_dskARRouteTemplate' '1' to 'eService Number Generator' 'type_dskARRouteTemplate' '1';
